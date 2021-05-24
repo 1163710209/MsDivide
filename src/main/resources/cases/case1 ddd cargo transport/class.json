@@ -1,0 +1,214 @@
+{
+   "name": "Cargo Tracking",
+   "classList": [
+      {
+         "name": "Cargo",
+         "attributes": [
+            "trackingId"
+         ],
+         "methods": [
+            "createCargo()"
+         ]
+      },
+      {
+         "name": "RouteSpecification",
+         "attributes": [
+            "origin",
+            "destination",
+            "arrivalDeadline"
+         ],
+         "methods": [
+            "bookCargo",
+            "changeCargoDestination"
+         ]
+      },
+      {
+         "name": "Leg",
+         "attributes": [
+            "loadLocation",
+            "unloadLocation",
+            "loadTime",
+            "unloadTime"
+         ],
+         "methods": [
+            "routeCargo"
+         ]
+      },
+      {
+         "name":"Voyage",
+         "attributes": [
+            "voyageNumber"
+         ],
+         "methods": [
+            "handleCargoEvent",
+            "createVoyage"
+         ]
+      },
+      {
+         "name":"CarrierMovement",
+         "attributes": [
+            "departureLocation",
+            "arrivalLocation",
+            "departureTime",
+            "arrivalTime"
+         ],
+         "methods": [
+            "addCarrierMovement"
+         ]
+      },
+      {
+         "name":"Itinerary",
+         "attributes": [
+            "itineraryNumber"
+         ],
+         "methods": [
+            "routeCargo"
+         ]
+      },
+      {
+         "name":"Delivery",
+         "attributes": [
+            "transportStatus",
+            "misdirected",
+            "estimatedArrivalTime",
+            "isUnloadedAtDestination",
+            "routingStatus"
+         ],
+         "methods": [
+            "handleCargoEvent",
+            "viewCargos"
+         ]
+      },
+      {
+         "name":"Location",
+         "attributes": [
+            "unLocode",
+            "name"
+         ],
+         "methods": [
+            "createLocation"
+         ]
+      },
+      {
+         "name":"HandlingEvent",
+         "attributes": [
+            "type",
+            "completionTime",
+            "registrationTime",
+            "location"
+         ],
+         "methods": [
+            "viewTracking",
+            "handleCargoEvent"
+         ]
+      }
+   ],
+   "classRelationList": [
+      {
+         "origin":"Cargo",
+         "destination":"RouteSpecification",
+         "type":"ClassComposition"
+      },
+      {
+         "origin":"Cargo",
+         "destination":"Leg",
+         "type":"ClassAggregate"
+      },
+      {
+         "origin":"Cargo",
+         "destination":"Delivery",
+         "type":"ClassComposition"
+      },
+      {
+         "origin":"Leg",
+         "destination":"Voyage",
+         "type":"ClassAggregate"
+      },
+      {
+         "origin":"Voyage",
+         "destination":"CarrierMovement",
+         "type":"ClassComposition"
+      },
+      {
+         "origin":"Delivery",
+         "destination":"Voyage",
+         "type":"ClassAggregate"
+      },
+      {
+         "origin":"Cargo",
+         "destination":"Location",
+         "type":"ClassAggregate"
+      },
+      {
+         "origin":"RouteSpecification",
+         "destination":"Location",
+         "type":"ClassAggregate"
+      },
+      {
+         "origin":"Leg",
+         "destination":"Location",
+         "type":"ClassAggregate"
+      },
+      {
+         "origin":"Delivery",
+         "destination":"Location",
+         "type":"ClassAggregate"
+      },
+      {
+         "origin":"CarrierMovement",
+         "destination":"Location",
+         "type":"ClassAggregate"
+      },
+      {
+         "origin":"HandlingEvent",
+         "destination":"Voyage",
+         "type":"ClassAggregate"
+      },
+      {
+         "origin":"HandlingEvent",
+         "destination":"Location",
+         "type":"ClassAggregate"
+      },
+      {
+         "origin":"HandlingEvent",
+         "destination":"Cargo",
+         "type":"ClassAggregate"
+      },
+      {
+         "origin":"Cargo",
+         "destination":"Itinerary",
+         "type":"ClassComposition"
+      },
+      {
+         "origin":"Itinerary",
+         "destination":"Leg",
+         "type":"ClassComposition"
+      }
+   ],
+   "dddGroups": [
+      {
+         "name": "DDDValueObject",
+         "classList": [
+            "Cargo",
+            "HandlingEvent",
+            "Delivery"
+         ]
+      },
+      {
+         "name": "DDDAggregate",
+         "classList": [
+            "Cargo",
+            "Leg",
+            "HandlingEvent"
+         ]
+      },
+      {
+         "name": "DDDService",
+         "classList": [
+            "Cargo",
+            "Leg",
+            "Delivery"
+         ]
+      }
+   ]
+}

@@ -1,0 +1,23 @@
+server:
+  port: 8088
+  servlet:
+    context-path: /newMsDivide
+
+spring:
+  application:
+    name: new microservice divide
+
+#   自定义属性：用于自动打开界面
+#  auto:
+#    openUrl: true
+#  web:
+#    loginUrl: http://localhost:8088/graph.html
+
+  # 模板引擎
+  thymeleaf:
+    mode: HTML
+    # prefix: classpath:/templates/ # Prefix that gets prepended to view names when building a URL.
+    # suffix: .html # Suffix that gets appended to view names when building a URL.
+    encoding: utf-8
+    # 禁用缓存
+    cache: false
