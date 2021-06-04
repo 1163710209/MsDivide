@@ -17,5 +17,15 @@ public class ClassDiagram {
     private String name;
     private List<UmlClass> classList;
     private List<ClassRelation> classRelationList;
-    private List<ClassGroup> dddGroups;
+    private List<ClassGroup> classGroups;
+
+    public UmlClass getUmlClassByName(String name) {
+        for (UmlClass umlClass : classList) {
+            if (umlClass.getName().equals(name)) {
+                return umlClass;
+            }
+        }
+        return null;
+    }
+
 }

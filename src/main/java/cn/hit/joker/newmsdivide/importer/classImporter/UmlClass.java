@@ -6,6 +6,7 @@ import lombok.NoArgsConstructor;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 
 /**
  * @author joker
@@ -29,5 +30,18 @@ public class UmlClass {
 
     public UmlClass(final String name) {
         this.name = name;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (obj instanceof UmlClass) {
+            return this.name.equals(((UmlClass) obj).getName());
+        }
+        return false;
+    }
+
+    @Override
+    public String toString() {
+        return name;
     }
 }

@@ -14,12 +14,13 @@ import java.util.List;
 @Data
 @NoArgsConstructor
 public class ClassGroup {
-    private DDDType name;
+    private Type name;
     private List<UmlClass> classList;
 
-    enum DDDType {
+    enum Type {
         DDDValueObject,
         DDDAggregate,
-        DDDService
+        DDDService,
+        LifeCycleCommonality
     }
 }
