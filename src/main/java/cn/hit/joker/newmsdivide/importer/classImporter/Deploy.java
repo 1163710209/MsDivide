@@ -15,7 +15,7 @@ public class Deploy {
     private Set<Location> locations;
     private Map<String, Double> resources;
 
-    enum Location {
+    public enum Location {
         Cloud,
         Edge,
         End

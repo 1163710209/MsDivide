@@ -17,8 +17,10 @@ public class ClassRelation {
     private RelationType type;
 
     public enum RelationType {
+        ClassAssociation,
         ClassAggregate,
         ClassComposition,
+        ClassDependency,
         ClassInheritance
     }
 }

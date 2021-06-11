@@ -19,7 +19,7 @@ public class SequenceDiagram {
     private List<Activity> activityList;
     private List<Indicator> indicators;
 
-    public List<IndicatorName> getIndicatorsName() {
+    public List<String> getIndicatorsName() {
         return indicators.stream().map(Indicator::getName).collect(Collectors.toList());
     }
 }

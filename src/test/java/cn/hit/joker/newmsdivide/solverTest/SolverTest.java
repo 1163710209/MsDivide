@@ -1,5 +1,6 @@
 package cn.hit.joker.newmsdivide.solverTest;
 
+import cn.hit.joker.newmsdivide.MainSystem;
 import cn.hit.joker.newmsdivide.importer.ImporterUtils;
 import cn.hit.joker.newmsdivide.importer.InputData;
 import cn.hit.joker.newmsdivide.importer.classImporter.ClassDiagram;
@@ -34,22 +35,27 @@ public class SolverTest {
     }
 
     @Test
-    public void solveTest() {
-        InputData inputData = getInputData();
-        MsDivideSystem divideSystem = inputData.getMsDivideSystem();
-        SolverConfig whisperConfig = SolverConfig.getChineseWhisperConfig();
-        SolverConfig markovConfig = SolverConfig.getMarkovConfig();
-        SolverConfig fastNewmanConfig = SolverConfig.getFastNewmanConfig();
-        SolverConfig gephiConfig = SolverConfig.getGephiConfig(5);
+    public void ChineseWhisperSolverTest() {
+        MainSystem.start(SolveSystem.MODE_CW, 0);
+    }
 
-        System.out.println(divideSystem);
-//        System.out.println(whisperConfig);
+    @Test
+    public void MarkovSolverTest() {
+        MainSystem.start(SolveSystem.MODE_MARKOV, 0);
+    }
 
-        // start solve
-//        List<Microservice> msList = new SolveSystem().solveSystem(divideSystem, whisperConfig, "Score");
-//        List<Microservice> msList = new SolveSystem().solveSystem(divideSystem, markovConfig, "Score");
-//        List<Microservice> msList = new SolveSystem().solveSystem(divideSystem, fastNewmanConfig, "Score");
-        List<Microservice> msList = new SolveSystem().solveSystem(divideSystem, gephiConfig, SolveSystem.TYPE_NORMAL);
-        System.out.println(msList);
+    @Test
+    public void FastNewmanSolverTest() {
+        MainSystem.start(SolveSystem.MODE_FAST_NEWMAN, 0);
+    }
+
+    @Test
+    public void GNSolverTest() {
+        MainSystem.start(SolveSystem.MODE_GEPHI, 3);
+    }
+
+    @Test
+    public void DivideResultTest() {
+        MainSystem.getDivideResult(SolveSystem.MODE_GEPHI);
     }
 }

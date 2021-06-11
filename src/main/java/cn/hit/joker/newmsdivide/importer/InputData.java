@@ -193,7 +193,7 @@ public class InputData {
 
         // handle couping and critical
         sequenceDiagram.getIndicators().forEach(indicator -> {
-            IndicatorName name = indicator.getName();
+            String name = indicator.getName();
             Map<String, Double> temp = new HashMap<>();
             indicator.getClassList().forEach((classA, degreeA) -> {
                 // handle couping: compute support degree of each two different class

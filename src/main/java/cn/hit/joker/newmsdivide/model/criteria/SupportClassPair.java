@@ -22,6 +22,6 @@ public class SupportClassPair {
     private double degreeA;
     private double degreeB;
 
-    private IndicatorName name;
+    private String name;
     private double priority;
 }

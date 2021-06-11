@@ -10,7 +10,7 @@ import java.util.Map;
 @Data
 @NoArgsConstructor
 public class Indicator {
-    private IndicatorName name;
+    private String name;
     private double priority;
     private Map<String, Double> classList;
 }

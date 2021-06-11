@@ -10,8 +10,10 @@ public final class CriterionPriority {
     public final static double LifeCycleCommonality = 10.0d;
 
     // class: 类图中的组合继承原则
+    public final static double ClassAssociation = 2d;
     public final static double ClassComposition = 5d;
     public final static double ClassAggregate = 3d;
+    public final static double ClassDependency = 1d;
     public final static double ClassInheritance = 5d;
 
     // DDD: 领域驱动设计原则

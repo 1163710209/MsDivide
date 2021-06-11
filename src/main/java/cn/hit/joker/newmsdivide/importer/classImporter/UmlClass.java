@@ -1,12 +1,9 @@
 package cn.hit.joker.newmsdivide.importer.classImporter;
 
-import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import java.util.ArrayList;
 import java.util.List;
-import java.util.Objects;
 
 /**
  * @author joker
@@ -38,6 +35,11 @@ public class UmlClass {
             return this.name.equals(((UmlClass) obj).getName());
         }
         return false;
+    }
+
+    @Override
+    public int hashCode() {
+        return this.name.hashCode();
     }
 
     @Override

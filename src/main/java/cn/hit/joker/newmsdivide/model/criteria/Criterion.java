@@ -27,6 +27,9 @@ public class Criterion {
             case LifeCycleCommonality:
                 criterion = CriterionFactory.getLifeCycleCommonalityCriterion();
                 break;
+            case ClassAssociation:
+                criterion = CriterionFactory.getClassAssociationCriterion();
+                break;
             case ClassAggregate:
                 criterion = CriterionFactory.getClassAggregateCriterion();
                 break;
@@ -35,6 +38,9 @@ public class Criterion {
                 break;
             case ClassInheritance:
                 criterion = CriterionFactory.getClassInheritanceCriterion();
+                break;
+            case ClassDependency:
+                criterion = CriterionFactory.getClassDependencyCriterion();
                 break;
             case DDDValueObject:
                 criterion = CriterionFactory.getDDDValueObjectCriterion();
@@ -75,6 +81,14 @@ public class Criterion {
             return new Criterion(name, type, spec, priority);
         }
 
+        public static Criterion getClassAssociationCriterion() {
+            CriterionName name = CriterionName.ClassAssociation;
+            CriterionType type = CriterionType.Cohesiveness;
+            String spec = "";
+            double priority = CriterionPriority.ClassAssociation;
+            return new Criterion(name, type, spec, priority);
+        }
+
         public static Criterion getClassCompositionCriterion() {
             CriterionName name = CriterionName.ClassComposition;
             CriterionType type = CriterionType.Cohesiveness;
@@ -88,6 +102,14 @@ public class Criterion {
             CriterionType type = CriterionType.Cohesiveness;
             String spec = "";
             double priority = CriterionPriority.ClassAggregate;
+            return new Criterion(name, type, spec, priority);
+        }
+
+        public static Criterion getClassDependencyCriterion() {
+            CriterionName name = CriterionName.ClassDependency;
+            CriterionType type = CriterionType.Cohesiveness;
+            String spec = "";
+            double priority = CriterionPriority.ClassDependency;
             return new Criterion(name, type, spec, priority);
         }
 

@@ -13,8 +13,10 @@ import java.util.Map;
  * @description
  */
 public class ClassScorer implements CriterionScorer {
+    private final static double AssociationScore = 1.0d;
     private final static double AggregateScore = 1.0d;
     private final static double CompositionScore = 1.0d;
+    private final static double DependencyScore = 1.0d;
     private final static double InheritanceScore = 1.0d;
 
     @Override
@@ -23,11 +25,17 @@ public class ClassScorer implements CriterionScorer {
 
         double defaultScore = 0d;
         switch (instance.getCriterion().getName()) {
+            case ClassAssociation:
+                defaultScore = AssociationScore;
+                break;
             case ClassAggregate:
                 defaultScore = AggregateScore;
                 break;
             case ClassComposition:
                 defaultScore = CompositionScore;
+                break;
+            case ClassDependency:
+                defaultScore = DependencyScore;
                 break;
             case ClassInheritance:
                 defaultScore = InheritanceScore;

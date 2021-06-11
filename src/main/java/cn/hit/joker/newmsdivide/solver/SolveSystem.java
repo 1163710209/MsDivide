@@ -50,7 +50,7 @@ public class SolveSystem {
         // exec algorithm
         List<Microservice> msList = solver.solve();
         log.info(" {} 聚类算法执行成功！", config.getAlgorithm());
-        log.info("微服务划分系统 {} 划分完成，得到共 {} 个候选服务：{}", msDivideSystem.getName(), msList.size(), msList.toString());
+        log.info("微服务划分系统 {} 划分完成，得到共 {} 个候选服务", msDivideSystem.getName(), msList.size());
 
         // TODO: 分析划分结果
 
