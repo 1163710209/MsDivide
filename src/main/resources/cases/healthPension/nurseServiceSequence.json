@@ -1,0 +1,168 @@
+{
+  "name": "NurseServiceSequence",
+  "activityList": [
+    {
+      "methodCalls": [
+        {
+          "num": 1,
+          "from": "OldMan",
+          "to": "Nurse",
+          "method": "appointment",
+          "runTime": {
+            "frequency": 3,
+            "size": 4
+          }
+        },
+        {
+          "num": 3,
+          "from": "OldMan",
+          "to": "NurseReserveRecord",
+          "method": "addRecord",
+          "runTime": {
+            "frequency": 3,
+            "size": 4
+          }
+        }
+      ]
+    },
+    {
+      "methodCalls": [
+        {
+          "num": 5,
+          "from": "OldMan",
+          "to": "NurseOrder",
+          "method": "addOrder",
+          "runTime": {
+            "frequency": 4,
+            "size": 3
+          }
+        },
+        {
+          "num": 6,
+          "from": "NurseOrder",
+          "to": "NursePayRecord",
+          "method": "addRecord",
+          "runTime": {
+            "frequency": 4,
+            "size": 4
+          }
+        }
+      ]
+    },
+    {
+      "methodCalls": [
+        {
+          "num": 8,
+          "from": "Nurse",
+          "to": "NurseService",
+          "method": "applyService",
+          "runTime": {
+            "frequency": 4,
+            "size": 4
+          }
+        },
+        {
+          "num": 9,
+          "from": "NurseService",
+          "to": "NurseService",
+          "method": "careOldMan",
+          "runTime": {
+            "frequency": 4,
+            "size": 4
+          }
+        },
+        {
+          "num": 10,
+          "from": "NurseService",
+          "to": "HealthFile",
+          "method": "getHealthFile",
+          "runTime": {
+            "frequency": 4,
+            "size": 2
+          }
+        },
+        {
+          "num": 12,
+          "from": "NurseService",
+          "to": "NurseService",
+          "method": "helpTakeDrugs",
+          "runTime": {
+            "frequency": 4,
+            "size": 4
+          }
+        },
+        {
+          "num": 13,
+          "from": "NurseService",
+          "to": "NurseCareRecord",
+          "method": "addRecord",
+          "runTime": {
+            "frequency": 2,
+            "size": 3
+          }
+        }
+      ]
+    },
+    {
+      "methodCalls": [
+        {
+          "num": 13,
+          "from": "OldMan",
+          "to": "NurseServiceEvaluate",
+          "method": "evaluate",
+          "runTime": {
+            "frequency": 4,
+            "size": 4
+          }
+        }
+      ]
+    }
+  ],
+  "indicators": [
+    {
+      "name": "NurseResponseTime",
+      "priority": 0.6,
+      "classList": {
+        "OldMan": 0.33,
+        "Nurse": 0.33,
+        "NurseReserveRecord": 0.33
+      }
+    },
+    {
+      "name": "NurseSystemReliability",
+      "priority": 0.4,
+      "classList": {
+        "OldMan": 0.2,
+        "Nurse": 0.2,
+        "NurseReserveRecord": 0.2,
+        "NurseOrder": 0.2,
+        "NursePayRecord": 0.2
+      }
+    },
+    {
+      "name": "NurseProfit",
+      "priority": 0.8,
+      "classList": {
+        "NurseOrder": 0.5,
+        "NursePayRecord": 0.5
+      }
+    },
+    {
+      "name": "NurseServiceQuality",
+      "priority": 0.8,
+      "classList": {
+        "NurseService": 0.25,
+        "Nurse": 0.25,
+        "HealthFile": 0.25,
+        "NurseCareRecord": 0.25
+      }
+    },
+    {
+      "name": "NurseSatisfy",
+      "priority": 0.8,
+      "classList": {
+        "NurseServiceEvaluate": 1
+      }
+    }
+  ]
+}

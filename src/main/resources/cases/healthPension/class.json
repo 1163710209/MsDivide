@@ -1,0 +1,992 @@
+{
+  "name": "HealthCare",
+  "classList": [
+    {
+      "name": "OldMan",
+      "type": "Entity",
+      "attributes": [
+        "id",
+        "age",
+        "name"
+      ],
+      "methods": [
+      ],
+      "deploy": {
+        "locations": [
+          "Cloud",
+          "Edge"
+        ],
+        "resources":{
+          "memory": "",
+          "compute": ""
+        }
+      }
+    },
+    {
+      "name": "Nurse",
+      "type": "Entity",
+      "attributes": [
+        "id",
+        "age",
+        "level"
+      ],
+      "methods": [
+        "appointment",
+        "reply"
+      ],
+      "deploy": {
+        "locations": [
+          "Cloud",
+          "Edge"
+        ],
+        "resources":{
+          "memory": "",
+          "compute": ""
+        }
+      }
+    },
+    {
+      "name": "NurseLevel",
+      "type": "Entity",
+      "attributes": [
+        "id",
+        "desc",
+        "salary"
+      ],
+      "methods": [
+        "getInfo"
+      ],
+      "deploy": {
+        "locations": [
+          "Cloud",
+          "Edge"
+        ],
+        "resources":{
+          "memory": "",
+          "compute": ""
+        }
+      }
+    },
+    {
+      "name": "NurseOrder",
+      "type": "Entity",
+      "attributes": [
+        "orderId",
+        "oldManId",
+        "orderItemList"
+      ],
+      "methods": [
+        "addNurseOrder"
+      ],
+      "deploy": {
+        "locations": [
+          "Cloud",
+          "Edge"
+        ],
+        "resources":{
+          "memory": "",
+          "compute": ""
+        }
+      }
+    },
+    {
+      "name": "OrderItem",
+      "type": "Entity",
+      "attributes": [
+        "id",
+        "serviceInfo"
+      ],
+      "methods": [
+      ],
+      "deploy": {
+        "locations": [
+          "Cloud",
+          "Edge"
+        ],
+        "resources":{
+          "memory": "",
+          "compute": ""
+        }
+      }
+    },
+    {
+      "name": "NurseServiceEvaluate",
+      "type": "Entity",
+      "attributes": [
+        "level",
+        "desc",
+        "nurseId"
+      ],
+      "methods": [
+        "addRecord"
+      ],
+      "deploy": {
+        "locations": [
+          "Cloud",
+          "Edge"
+        ],
+        "resources":{
+          "memory": "",
+          "compute": ""
+        }
+      }
+    },
+    {
+      "name": "NurseCareRecord",
+      "type": "Entity",
+      "attributes": [
+        "nurseId"
+      ],
+      "methods": [
+        "addCareRecord"
+      ],
+      "deploy": {
+        "locations": [
+          "Cloud",
+          "Edge"
+        ],
+        "resources":{
+          "memory": "",
+          "compute": ""
+        }
+      }
+    },
+    {
+      "name": "NurseReserveRecord",
+      "type": "Entity",
+      "attributes": [
+        "nurseId",
+        "oldManId"
+      ],
+      "methods": [
+        "addRecord"
+      ],
+      "deploy": {
+        "locations": [
+          "Cloud",
+          "Edge"
+        ],
+        "resources":{
+          "memory": "",
+          "compute": ""
+        }
+      }
+    },
+    {
+      "name": "NursePayRecord",
+      "type": "Entity",
+      "attributes": [
+        "nurseOrderId",
+        "oldManId"
+      ],
+      "methods": [
+        "addPayRecord"
+      ],
+      "deploy": {
+        "locations": [
+          "Cloud",
+          "Edge"
+        ],
+        "resources":{
+          "memory": "",
+          "compute": ""
+        }
+      }
+    },
+    {
+      "name": "NurseService",
+      "type": "Control",
+      "attributes": [
+      ],
+      "methods": [
+        "careOldMan",
+        "helpTakeDrugs"
+      ],
+      "deploy": {
+        "locations": [
+          "Cloud",
+          "Edge"
+        ],
+        "resources":{
+          "memory": "",
+          "compute": ""
+        }
+      }
+    },
+    {
+      "name": "HomeDoctor",
+      "type": "Entity",
+      "attributes": [
+        "id",
+        "name"
+      ],
+      "methods": [
+      ],
+      "deploy": {
+        "locations": [
+          "Cloud",
+          "Edge"
+        ],
+        "resources":{
+          "memory": "",
+          "compute": ""
+        }
+      }
+    },
+    {
+      "name": "DoctorOrder",
+      "type": "Entity",
+      "attributes": [
+        "oldManId",
+        "doctor"
+      ],
+      "methods": [
+        "addOrder"
+      ],
+      "deploy": {
+        "locations": [
+          "Cloud",
+          "Edge"
+        ],
+        "resources":{
+          "memory": "",
+          "compute": ""
+        }
+      }
+    },
+    {
+      "name": "DoctorPayRecord",
+      "type": "Entity",
+      "attributes": [
+        "orderId",
+        "oldManId",
+        "doctorId"
+      ],
+      "methods": [
+        "addOrder"
+      ],
+      "deploy": {
+        "locations": [
+          "Cloud",
+          "Edge"
+        ],
+        "resources":{
+          "memory": "",
+          "compute": ""
+        }
+      }
+    },
+    {
+      "name": "DoctorVisitRecord",
+      "type": "Entity",
+      "attributes": [
+        "doctorId",
+        "oldManId"
+      ],
+      "methods": [
+        "addRecord"
+      ],
+      "deploy": {
+        "locations": [
+          "Cloud",
+          "Edge"
+        ],
+        "resources":{
+          "memory": "",
+          "compute": ""
+        }
+      }
+    },
+    {
+      "name": "DoctorEvaluate",
+      "type": "Entity",
+      "attributes": [
+        "oldManId",
+        "doctorId"
+      ],
+      "methods": [
+        "addRecord"
+      ],
+      "deploy": {
+        "locations": [
+          "Cloud",
+          "Edge"
+        ],
+        "resources":{
+          "memory": "",
+          "compute": ""
+        }
+      }
+    },
+    {
+      "name": "DoctorService",
+      "type": "Control",
+      "attributes": [
+        "doctorId"
+      ],
+      "methods": [
+        "checkOldMan"
+      ],
+      "deploy": {
+        "locations": [
+          "Cloud",
+          "Edge"
+        ],
+        "resources":{
+          "memory": "",
+          "compute": ""
+        }
+      }
+    },
+    {
+      "name": "WristBand",
+      "type": "Entity",
+      "attributes": [
+        "oldManId",
+        "id"
+      ],
+      "methods": [
+      ],
+      "deploy": {
+        "locations": [
+          "End"
+        ],
+        "resources":{
+          "memory": "",
+          "compute": ""
+        }
+      }
+    },
+    {
+      "name": "BloodPressure",
+      "type": "Entity",
+      "attributes": [
+        "oldManId",
+        "time",
+        "data"
+      ],
+      "methods": [
+        "collectData",
+        "uploadData"
+      ],
+      "deploy": {
+        "locations": [
+          "End"
+        ],
+        "resources":{
+          "memory": "",
+          "compute": ""
+        }
+      }
+    },
+    {
+      "name": "BloodSugar",
+      "type": "Entity",
+      "attributes": [
+        "oldManId",
+        "time",
+        "data"
+      ],
+      "methods": [
+        "collectData",
+        "uploadData"
+      ],
+      "deploy": {
+        "locations": [
+          "End"
+        ],
+        "resources":{
+          "memory": "",
+          "compute": ""
+        }
+      }
+    },
+    {
+      "name": "BloodLipid",
+      "type": "Entity",
+      "attributes": [
+        "oldManId",
+        "time",
+        "data"
+      ],
+      "methods": [
+        "collectData",
+        "uploadData"
+      ],
+      "deploy": {
+        "locations": [
+          "End"
+        ],
+        "resources":{
+          "memory": "",
+          "compute": ""
+        }
+      }
+    },
+    {
+      "name": "HeartRate",
+      "type": "Entity",
+      "attributes": [
+        "oldManId",
+        "time",
+        "data"
+      ],
+      "methods": [
+        "collectData",
+        "uploadData"
+      ],
+      "deploy": {
+        "locations": [
+          "End"
+        ],
+        "resources":{
+          "memory": "",
+          "compute": ""
+        }
+      }
+    },
+    {
+      "name": "HealthWarning",
+      "type": "Control",
+      "attributes": [
+      ],
+      "methods": [
+        "handleData",
+        "dataUpload",
+        "sendMessage",
+        "isNormal"
+      ],
+      "deploy": {
+        "locations": [
+          "Edge"
+        ],
+        "resources":{
+          "memory": "",
+          "compute": ""
+        }
+      }
+    },
+    {
+      "name": "HealthEvaluate",
+      "type": "Control",
+      "attributes": [
+        "oldManId",
+        "hospitalId"
+      ],
+      "methods": [
+        "healthEvaluate",
+        "treatment"
+      ],
+      "deploy": {
+        "locations": [
+          "Cloud",
+          "Edge"
+        ],
+        "resources":{
+          "memory": "",
+          "compute": ""
+        }
+      }
+    },
+    {
+      "name": "HealthFile",
+      "type": "Entity",
+      "attributes": [
+        "oldManId",
+        "medicineInfoList",
+        "drugInfoList",
+        "treatRecordList",
+        "bodyDailyInfoList",
+        "healthInfoList"
+      ],
+      "methods": [
+        "createHealthFile",
+        "getDrugsInfo"
+      ],
+      "deploy": {
+        "locations": [
+          "Cloud",
+          "Edge"
+        ],
+        "resources":{
+          "memory": "",
+          "compute": ""
+        }
+      }
+    },
+    {
+      "name": "HealthInfo",
+      "type": "Entity",
+      "attributes": [
+      ],
+      "methods": [
+        "addData"
+      ],
+      "deploy": {
+        "locations": [
+          "Cloud",
+          "Edge"
+        ],
+        "resources":{
+          "memory": "",
+          "compute": ""
+        }
+      }
+    },
+    {
+      "name": "MedicineInfo",
+      "type": "Entity",
+      "attributes": [
+        ""
+      ],
+      "methods": [
+      ],
+      "deploy": {
+        "locations": [
+          "Cloud",
+          "Edge"
+        ],
+        "resources":{
+          "memory": "",
+          "compute": ""
+        }
+      }
+    },
+    {
+      "name": "TreatRecord",
+      "type": "Entity",
+      "attributes": [
+      ],
+      "methods": [
+        "addRecord"
+      ],
+      "deploy": {
+        "locations": [
+          "Cloud",
+          "Edge"
+        ],
+        "resources":{
+          "memory": "",
+          "compute": ""
+        }
+      }
+    },
+    {
+      "name": "DailyInfo",
+      "type": "Entity",
+      "attributes": [
+      ],
+      "methods": [
+        "addData"
+      ],
+      "deploy": {
+        "locations": [
+          "Cloud",
+          "Edge"
+        ],
+        "resources":{
+          "memory": "",
+          "compute": ""
+        }
+      }
+    },
+    {
+      "name": "DrugInfo",
+      "type": "Entity",
+      "attributes": [
+        "drugNumber",
+        "instruction"
+      ],
+      "methods": [
+        "addData"
+      ],
+      "deploy": {
+        "locations": [
+          "Cloud",
+          "Edge"
+        ],
+        "resources":{
+          "memory": "",
+          "compute": ""
+        }
+      }
+    },
+    {
+      "name": "Drug",
+      "type": "Entity",
+      "attributes": [
+        "name",
+        "number"
+      ],
+      "methods": [
+        "prescribeMedicine"
+      ],
+      "deploy": {
+        "locations": [
+          "Cloud",
+          "Edge"
+        ],
+        "resources":{
+          "memory": "",
+          "compute": ""
+        }
+      }
+    },
+    {
+      "name": "Hospital",
+      "type": "Entity",
+      "attributes": [
+        "id",
+        "name",
+        "location",
+        "medicineList"
+      ],
+      "methods": [
+        "treatOldMan",
+        "checkOldMan"
+      ],
+      "deploy": {
+        "locations": [
+          "Cloud",
+          "Edge"
+        ],
+        "resources":{
+          "memory": "",
+          "compute": ""
+        }
+      }
+    },
+    {
+      "name": "SickTreat",
+      "type": "Control",
+      "attributes": [
+        "hospitalId",
+        "oldManId"
+      ],
+      "methods": [
+        "treatment"
+      ],
+      "deploy": {
+        "locations": [
+          "Cloud",
+          "Edge"
+        ],
+        "resources":{
+          "memory": "",
+          "compute": ""
+        }
+      }
+    },
+    {
+      "name": "DataAnalyze",
+      "type": "Control",
+      "attributes": [
+      ],
+      "methods": [
+        "dataAnalyze"
+      ],
+      "deploy": {
+        "locations": [
+          "Cloud"
+        ],
+        "resources":{
+          "memory": "",
+          "compute": ""
+        }
+      }
+    }
+  ],
+  "classRelationList": [
+    {
+      "origin": "Nurse",
+      "destination": "NurseLevel",
+      "type": "ClassAssociation"
+    },
+    {
+      "origin": "NurseOrder",
+      "destination": "OldMan",
+      "type": "ClassAssociation"
+    },
+    {
+      "origin": "NurseCareRecord",
+      "destination": "OldMan",
+      "type": "ClassAssociation"
+    },
+    {
+      "origin": "NursePayRecord",
+      "destination": "OldMan",
+      "type": "ClassAssociation"
+    },
+    {
+      "origin": "NurseReserveRecord",
+      "destination": "OlaMan",
+      "type": "ClassAssociation"
+    },
+    {
+      "origin": "NurseServiceEvaluate",
+      "destination": "OlaMan",
+      "type": "ClassAssociation"
+    },
+    {
+      "origin": "NurseOrder",
+      "destination": "Nurse",
+      "type": "ClassAssociation"
+    },
+    {
+      "origin": "NurseCareRecord",
+      "destination": "Nurse",
+      "type": "ClassAssociation"
+    },
+    {
+      "origin": "NurseService",
+      "destination": "Nurse",
+      "type": "ClassAssociation"
+    },
+    {
+      "origin": "NurseReserveRecord",
+      "destination": "Nurse",
+      "type": "ClassAssociation"
+    },
+    {
+      "origin": "NurseServiceEvaluate",
+      "destination": "Nurse",
+      "type": "ClassAssociation"
+    },
+    {
+      "origin": "NurseService",
+      "destination": "NurseCareRecord",
+      "type": "ClassDependency"
+    },
+    {
+      "origin": "NurseOrder",
+      "destination": "NurseServiceEvaluate",
+      "type": "ClassAssociation"
+    },
+    {
+      "origin": "OrderItem",
+      "destination": "NurseOrder",
+      "type": "ClassAssociation"
+    },
+    {
+      "origin": "NurseOrder",
+      "destination": "NursePayRecord",
+      "type": "ClassAssociation"
+    },
+    {
+      "origin": "DoctorOrder",
+      "destination": "OldMan",
+      "type": "ClassAssociation"
+    },
+    {
+      "origin": "DoctorPayRecord",
+      "destination": "OldMan",
+      "type": "ClassAssociation"
+    },
+    {
+      "origin": "DoctorVisitRecord",
+      "destination": "OldMan",
+      "type": "ClassAssociation"
+    },
+    {
+      "origin": "DoctorEvaluate",
+      "destination": "OldMan",
+      "type": "ClassAssociation"
+    },
+    {
+      "origin": "DoctorOrder",
+      "destination": "HomeDoctor",
+      "type": "ClassAssociation"
+    },
+    {
+      "origin": "DoctorPayRecord",
+      "destination": "DoctorOrder",
+      "type": "ClassAssociation"
+    },
+    {
+      "origin": "DoctorVisitRecord",
+      "destination": "HomeDoctor",
+      "type": "ClassAssociation"
+    },
+    {
+      "origin": "DoctorEvaluate",
+      "destination": "HomeDoctor",
+      "type": "ClassAssociation"
+    },
+    {
+      "origin": "DoctorEvaluate",
+      "destination": "DoctorService",
+      "type": "ClassDependency"
+    },
+    {
+      "origin": "WristBand",
+      "destination": "OldMan",
+      "type": "ClassAssociation"
+    },
+    {
+      "origin": "BloodPressure",
+      "destination": "OldMan",
+      "type": "ClassAssociation"
+    },
+    {
+      "origin": "BloodSugar",
+      "destination": "OldMan",
+      "type": "ClassAssociation"
+    },
+    {
+      "origin": "BloodLipid",
+      "destination": "OldMan",
+      "type": "ClassAssociation"
+    },
+    {
+      "origin": "HeartRate",
+      "destination": "OldMan",
+      "type": "ClassAssociation"
+    },
+    {
+      "origin": "HealthWarning",
+      "destination": "WristBand",
+      "type": "ClassDependency"
+    },
+    {
+      "origin": "HealthWarning",
+      "destination": "BloodPressure",
+      "type": "ClassDependency"
+    },
+    {
+      "origin": "HealthWarning",
+      "destination": "BloodSugar",
+      "type": "ClassDependency"
+    },
+    {
+      "origin": "HealthWarning",
+      "destination": "BloodLipid",
+      "type": "ClassDependency"
+    },
+    {
+      "origin": "HealthWarning",
+      "destination": "HeartRate",
+      "type": "ClassDependency"
+    },
+    {
+      "origin": "HealthEvaluate",
+      "destination": "OldMan",
+      "type": "ClassAssociation"
+    },
+    {
+      "origin": "HealthFile",
+      "destination": "OldMan",
+      "type": "ClassAssociation"
+    },
+    {
+      "origin": "HealthInfo",
+      "destination": "HealthFile",
+      "type": "ClassAggregate"
+    },
+    {
+      "origin": "MedicineInfo",
+      "destination": "HealthFile",
+      "type": "ClassAggregate"
+    },
+    {
+      "origin": "TreatRecord",
+      "destination": "HealthFile",
+      "type": "ClassAggregate"
+    },
+    {
+      "origin": "DailyInfo",
+      "destination": "HealthFile",
+      "type": "ClassAggregate"
+    },
+    {
+      "origin": "DrugInfo",
+      "destination": "HealthFile",
+      "type": "ClassAggregate"
+    },
+    {
+      "origin": "TreatRecord",
+      "destination": "HealthEvaluate",
+      "type": "ClassDependency"
+    },
+    {
+      "origin": "TreatRecord",
+      "destination": "sickTreat",
+      "type": "ClassDependency"
+    },
+    {
+      "origin": "DrugInfo",
+      "destination": "Drug",
+      "type": "ClassAssociation"
+    },
+    {
+      "origin": "Drug",
+      "destination": "Hospital",
+      "type": "ClassAggregate"
+    },
+    {
+      "origin": "SickTreat",
+      "destination": "DataAnalyze",
+      "type": "ClassDependency"
+    },
+    {
+      "origin": "HealthEvaluate",
+      "destination": "Hospital",
+      "type": "ClassAssociation"
+    },
+    {
+      "origin": "SickTreat",
+      "destination": "Hospital",
+      "type": "ClassAssociation"
+    },
+    {
+      "origin": "SickTreat",
+      "destination": "OldMan",
+      "type": "ClassAssociation"
+    },
+    {
+      "origin": "DailyInfo",
+      "destination": "HealthWarning",
+      "type": "ClassDependency"
+    },
+    {
+      "origin": "DataAnalyze",
+      "destination": "DailyInfo",
+      "type": "ClassDependency"
+    },
+    {
+      "origin": "DataAnalyze",
+      "destination": "TreatRecord",
+      "type": "ClassDependency"
+    },
+    {
+      "origin": "NurseService",
+      "destination": "MedicineInfo",
+      "type": "ClassDependency"
+    }
+  ],
+  "classGroups": [
+    {
+      "name": "DDDValueObject",
+      "classList": [
+        "WristBand",
+        "BloodPressure",
+        "BloodSugar",
+        "HeartRate",
+        "BloodLipid"
+      ]
+    },
+    {
+      "name": "DDDAggregate",
+      "classList": [
+        "Nurse",
+        "NurseLevel"
+      ]
+    },
+    {
+      "name": "LifeCycleCommonality",
+      "classList": [
+        "NurseOrder",
+        "OrderItem"
+      ]
+    }
+  ]
+}

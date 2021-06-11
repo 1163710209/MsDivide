@@ -17,7 +17,7 @@ public class ImportTest {
 
     @Test
     public void classImportTest() {
-        String path = "cases/case1 ddd cargo transport/class.json";
+        String path = "cases/healthPension/class.json";
         try {
             ClassDiagram classDiagram = ImporterUtils.importClassDiagram(path);
             System.out.println(classDiagram);
@@ -28,7 +28,7 @@ public class ImportTest {
 
     @Test
     public void sequenceImportTest() {
-        String path = "cases/case1 ddd cargo transport/sequence.json";
+        String path = "cases/healthPension/nurseServiceSequence.json";
         try {
             SequenceDiagram sequenceDiagram = ImporterUtils.importSequenceDiagram(path);
             System.out.println(sequenceDiagram);
