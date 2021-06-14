@@ -27,12 +27,12 @@ import java.util.Map;
 public class InputData {
     private String systemName;
     private ClassDiagram classDiagram;
-    private SequenceDiagram sequenceDiagram;
+    private List<SequenceDiagram> sequenceDiagramList;
 
-    public InputData(ClassDiagram classDiagram, SequenceDiagram sequenceDiagram) {
+    public InputData(ClassDiagram classDiagram, List<SequenceDiagram> sequenceDiagramList) {
         this.systemName = classDiagram.getName();
         this.classDiagram = classDiagram;
-        this.sequenceDiagram = sequenceDiagram;
+        this.sequenceDiagramList = sequenceDiagramList;
     }
 
     /**
@@ -42,7 +42,7 @@ public class InputData {
      */
     public MsDivideSystem getMsDivideSystem() {
         if (classDiagram == null || classDiagram.getClassList().size() == 0
-                || sequenceDiagram == null || sequenceDiagram.getActivityList().size() == 0) {
+                || sequenceDiagramList == null || sequenceDiagramList.size() == 0) {
             throw new IllegalArgumentException("输入的类图数据与时序图数据不能为空！");
         }
 
@@ -62,15 +62,20 @@ public class InputData {
 
         // set qualityInstanceList
         List<QualityInstance> qualityInstanceList = new ArrayList<>();
-        getQualityInstance(qualityInstanceList);
-        msDivideSystem.setQualityInstanceList(qualityInstanceList);
-        log.info("从时序图 {} 中构建价值维度原则实例成功！", sequenceDiagram.getName());
+        sequenceDiagramList.forEach(sequenceDiagram -> {
+            getQualityInstance(qualityInstanceList, sequenceDiagram);
+            msDivideSystem.setQualityInstanceList(qualityInstanceList);
+            log.info("从时序图 {} 中构建价值维度原则实例成功！", sequenceDiagram.getName());
 
+        });
         // set communicate score
         Map<ClassPair, Double> communicateScore = new HashMap<>();
-        getCommunicateScore(communicateScore);
-        msDivideSystem.setCommunicateScore(communicateScore);
-        log.info("从时序图 {} 中构建通信维度原则实例成功！", sequenceDiagram.getName());
+        sequenceDiagramList.forEach(sequenceDiagram -> {
+            getCommunicateScore(communicateScore, sequenceDiagram);
+            msDivideSystem.setCommunicateScore(communicateScore);
+            log.info("从时序图 {} 中构建通信维度原则实例成功！", sequenceDiagram.getName());
+
+        });
 
         log.info("从输入中构建微服务划分系统成功！");
         return msDivideSystem;
@@ -173,7 +178,7 @@ public class InputData {
         }
     }
 
-    private void getCommunicateScore(Map<ClassPair, Double> communicateScore) {
+    private void getCommunicateScore(Map<ClassPair, Double> communicateScore, SequenceDiagram sequenceDiagram) {
         sequenceDiagram.getActivityList().forEach(activity -> {
             activity.getMethodCalls().forEach(methodCall -> {
                 ClassPair classPair = new ClassPair(
@@ -187,7 +192,7 @@ public class InputData {
         });
     }
 
-    private void getQualityInstance(List<QualityInstance> instanceList) {
+    private void getQualityInstance(List<QualityInstance> instanceList,  SequenceDiagram sequenceDiagram) {
         QualityInstance couping = QualityInstance.getQualityInstance(CriterionName.BusinessQualityCouping);
         QualityInstance critical = QualityInstance.getQualityInstance(CriterionName.BusinessQualityCriticality);
 

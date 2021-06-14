@@ -33,7 +33,9 @@ public class MainSystem {
         try {
             ClassDiagram classDiagram = ImporterUtils.importClassDiagram(classPath);
             SequenceDiagram sequenceDiagram = ImporterUtils.importSequenceDiagram(sequencePath);
-            inputData = new InputData(classDiagram, sequenceDiagram);
+            List<SequenceDiagram> sequenceDiagrams = new ArrayList<>();
+            sequenceDiagrams.add(sequenceDiagram);
+            inputData = new InputData(classDiagram, sequenceDiagrams);
         } catch (Exception e) {
             e.printStackTrace();
         }

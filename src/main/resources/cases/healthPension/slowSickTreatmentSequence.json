@@ -1,0 +1,149 @@
+{
+  "name": "slowSickTreatmentSequence",
+  "activityList": [
+    {
+      "methodCalls": [
+        {
+          "num": 1,
+          "from": "OlaMan",
+          "to": "Hospital",
+          "method": "register",
+          "runTime": {
+            "frequency": 4,
+            "size": 4
+          }
+        },
+        {
+          "num": 2,
+          "from": "Hospital",
+          "to": "HealthEvaluate",
+          "method": "checkOldMan",
+          "runTime": {
+            "frequency": 4,
+            "size": 4
+          }
+        },
+        {
+          "num": 3,
+          "from": "HealthEvaluate",
+          "to": "HealthEvaluate",
+          "method": "healthEvaluate",
+          "runTime": {
+            "frequency": 4,
+            "size": 4
+          }
+        },
+        {
+          "num": 4,
+          "from": "HealthEvaluate",
+          "to": "HealthFile",
+          "method": "createHealthFile",
+          "runTime": {
+            "frequency": 4,
+            "size": 4
+          }
+        },
+        {
+          "num": 5,
+          "from": "DailyInfo",
+          "to": "HealthFile",
+          "method": "uploadData",
+          "runTime": {
+            "frequency": 3,
+            "size": 2
+          }
+        },
+        {
+          "num": 6,
+          "from": "DailyInfo",
+          "to": "DataAnalyze",
+          "method": "uploadData",
+          "runTime": {
+            "frequency": 3,
+            "size": 2
+          }
+        },
+        {
+          "num": 7,
+          "from": "DataAnalyze",
+          "to": "DataAnalyze",
+          "method": "dataAnalyze",
+          "runTime": {
+            "frequency": 4,
+            "size": 4
+          }
+        },
+        {
+          "num": 8,
+          "from": "DataAnalyze",
+          "to": "DataAnalyze",
+          "method": "dataAnalyze",
+          "runTime": {
+            "frequency": 4,
+            "size": 4
+          }
+        },
+        {
+          "num": 10,
+          "from": "DataAnalyze",
+          "to": "Hospital",
+          "method": "transportData",
+          "runTime": {
+            "frequency": 3,
+            "size": 2
+          }
+        },
+        {
+          "num": 11,
+          "from": "Hospital",
+          "to": "SickTreat",
+          "method": "treatment",
+          "runTime": {
+            "frequency": 4,
+            "size": 4
+          }
+        },
+        {
+          "num": 12,
+          "from": "SickTreat",
+          "to": "TreatRecord",
+          "method": "addRecord",
+          "runTime": {
+            "frequency": 3,
+            "size": 3
+          }
+        },
+        {
+          "num": 13,
+          "from": "TreatRecord",
+          "to": "HealthFile",
+          "method": "uploadData",
+          "runTime": {
+            "frequency": 3,
+            "size": 3
+          }
+        }
+      ]
+    }
+  ],
+  "indicators": [
+    {
+      "name": "ResponseTime",
+      "priority": 0.6,
+      "classList": {
+        "HealthFile": 0.5,
+        "DailyInfo": 0.3,
+        "DataAnalyze": 0.2
+      }
+    },
+    {
+      "name": "Reliability",
+      "priority": 0.5,
+      "classList": {
+        "HealthFile": 0.5,
+        "DailyInfo": 0.3,
+        "DataAnalyze": 0.2
+      }
+    }
+  ]
+}

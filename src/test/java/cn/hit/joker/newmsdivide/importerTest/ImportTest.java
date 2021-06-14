@@ -7,6 +7,9 @@ import cn.hit.joker.newmsdivide.importer.sequenceImporter.SequenceDiagram;
 import cn.hit.joker.newmsdivide.model.MsDivideSystem;
 import org.junit.jupiter.api.Test;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  * @author joker
  * @version 1.0
@@ -28,11 +31,31 @@ public class ImportTest {
 
     @Test
     public void sequenceImportTest() {
-        String path = "cases/healthPension/nurseServiceSequence.json";
+        String path1 = "cases/healthPension/nurseServiceSequence.json";
+        String path2 = "cases/healthPension/bodyInfoCollectSequence.json";
+        String path3 = "cases/healthPension/homeDoctorServiceSequence.json";
+        String path4 = "cases/healthPension/slowSickTreatmentSequence.json";
+
         try {
-            SequenceDiagram sequenceDiagram = ImporterUtils.importSequenceDiagram(path);
-            System.out.println(sequenceDiagram);
-            System.out.println(sequenceDiagram.getIndicatorsName());
+            SequenceDiagram sequenceDiagram1 = ImporterUtils.importSequenceDiagram(path1);
+            System.out.println(sequenceDiagram1);
+            System.out.println(sequenceDiagram1.getIndicatorsName());
+            System.out.println("-----------------------------------------------");
+
+            SequenceDiagram sequenceDiagram2 = ImporterUtils.importSequenceDiagram(path2);
+            System.out.println(sequenceDiagram2);
+            System.out.println(sequenceDiagram2.getIndicatorsName());
+            System.out.println("-----------------------------------------------");
+
+            SequenceDiagram sequenceDiagram3 = ImporterUtils.importSequenceDiagram(path3);
+            System.out.println(sequenceDiagram3);
+            System.out.println(sequenceDiagram3.getIndicatorsName());
+            System.out.println("-----------------------------------------------");
+
+            SequenceDiagram sequenceDiagram4 = ImporterUtils.importSequenceDiagram(path4);
+            System.out.println(sequenceDiagram4);
+            System.out.println(sequenceDiagram4.getIndicatorsName());
+            System.out.println("-----------------------------------------------");
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -46,7 +69,9 @@ public class ImportTest {
         try {
             ClassDiagram classDiagram = ImporterUtils.importClassDiagram(classPath);
             SequenceDiagram sequenceDiagram = ImporterUtils.importSequenceDiagram(sequencePath);
-            inputData = new InputData(classDiagram, sequenceDiagram);
+            List<SequenceDiagram> sequenceDiagrams = new ArrayList<>();
+            sequenceDiagrams.add(sequenceDiagram);
+            inputData = new InputData(classDiagram, sequenceDiagrams);
         } catch (Exception e) {
             e.printStackTrace();
         }

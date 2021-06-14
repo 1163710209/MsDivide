@@ -130,8 +130,11 @@ public class MicroserviceAnalyzer {
      */
     public static void addAllToMs(List<Microservice> microserviceList, InputData inputData) {
         addClassRelationToMs(microserviceList, inputData.getClassDiagram());
-        addInterfaceListToMs(microserviceList, inputData.getSequenceDiagram());
-        addQualityDegreeToMs(microserviceList, inputData.getSequenceDiagram());
+        inputData.getSequenceDiagramList().forEach(sequenceDiagram -> {
+            addInterfaceListToMs(microserviceList, sequenceDiagram);
+            addQualityDegreeToMs(microserviceList, sequenceDiagram);
+        });
+
     }
 
     /**

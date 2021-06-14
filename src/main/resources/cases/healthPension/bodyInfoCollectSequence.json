@@ -1,0 +1,176 @@
+{
+  "name": "OldManBodyInfoCollectSequence",
+  "activityList": [
+    {
+      "methodCalls": [
+        {
+          "num": 1,
+          "from": "OlaMan",
+          "to": "BloodPressure",
+          "method": "collectData",
+          "runTime": {
+            "frequency": 4,
+            "size": 4
+          }
+        },
+        {
+          "num": 2,
+          "from": "BloodPressure",
+          "to": "HealthWarning",
+          "method": "updateData",
+          "runTime": {
+            "frequency": 2,
+            "size": 4
+          }
+        },
+        {
+          "num": 3,
+          "from": "OlaMan",
+          "to": "BloodSugar",
+          "method": "collectData",
+          "runTime": {
+            "frequency": 4,
+            "size": 4
+          }
+        },
+        {
+          "num": 4,
+          "from": "BloodSugar",
+          "to": "HealthWarning",
+          "method": "updateData",
+          "runTime": {
+            "frequency": 2,
+            "size": 4
+          }
+        },
+        {
+          "num": 5,
+          "from": "OlaMan",
+          "to": "BloodLipid",
+          "method": "collectData",
+          "runTime": {
+            "frequency": 4,
+            "size": 4
+          }
+        },
+        {
+          "num": 6,
+          "from": "BloodLipid",
+          "to": "HealthWarning",
+          "method": "updateData",
+          "runTime": {
+            "frequency": 2,
+            "size": 4
+          }
+        },
+        {
+          "num": 7,
+          "from": "OlaMan",
+          "to": "HeartRate",
+          "method": "collectData",
+          "runTime": {
+            "frequency": 4,
+            "size": 4
+          }
+        },
+        {
+          "num": 8,
+          "from": "HeartRate",
+          "to": "HealthWarning",
+          "method": "updateData",
+          "runTime": {
+            "frequency": 1,
+            "size": 4
+          }
+        },
+        {
+          "num": 9,
+          "from": "HealthWarning",
+          "to": "HealthWarning",
+          "method": "isNormal",
+          "runTime": {
+            "frequency": 4,
+            "size": 4
+          }
+        },
+        {
+          "num": 10,
+          "from": "HealthWarning",
+          "to": "NurseService",
+          "method": "sendMessage",
+          "runTime": {
+            "frequency": 4,
+            "size": 3
+          }
+        },
+        {
+          "num": 10,
+          "from": "HealthWarning",
+          "to": "NurseService",
+          "method": "sendMessage",
+          "runTime": {
+            "frequency": 4,
+            "size": 3
+          }
+        },
+        {
+          "num": 11,
+          "from": "HealthWarning",
+          "to": "Hospital",
+          "method": "sendMessage",
+          "runTime": {
+            "frequency": 4,
+            "size": 3
+          }
+        },
+        {
+          "num": 12,
+          "from": "HealthWarning",
+          "to": "DailyInfo",
+          "method": "uploadData",
+          "runTime": {
+            "frequency": 2,
+            "size": 3
+          }
+        }
+      ]
+    }
+  ],
+  "indicators": [
+    {
+      "name": "BloodPressureUploadTime",
+      "priority": 0.5,
+      "classList": {
+        "BloodPressure": 1.0
+      }
+    },
+    {
+      "name": "BloodSugarUploadTime",
+      "priority": 0.5,
+      "classList": {
+        "BloodSugar": 1.0
+      }
+    },
+    {
+      "name": "BloodLipidUploadTime",
+      "priority": 0.5,
+      "classList": {
+        "BloodLipid": 1.0
+      }
+    },
+    {
+      "name": "HeartRateUploadTime",
+      "priority": 0.5,
+      "classList": {
+        "HeartRate": 1.0
+      }
+    },
+    {
+      "name": "dataHandleSpeed",
+      "priority": 0.5,
+      "classList": {
+        "HealthWarning": 1.0
+      }
+    }
+  ]
+}

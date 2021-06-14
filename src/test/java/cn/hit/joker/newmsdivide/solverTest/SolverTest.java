@@ -11,6 +11,7 @@ import cn.hit.joker.newmsdivide.solver.SolveSystem;
 import cn.hit.joker.newmsdivide.solver.SolverConfig;
 import org.junit.jupiter.api.Test;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -27,7 +28,9 @@ public class SolverTest {
         try {
             ClassDiagram classDiagram = ImporterUtils.importClassDiagram(classPath);
             SequenceDiagram sequenceDiagram = ImporterUtils.importSequenceDiagram(sequencePath);
-            inputData = new InputData(classDiagram, sequenceDiagram);
+            List<SequenceDiagram> sequenceDiagrams = new ArrayList<>();
+            sequenceDiagrams.add(sequenceDiagram);
+            inputData = new InputData(classDiagram, sequenceDiagrams);
         } catch (Exception e) {
             e.printStackTrace();
         }

@@ -1,0 +1,95 @@
+{
+  "name": "HomeDoctorServiceSequence",
+  "activityList": [
+    {
+      "methodCalls": [
+        {
+          "num": 1,
+          "from": "OlaMan",
+          "to": "DoctorOrder",
+          "method": "addOrder",
+          "runTime": {
+            "frequency": 4,
+            "size": 4
+          }
+        },
+        {
+          "num": 3,
+          "from": "HomeDoctor",
+          "to": "DoctorService",
+          "method": "provideService",
+          "runTime": {
+            "frequency": 4,
+            "size": 4
+          }
+        },
+        {
+          "num": 4,
+          "from": "DoctorService",
+          "to": "DoctorService",
+          "method": "checkOldMan",
+          "runTime": {
+            "frequency": 4,
+            "size": 4
+          }
+        },
+        {
+          "num": 5,
+          "from": "DoctorService",
+          "to": "DoctorVisitRecord",
+          "method": "addRecord",
+          "runTime": {
+            "frequency": 2,
+            "size": 3
+          }
+        },
+        {
+          "num": 6,
+          "from": "OldMan",
+          "to": "DoctorPayRecord",
+          "method": "addRecord",
+          "runTime": {
+            "frequency": 4,
+            "size": 3
+          }
+        },
+        {
+          "num": 7,
+          "from": "OldMan",
+          "to": "DoctorEvaluate",
+          "method": "addRecord",
+          "runTime": {
+            "frequency": 4,
+            "size": 3
+          }
+        }
+      ]
+    }
+  ],
+  "indicators": [
+    {
+      "name": "DoctorServiceQuality",
+      "priority": 0.8,
+      "classList": {
+        "DoctorService": 0.5,
+        "DoctorVisitRecord": 0.5
+      }
+    },
+    {
+      "name": "DoctorProfit",
+      "priority": 0.6,
+      "classList": {
+        "DoctorPayRecord": 0.5,
+        "DoctorEvaluate": 0.5
+      }
+    },
+    {
+      "name": "DoctorServiceSatisfy",
+      "priority": 0.4,
+      "classList": {
+        "DoctorPayRecord": 0.5,
+        "DoctorEvaluate": 0.5
+      }
+    }
+  ]
+}

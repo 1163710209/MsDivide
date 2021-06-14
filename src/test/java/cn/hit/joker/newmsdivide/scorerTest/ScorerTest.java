@@ -10,6 +10,8 @@ import cn.hit.joker.newmsdivide.scorer.Score;
 import cn.hit.joker.newmsdivide.scorer.Scorer;
 import org.junit.jupiter.api.Test;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Map;
 
 /**
@@ -27,7 +29,9 @@ public class ScorerTest {
         try {
             ClassDiagram classDiagram = ImporterUtils.importClassDiagram(classPath);
             SequenceDiagram sequenceDiagram = ImporterUtils.importSequenceDiagram(sequencePath);
-            inputData = new InputData(classDiagram, sequenceDiagram);
+            List<SequenceDiagram> sequenceDiagrams = new ArrayList<>();
+            sequenceDiagrams.add(sequenceDiagram);
+            inputData = new InputData(classDiagram, sequenceDiagrams);
         } catch (Exception e) {
             e.printStackTrace();
         }
