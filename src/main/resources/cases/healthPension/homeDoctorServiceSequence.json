@@ -5,7 +5,7 @@
       "methodCalls": [
         {
           "num": 1,
-          "from": "OlaMan",
+          "from": "OldMan",
           "to": "DoctorOrder",
           "method": "addOrder",
           "runTime": {

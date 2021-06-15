@@ -5,7 +5,7 @@
       "methodCalls": [
         {
           "num": 1,
-          "from": "OlaMan",
+          "from": "OldMan",
           "to": "BloodPressure",
           "method": "collectData",
           "runTime": {
@@ -25,7 +25,7 @@
         },
         {
           "num": 3,
-          "from": "OlaMan",
+          "from": "OldMan",
           "to": "BloodSugar",
           "method": "collectData",
           "runTime": {
@@ -45,7 +45,7 @@
         },
         {
           "num": 5,
-          "from": "OlaMan",
+          "from": "OldMan",
           "to": "BloodLipid",
           "method": "collectData",
           "runTime": {
@@ -65,7 +65,7 @@
         },
         {
           "num": 7,
-          "from": "OlaMan",
+          "from": "OldMan",
           "to": "HeartRate",
           "method": "collectData",
           "runTime": {

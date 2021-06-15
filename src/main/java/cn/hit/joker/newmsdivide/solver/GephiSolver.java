@@ -125,9 +125,16 @@ public class GephiSolver extends AbstractSolver<Node, Edge> {
      */
     @Override
     protected void createEdgeAndSetWeight(final UmlClass first, final UmlClass second, final double weight) {
-        Edge edge = graphModel.factory().newEdge(getNode(first), getNode(second), (float) weight, false);
-        undirectedGraph.addEdge(edge);
-        edge.getEdgeData().setLabel(edge.getWeight() + "");
+        try{
+            Edge edge = graphModel.factory().newEdge(getNode(first), getNode(second), (float) weight, false);
+            undirectedGraph.addEdge(edge);
+            edge.getEdgeData().setLabel(edge.getWeight() + "");
+        } catch (Exception e) {
+            e.printStackTrace();
+            System.out.println(first);
+            System.out.println(second);
+        }
+
     }
 
     /**

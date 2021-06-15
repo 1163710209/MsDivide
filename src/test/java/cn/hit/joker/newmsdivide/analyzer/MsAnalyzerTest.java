@@ -98,20 +98,33 @@ public class MsAnalyzerTest {
     @Test
     public void MsSolutionListTest() {
         InputData inputData = getInputData();
-        MsDivideSystem divideSystem = inputData.getMsDivideSystem();
-        List<List<Microservice>> solutionList = MainSystem.getDivideResult(SolveSystem.MODE_GEPHI);
+        List<List<Microservice>> solutionList = MainSystem.getDivideResult(SolveSystem.MODE_GEPHI, inputData);
 
         solutionList.forEach(microserviceList -> {
             MicroserviceAnalyzer.addAllToMs(microserviceList, inputData);
 
             double cohesionDegree = MicroserviceAnalyzer.getCohesionDegree(microserviceList, inputData.getClassDiagram());
             double coupingDegree = MicroserviceAnalyzer.getCoupingDegree(microserviceList, inputData.getClassDiagram());
-
+            System.out.println("------------------------------");
+            System.out.println("微服务划分方案为：");
             System.out.println("微服务的数量为：" + microserviceList.size());
             System.out.println("聚合度为：" + cohesionDegree);
             System.out.println("耦合度为：" + coupingDegree);
             System.out.println("-----------------------------------------------");
         });
+    }
+
+    @Test
+    public void FastNewManTest() {
+        InputData inputData = getInputData();
+        MsDivideSystem msDivideSystem = inputData.getMsDivideSystem();
+        List<Microservice> msList = MainSystem.start(SolveSystem.MODE_FAST_NEWMAN, 0, msDivideSystem);
+        double cohesionDegree = MicroserviceAnalyzer.getCohesionDegree(msList, inputData.getClassDiagram());
+        double coupingDegree = MicroserviceAnalyzer.getCoupingDegree(msList, inputData.getClassDiagram());
+        System.out.println("\n\n-----------------------------------");
+        System.out.println("微服务的数量为：" + msList.size());
+        System.out.println("聚合度为：" + cohesionDegree);
+        System.out.println("耦合度为：" + coupingDegree);
     }
 
 }

@@ -719,12 +719,12 @@
     },
     {
       "origin": "NurseReserveRecord",
-      "destination": "OlaMan",
+      "destination": "OldMan",
       "type": "ClassAssociation"
     },
     {
       "origin": "NurseServiceEvaluate",
-      "destination": "OlaMan",
+      "destination": "OldMan",
       "type": "ClassAssociation"
     },
     {
@@ -878,6 +878,11 @@
       "type": "ClassAssociation"
     },
     {
+      "origin": "HealthFile",
+      "destination": "HealthEvaluate",
+      "type": "ClassDependency"
+    },
+    {
       "origin": "HealthInfo",
       "destination": "HealthFile",
       "type": "ClassAggregate"
@@ -901,6 +906,11 @@
       "origin": "DrugInfo",
       "destination": "HealthFile",
       "type": "ClassAggregate"
+    },
+    {
+      "origin": "NurseService",
+      "destination": "HealthFile",
+      "type": "ClassDependency"
     },
     {
       "origin": "TreatRecord",
@@ -961,6 +971,26 @@
       "origin": "NurseService",
       "destination": "MedicineInfo",
       "type": "ClassDependency"
+    },
+    {
+      "origin": "HealthWarning",
+      "destination": "NurseService",
+      "type": "ClassDependency"
+    },
+    {
+      "origin": "HealthWarning",
+      "destination": "Hospital",
+      "type": "ClassDependency"
+    },
+    {
+      "origin": "HealthWarning",
+      "destination": "DailyInfo",
+      "type": "ClassDependency"
+    },
+    {
+      "origin": "DoctorService",
+      "destination": "DoctorVisitRecord",
+      "type": "ClassDependency"
     }
   ],
   "classGroups": [
@@ -971,7 +1001,9 @@
         "BloodPressure",
         "BloodSugar",
         "HeartRate",
-        "BloodLipid"
+        "BloodLipid",
+        "OldMan",
+        "DataAnalyze"
       ]
     },
     {

@@ -49,9 +49,7 @@ public class MainSystem {
      * @param clusterNum
      * @return
      */
-    public static List<Microservice> start(String algorithm, int clusterNum) {
-        InputData inputData = getInputData();
-        MsDivideSystem divideSystem = inputData.getMsDivideSystem();
+    public static List<Microservice> start(String algorithm, int clusterNum, MsDivideSystem msDivideSystem) {
         SolverConfig solverConfig;
         switch (algorithm) {
             case SolveSystem.MODE_CW:
@@ -69,7 +67,7 @@ public class MainSystem {
             default:
                 throw new IllegalArgumentException("输入的算法不支持");
         }
-        List<Microservice> msList = new SolveSystem().solveSystem(divideSystem, solverConfig, SolveSystem.TYPE_NEW);
+        List<Microservice> msList = new SolveSystem().solveSystem(msDivideSystem, solverConfig, SolveSystem.TYPE_NEW);
         System.out.println(msList);
         return msList;
     }
@@ -80,15 +78,22 @@ public class MainSystem {
      * @param algorithm
      * @return
      */
-    public static List<List<Microservice>> getDivideResult(String algorithm) {
+    public static List<List<Microservice>> getDivideResult(String algorithm, InputData inputData) {
         List<List<Microservice>> msSolutionList = new ArrayList<>();
-        InputData inputData = getInputData();
         List<UmlClass> classList = inputData.getClassDiagram().getClassList();
+        MsDivideSystem msDivideSystem = inputData.getMsDivideSystem();
         for (int i=1; i<=classList.size(); i++) {
-            List<Microservice> msList = start(algorithm, i);
+            List<Microservice> msList = start(algorithm, i, msDivideSystem);
             if (msList.size() == i) {
                 msSolutionList.add(msList);
             }
+        }
+
+        // add other algorithm result
+        if (algorithm.equals(SolveSystem.MODE_GEPHI)) {
+            msSolutionList.add(start(SolveSystem.MODE_CW, 0, msDivideSystem));
+            msSolutionList.add(start(SolveSystem.MODE_MARKOV, 0, msDivideSystem));
+            msSolutionList.add(start(SolveSystem.MODE_FAST_NEWMAN, 0, msDivideSystem));
         }
 
         // check deployLocation constraint
@@ -101,7 +106,6 @@ public class MainSystem {
                         msSolutionList.remove(i);
                         i--;
                         meet = false;
-                        
                         break;
                     }
                 }

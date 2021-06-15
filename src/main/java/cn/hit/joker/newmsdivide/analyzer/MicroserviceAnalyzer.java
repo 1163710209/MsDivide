@@ -138,7 +138,7 @@ public class MicroserviceAnalyzer {
     }
 
     /**
-     * compute cohesion degree of ms divide solution
+     * compute couping degree of ms divide solution
      *
      * @param microserviceList
      * @param classDiagram
@@ -152,7 +152,7 @@ public class MicroserviceAnalyzer {
     }
 
     /**
-     * compute coping degree of ms divide solution
+     * compute cohesion degree of ms divide solution
      *
      * @param microserviceList
      * @param classDiagram

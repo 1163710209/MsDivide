@@ -146,7 +146,7 @@ public class InputData {
             CriterionName groupName = CriterionName.valueOf(classGroup.getName() + "");
             switch (groupName) {
                 case DDDValueObject:
-                    addClassPairToInstance(dddValueObject, classGroup.getClassList());
+                    handleDDDValueObjectInstance(dddValueObject, classGroup.getClassList());
                     break;
                 case DDDAggregate:
                     addClassPairToInstance(dddAggregate, classGroup.getClassList());
@@ -176,6 +176,18 @@ public class InputData {
                 instance.getClassPairList().add(new ClassPair(classList.get(i), classList.get(j)));
             }
         }
+    }
+
+    // handle ddd valueObject
+    private void handleDDDValueObjectInstance(CriterionInstance instance, List<UmlClass> groupList) {
+        List<UmlClass> classList = classDiagram.getClassList();
+        groupList.forEach(umlClassA -> {
+            classList.forEach(umlClassB -> {
+                if (!umlClassA.equals(umlClassB)) {
+                    instance.getClassPairList().add(new ClassPair(umlClassA, umlClassB));
+                }
+            });
+        });
     }
 
     private void getCommunicateScore(Map<ClassPair, Double> communicateScore, SequenceDiagram sequenceDiagram) {

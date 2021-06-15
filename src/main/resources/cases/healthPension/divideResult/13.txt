@@ -1,0 +1,98 @@
+------------------------------
+微服务划分方案为：
+微服务的数量为：13
+微服务为：[
+微服务serviceA
+	 classList = [OldMan]
+	 classRelationList = []
+	 interfaceList = []
+	 qualitySupportDegree = {NurseResponseTime=0.33, NurseSystemReliability=0.2}
+ ---------------------------------------------------------
+, 
+微服务serviceB
+	 classList = [Nurse, NurseLevel, NurseCareRecord, NurseReserveRecord, NursePayRecord, NurseService, HealthFile, NurseOrder, HealthInfo, MedicineInfo, DailyInfo, DrugInfo, OrderItem, HealthWarning]
+	 classRelationList = [ClassRelation(origin=Nurse, destination=NurseLevel, type=ClassAssociation), ClassRelation(origin=NurseCareRecord, destination=Nurse, type=ClassAssociation), ClassRelation(origin=NurseReserveRecord, destination=Nurse, type=ClassAssociation), ClassRelation(origin=NurseService, destination=Nurse, type=ClassAssociation), ClassRelation(origin=NurseOrder, destination=Nurse, type=ClassAssociation), ClassRelation(origin=NurseService, destination=NurseCareRecord, type=ClassDependency), ClassRelation(origin=NurseOrder, destination=NursePayRecord, type=ClassAssociation), ClassRelation(origin=NurseService, destination=HealthFile, type=ClassDependency), ClassRelation(origin=NurseService, destination=MedicineInfo, type=ClassDependency), ClassRelation(origin=HealthWarning, destination=NurseService, type=ClassDependency), ClassRelation(origin=HealthInfo, destination=HealthFile, type=ClassAggregate), ClassRelation(origin=MedicineInfo, destination=HealthFile, type=ClassAggregate), ClassRelation(origin=DailyInfo, destination=HealthFile, type=ClassAggregate), ClassRelation(origin=DrugInfo, destination=HealthFile, type=ClassAggregate), ClassRelation(origin=OrderItem, destination=NurseOrder, type=ClassAssociation), ClassRelation(origin=DailyInfo, destination=HealthWarning, type=ClassDependency), ClassRelation(origin=HealthWarning, destination=DailyInfo, type=ClassDependency)]
+	 interfaceList = [MsInterface(className=NurseOrder, methodName=addOrder, msNameList=[serviceA]), MsInterface(className=HealthFile, methodName=uploadData, msNameList=[serviceL]), MsInterface(className=Nurse, methodName=appointment, msNameList=[serviceA]), MsInterface(className=HealthWarning, methodName=updateData, msNameList=[serviceJ]), MsInterface(className=HealthWarning, methodName=updateData, msNameList=[serviceK]), MsInterface(className=HealthFile, methodName=createHealthFile, msNameList=[serviceL]), MsInterface(className=HealthWarning, methodName=updateData, msNameList=[serviceH]), MsInterface(className=NurseReserveRecord, methodName=addRecord, msNameList=[serviceA]), MsInterface(className=HealthWarning, methodName=updateData, msNameList=[serviceI])]
+	 qualitySupportDegree = {NurseProfit=1.0, NurseResponseTime=0.66, dataHandleSpeed=1.0, ResponseTime=0.8, Reliability=0.8, NurseSystemReliability=0.8, NurseServiceQuality=1.0}
+ ---------------------------------------------------------
+, 
+微服务serviceC
+	 classList = [NurseServiceEvaluate]
+	 classRelationList = []
+	 interfaceList = [MsInterface(className=NurseServiceEvaluate, methodName=evaluate, msNameList=[serviceA])]
+	 qualitySupportDegree = {NurseSatisfy=1.0}
+ ---------------------------------------------------------
+, 
+微服务serviceD
+	 classList = [HomeDoctor, DoctorService, DoctorVisitRecord]
+	 classRelationList = [ClassRelation(origin=DoctorVisitRecord, destination=HomeDoctor, type=ClassAssociation), ClassRelation(origin=DoctorService, destination=DoctorVisitRecord, type=ClassDependency)]
+	 interfaceList = []
+	 qualitySupportDegree = {DoctorServiceQuality=1.0}
+ ---------------------------------------------------------
+, 
+微服务serviceE
+	 classList = [DoctorOrder]
+	 classRelationList = []
+	 interfaceList = [MsInterface(className=DoctorOrder, methodName=addOrder, msNameList=[serviceA])]
+	 qualitySupportDegree = {}
+ ---------------------------------------------------------
+, 
+微服务serviceF
+	 classList = [DoctorPayRecord, DoctorEvaluate]
+	 classRelationList = []
+	 interfaceList = [MsInterface(className=DoctorPayRecord, methodName=addRecord, msNameList=[serviceA]), MsInterface(className=DoctorEvaluate, methodName=addRecord, msNameList=[serviceA])]
+	 qualitySupportDegree = {DoctorProfit=1.0, DoctorServiceSatisfy=1.0}
+ ---------------------------------------------------------
+, 
+微服务serviceG
+	 classList = [WristBand]
+	 classRelationList = []
+	 interfaceList = []
+	 qualitySupportDegree = {}
+ ---------------------------------------------------------
+, 
+微服务serviceH
+	 classList = [BloodPressure]
+	 classRelationList = []
+	 interfaceList = [MsInterface(className=BloodPressure, methodName=collectData, msNameList=[serviceA])]
+	 qualitySupportDegree = {BloodPressureUploadTime=1.0}
+ ---------------------------------------------------------
+, 
+微服务serviceI
+	 classList = [BloodSugar]
+	 classRelationList = []
+	 interfaceList = [MsInterface(className=BloodSugar, methodName=collectData, msNameList=[serviceA])]
+	 qualitySupportDegree = {BloodSugarUploadTime=1.0}
+ ---------------------------------------------------------
+, 
+微服务serviceJ
+	 classList = [BloodLipid]
+	 classRelationList = []
+	 interfaceList = [MsInterface(className=BloodLipid, methodName=collectData, msNameList=[serviceA])]
+	 qualitySupportDegree = {BloodLipidUploadTime=1.0}
+ ---------------------------------------------------------
+, 
+微服务serviceK
+	 classList = [HeartRate]
+	 classRelationList = []
+	 interfaceList = [MsInterface(className=HeartRate, methodName=collectData, msNameList=[serviceA])]
+	 qualitySupportDegree = {HeartRateUploadTime=1.0}
+ ---------------------------------------------------------
+, 
+微服务serviceL
+	 classList = [HealthEvaluate, Hospital, SickTreat, Drug, TreatRecord]
+	 classRelationList = [ClassRelation(origin=HealthEvaluate, destination=Hospital, type=ClassAssociation), ClassRelation(origin=TreatRecord, destination=HealthEvaluate, type=ClassDependency), ClassRelation(origin=SickTreat, destination=Hospital, type=ClassAssociation), ClassRelation(origin=Drug, destination=Hospital, type=ClassAggregate)]
+	 interfaceList = [MsInterface(className=Hospital, methodName=sendMessage, msNameList=[serviceB]), MsInterface(className=Hospital, methodName=register, msNameList=[serviceA]), MsInterface(className=SickTreat, methodName=transportData, msNameList=[serviceM])]
+	 qualitySupportDegree = {}
+ ---------------------------------------------------------
+, 
+微服务serviceM
+	 classList = [DataAnalyze]
+	 classRelationList = []
+	 interfaceList = [MsInterface(className=DataAnalyze, methodName=uploadData, msNameList=[serviceB])]
+	 qualitySupportDegree = {ResponseTime=0.2, Reliability=0.2}
+ ---------------------------------------------------------
+]
+聚合度为：0.9835164835164836
+耦合度为：2.769230769230769
+-------------------------------------------

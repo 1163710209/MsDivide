@@ -1,0 +1,238 @@
+------------------------------
+微服务划分方案为：
+微服务的数量为：33
+微服务为：[
+微服务serviceA
+	 classList = [OldMan]
+	 classRelationList = []
+	 interfaceList = []
+	 qualitySupportDegree = {NurseResponseTime=0.33, NurseSystemReliability=0.2}
+ ---------------------------------------------------------
+, 
+微服务serviceB
+	 classList = [Nurse]
+	 classRelationList = []
+	 interfaceList = [MsInterface(className=Nurse, methodName=appointment, msNameList=[serviceA])]
+	 qualitySupportDegree = {NurseResponseTime=0.33, NurseSystemReliability=0.2, NurseServiceQuality=0.25}
+ ---------------------------------------------------------
+, 
+微服务serviceC
+	 classList = [NurseLevel]
+	 classRelationList = []
+	 interfaceList = []
+	 qualitySupportDegree = {}
+ ---------------------------------------------------------
+, 
+微服务serviceD
+	 classList = [NurseOrder]
+	 classRelationList = []
+	 interfaceList = [MsInterface(className=NurseOrder, methodName=addOrder, msNameList=[serviceA])]
+	 qualitySupportDegree = {NurseProfit=0.5, NurseSystemReliability=0.2}
+ ---------------------------------------------------------
+, 
+微服务serviceE
+	 classList = [OrderItem]
+	 classRelationList = []
+	 interfaceList = []
+	 qualitySupportDegree = {}
+ ---------------------------------------------------------
+, 
+微服务serviceF
+	 classList = [NurseServiceEvaluate]
+	 classRelationList = []
+	 interfaceList = [MsInterface(className=NurseServiceEvaluate, methodName=evaluate, msNameList=[serviceA])]
+	 qualitySupportDegree = {NurseSatisfy=1.0}
+ ---------------------------------------------------------
+, 
+微服务serviceG
+	 classList = [NurseCareRecord]
+	 classRelationList = []
+	 interfaceList = [MsInterface(className=NurseCareRecord, methodName=addRecord, msNameList=[serviceJ])]
+	 qualitySupportDegree = {NurseServiceQuality=0.25}
+ ---------------------------------------------------------
+, 
+微服务serviceH
+	 classList = [NurseReserveRecord]
+	 classRelationList = []
+	 interfaceList = [MsInterface(className=NurseReserveRecord, methodName=addRecord, msNameList=[serviceA])]
+	 qualitySupportDegree = {NurseResponseTime=0.33, NurseSystemReliability=0.2}
+ ---------------------------------------------------------
+, 
+微服务serviceI
+	 classList = [NursePayRecord]
+	 classRelationList = []
+	 interfaceList = [MsInterface(className=NursePayRecord, methodName=addRecord, msNameList=[serviceD])]
+	 qualitySupportDegree = {NurseProfit=0.5, NurseSystemReliability=0.2}
+ ---------------------------------------------------------
+, 
+微服务serviceJ
+	 classList = [NurseService]
+	 classRelationList = []
+	 interfaceList = [MsInterface(className=NurseService, methodName=sendMessage, msNameList=[serviceV]), MsInterface(className=NurseService, methodName=sendMessage, msNameList=[serviceV]), MsInterface(className=NurseService, methodName=applyService, msNameList=[serviceB])]
+	 qualitySupportDegree = {NurseServiceQuality=0.25}
+ ---------------------------------------------------------
+, 
+微服务serviceK
+	 classList = [HomeDoctor]
+	 classRelationList = []
+	 interfaceList = []
+	 qualitySupportDegree = {}
+ ---------------------------------------------------------
+, 
+微服务serviceL
+	 classList = [DoctorOrder]
+	 classRelationList = []
+	 interfaceList = [MsInterface(className=DoctorOrder, methodName=addOrder, msNameList=[serviceA])]
+	 qualitySupportDegree = {}
+ ---------------------------------------------------------
+, 
+微服务serviceM
+	 classList = [DoctorPayRecord]
+	 classRelationList = []
+	 interfaceList = [MsInterface(className=DoctorPayRecord, methodName=addRecord, msNameList=[serviceA])]
+	 qualitySupportDegree = {DoctorProfit=0.5, DoctorServiceSatisfy=0.5}
+ ---------------------------------------------------------
+, 
+微服务serviceN
+	 classList = [DoctorVisitRecord]
+	 classRelationList = []
+	 interfaceList = [MsInterface(className=DoctorVisitRecord, methodName=addRecord, msNameList=[serviceP])]
+	 qualitySupportDegree = {DoctorServiceQuality=0.5}
+ ---------------------------------------------------------
+, 
+微服务serviceO
+	 classList = [DoctorEvaluate]
+	 classRelationList = []
+	 interfaceList = [MsInterface(className=DoctorEvaluate, methodName=addRecord, msNameList=[serviceA])]
+	 qualitySupportDegree = {DoctorProfit=0.5, DoctorServiceSatisfy=0.5}
+ ---------------------------------------------------------
+, 
+微服务serviceP
+	 classList = [DoctorService]
+	 classRelationList = []
+	 interfaceList = [MsInterface(className=DoctorService, methodName=provideService, msNameList=[serviceK])]
+	 qualitySupportDegree = {DoctorServiceQuality=0.5}
+ ---------------------------------------------------------
+, 
+微服务serviceQ
+	 classList = [WristBand]
+	 classRelationList = []
+	 interfaceList = []
+	 qualitySupportDegree = {}
+ ---------------------------------------------------------
+, 
+微服务serviceR
+	 classList = [BloodPressure]
+	 classRelationList = []
+	 interfaceList = [MsInterface(className=BloodPressure, methodName=collectData, msNameList=[serviceA])]
+	 qualitySupportDegree = {BloodPressureUploadTime=1.0}
+ ---------------------------------------------------------
+, 
+微服务serviceS
+	 classList = [BloodSugar]
+	 classRelationList = []
+	 interfaceList = [MsInterface(className=BloodSugar, methodName=collectData, msNameList=[serviceA])]
+	 qualitySupportDegree = {BloodSugarUploadTime=1.0}
+ ---------------------------------------------------------
+, 
+微服务serviceT
+	 classList = [BloodLipid]
+	 classRelationList = []
+	 interfaceList = [MsInterface(className=BloodLipid, methodName=collectData, msNameList=[serviceA])]
+	 qualitySupportDegree = {BloodLipidUploadTime=1.0}
+ ---------------------------------------------------------
+, 
+微服务serviceU
+	 classList = [HeartRate]
+	 classRelationList = []
+	 interfaceList = [MsInterface(className=HeartRate, methodName=collectData, msNameList=[serviceA])]
+	 qualitySupportDegree = {HeartRateUploadTime=1.0}
+ ---------------------------------------------------------
+, 
+微服务serviceV
+	 classList = [HealthWarning]
+	 classRelationList = []
+	 interfaceList = [MsInterface(className=HealthWarning, methodName=updateData, msNameList=[serviceT]), MsInterface(className=HealthWarning, methodName=updateData, msNameList=[serviceR]), MsInterface(className=HealthWarning, methodName=updateData, msNameList=[serviceU]), MsInterface(className=HealthWarning, methodName=updateData, msNameList=[serviceS])]
+	 qualitySupportDegree = {dataHandleSpeed=1.0}
+ ---------------------------------------------------------
+, 
+微服务serviceW
+	 classList = [HealthEvaluate]
+	 classRelationList = []
+	 interfaceList = [MsInterface(className=HealthEvaluate, methodName=checkOldMan, msNameList=[service_])]
+	 qualitySupportDegree = {}
+ ---------------------------------------------------------
+, 
+微服务serviceX
+	 classList = [HealthFile]
+	 classRelationList = []
+	 interfaceList = [MsInterface(className=HealthFile, methodName=getHealthFile, msNameList=[serviceJ]), MsInterface(className=HealthFile, methodName=uploadData, msNameList=[service[]), MsInterface(className=HealthFile, methodName=createHealthFile, msNameList=[serviceW]), MsInterface(className=HealthFile, methodName=uploadData, msNameList=[service\])]
+	 qualitySupportDegree = {ResponseTime=0.5, Reliability=0.5, NurseServiceQuality=0.25}
+ ---------------------------------------------------------
+, 
+微服务serviceY
+	 classList = [HealthInfo]
+	 classRelationList = []
+	 interfaceList = []
+	 qualitySupportDegree = {}
+ ---------------------------------------------------------
+, 
+微服务serviceZ
+	 classList = [MedicineInfo]
+	 classRelationList = []
+	 interfaceList = []
+	 qualitySupportDegree = {}
+ ---------------------------------------------------------
+, 
+微服务service[
+	 classList = [TreatRecord]
+	 classRelationList = []
+	 interfaceList = [MsInterface(className=TreatRecord, methodName=addRecord, msNameList=[service`])]
+	 qualitySupportDegree = {}
+ ---------------------------------------------------------
+, 
+微服务service\
+	 classList = [DailyInfo]
+	 classRelationList = []
+	 interfaceList = [MsInterface(className=DailyInfo, methodName=uploadData, msNameList=[serviceV])]
+	 qualitySupportDegree = {ResponseTime=0.3, Reliability=0.3}
+ ---------------------------------------------------------
+, 
+微服务service]
+	 classList = [DrugInfo]
+	 classRelationList = []
+	 interfaceList = []
+	 qualitySupportDegree = {}
+ ---------------------------------------------------------
+, 
+微服务service^
+	 classList = [Drug]
+	 classRelationList = []
+	 interfaceList = []
+	 qualitySupportDegree = {}
+ ---------------------------------------------------------
+, 
+微服务service_
+	 classList = [Hospital]
+	 classRelationList = []
+	 interfaceList = [MsInterface(className=Hospital, methodName=register, msNameList=[serviceA]), MsInterface(className=Hospital, methodName=sendMessage, msNameList=[serviceV])]
+	 qualitySupportDegree = {}
+ ---------------------------------------------------------
+, 
+微服务service`
+	 classList = [SickTreat]
+	 classRelationList = []
+	 interfaceList = [MsInterface(className=SickTreat, methodName=transportData, msNameList=[servicea]), MsInterface(className=SickTreat, methodName=treatment, msNameList=[service_])]
+	 qualitySupportDegree = {}
+ ---------------------------------------------------------
+, 
+微服务servicea
+	 classList = [DataAnalyze]
+	 classRelationList = []
+	 interfaceList = [MsInterface(className=DataAnalyze, methodName=uploadData, msNameList=[service\])]
+	 qualitySupportDegree = {ResponseTime=0.2, Reliability=0.2}
+ ---------------------------------------------------------
+]
+聚合度为：1.0
+耦合度为：1.7878787878787878
+-------------------------------------------
