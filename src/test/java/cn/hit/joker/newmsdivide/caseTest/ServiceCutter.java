@@ -4,20 +4,34 @@ import cn.hit.joker.newmsdivide.MainSystem;
 import cn.hit.joker.newmsdivide.analyzer.MicroserviceAnalyzer;
 import cn.hit.joker.newmsdivide.importer.ImporterUtils;
 import cn.hit.joker.newmsdivide.importer.InputData;
+import cn.hit.joker.newmsdivide.importer.ReadFile;
 import cn.hit.joker.newmsdivide.importer.classImporter.ClassDiagram;
+import cn.hit.joker.newmsdivide.importer.classImporter.Deploy;
+import cn.hit.joker.newmsdivide.importer.classImporter.UmlClass;
 import cn.hit.joker.newmsdivide.importer.sequenceImporter.SequenceDiagram;
-import cn.hit.joker.newmsdivide.model.MsDivideSystem;
 import cn.hit.joker.newmsdivide.model.result.Microservice;
-import cn.hit.joker.newmsdivide.solver.SolveSystem;
 import cn.hit.joker.newmsdivide.utils.ChangeToServiceCutterInput;
 import cn.hit.joker.newmsdivide.utils.WriteFile;
+import com.alibaba.fastjson.JSON;
+import com.alibaba.fastjson.JSONArray;
+import com.alibaba.fastjson.JSONObject;
 import org.junit.jupiter.api.Test;
+import org.springframework.cglib.core.Local;
 
+import java.io.IOException;
+import java.net.URISyntaxException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Set;
 
-public class HealthCareImportTest
-{
+/**
+ * @author joker
+ * @version 1.0
+ * @date 2021/6/16 10:04
+ * @description
+ */
+public class ServiceCutter {
+
     public static InputData getInputData() {
         String path0 = "cases/healthPension/class.json";
         String path1 = "cases/healthPension/nurseServiceSequence.json";
@@ -51,54 +65,59 @@ public class HealthCareImportTest
     }
 
     @Test
-    public void getMsDivideSystemTest() {
-        InputData inputData = getInputData();
-//        MsDivideSystem msDivideSystem = inputData.getMsDivideSystem();
-//        System.out.println(msDivideSystem);
-        List<List<Microservice>> solutionList = MainSystem.getDivideResult(SolveSystem.MODE_GEPHI, inputData);
-
-        String path = "src/main/resources/cases/healthPension/divideResult";
-        // 删除文件
-        WriteFile.delAllFile(path);
-
-        solutionList.forEach(microserviceList -> {
-            MicroserviceAnalyzer.addAllToMs(microserviceList, inputData);
-
-            double cohesionDegree = MicroserviceAnalyzer.getCohesionDegree(microserviceList, inputData.getClassDiagram());
-            double coupingDegree = MicroserviceAnalyzer.getCoupingDegree(microserviceList, inputData.getClassDiagram());
-
-            StringBuilder builder = new StringBuilder();
-            builder.append("------------------------------\n")
-                    .append("微服务划分方案为：\n")
-                    .append("微服务的数量为：" + microserviceList.size() + "\n")
-                    .append("微服务为：" + microserviceList + "\n")
-                    .append("聚合度为：" + cohesionDegree + "\n")
-                    .append("耦合度为：" + coupingDegree + "\n")
-                    .append("-------------------------------------------\n");
-
-            String fileName = microserviceList.size() + ".txt";
-            WriteFile.writeToFile(path, builder.toString(), fileName);
-
-//            System.out.println("微服务划分方案为：");
-//            System.out.println("微服务的数量为：" + microserviceList.size());
-//            System.out.println("微服务为：" + microserviceList);
-//            System.out.println("聚合度为：" + cohesionDegree);
-//            System.out.println("耦合度为：" + coupingDegree);
-//            System.out.println("-----------------------------------------------");
-        });
+    public void changeToServiceCutterInput() {
+        String data = ChangeToServiceCutterInput.Change(getInputData().getClassDiagram());
+        String path = "src/main/resources/cases/healthPension/serviceCutter";
+        WriteFile.writeToFile(path, data, "HealthCareClass.json");
     }
 
     @Test
-    public void FastNewManTest() {
+    // analyze service cutter divide result
+    public void analyzeServiceCutterResult() {
+        String path = "cases/healthPension/serviceCutter/divideResult.json";
+        String input;
+        List<Microservice> msList = new ArrayList<>();
+        // get msList
+        try {
+            input = ReadFile.readFromJsonFile(path);
+//            System.out.println(input);
+            JSONObject msJson = JSON.parseObject(input);
+            msJson.entrySet().forEach(entry -> {
+                String msName = entry.getKey();
+                List<UmlClass> classList = new ArrayList<>();
+                JSONArray classArray = (JSONArray) entry.getValue();
+                for (int i = 0; i < classArray.size(); i++) {
+                    classList.add(new UmlClass(classArray.getString(i)));
+                }
+                msList.add(new Microservice(msName, classList));
+             });
+            System.out.println(msList);
+        } catch (IOException | URISyntaxException e) {
+            e.printStackTrace();
+        }
+
         InputData inputData = getInputData();
-        MsDivideSystem msDivideSystem = inputData.getMsDivideSystem();
-        List<Microservice> msList = MainSystem.start(SolveSystem.MODE_FAST_NEWMAN, 0, msDivideSystem);
+        ClassDiagram classDiagram = inputData.getClassDiagram();
+        boolean suit = true;
+        for (Microservice microservice : msList) {
+            Set<Deploy.Location> deploySet = MainSystem.checkDeployLocation(microservice, classDiagram.getClassList());
+            if (deploySet.size() > 0) {
+                microservice.setDeployLocationSet(deploySet);
+            } else {
+                suit = false;
+            }
+        }
+
+        if (!suit) {
+            System.out.println("当前划分不满足部署位置约束！");
+        } else {
+            System.out.println("当前划分满足部署位置约束！");
+        }
+
+        MicroserviceAnalyzer.addAllToMs(msList, inputData);
+
         double cohesionDegree = MicroserviceAnalyzer.getCohesionDegree(msList, inputData.getClassDiagram());
         double coupingDegree = MicroserviceAnalyzer.getCoupingDegree(msList, inputData.getClassDiagram());
-//        System.out.println("\n\n-----------------------------------");
-//        System.out.println("微服务的数量为：" + msList.size());
-//        System.out.println("聚合度为：" + cohesionDegree);
-//        System.out.println("耦合度为：" + coupingDegree);
 
         StringBuilder builder = new StringBuilder();
         builder.append("------------------------------\n")
@@ -109,8 +128,8 @@ public class HealthCareImportTest
                 .append("耦合度为：" + coupingDegree + "\n")
                 .append("-------------------------------------------\n");
 
-        String path = "src/main/resources/cases/healthPension/divideResult";
-        String fileName = msList.size() + ".txt";
-        WriteFile.writeToFile(path, builder.toString(), fileName);
+        String outPath = "src/main/resources/cases/healthPension/serviceCutter";
+        String fileName = "serviceCutter-" + msList.size() + ".txt";
+        WriteFile.writeToFile(outPath, builder.toString(), fileName);
     }
 }

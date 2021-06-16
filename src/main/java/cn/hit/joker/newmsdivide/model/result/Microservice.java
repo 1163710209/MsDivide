@@ -1,6 +1,7 @@
 package cn.hit.joker.newmsdivide.model.result;
 
 import cn.hit.joker.newmsdivide.importer.classImporter.ClassRelation;
+import cn.hit.joker.newmsdivide.importer.classImporter.Deploy;
 import cn.hit.joker.newmsdivide.importer.classImporter.UmlClass;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -21,6 +22,7 @@ public class Microservice {
     private List<ClassRelation> classRelationList;
     private Set<MsInterface> interfaceList;
     private Map<String, Double> qualitySupportDegree;
+    private Set<Deploy.Location> deployLocationSet;
 
     public Microservice(String name, List<UmlClass> classList) {
         this.name = name;
@@ -36,6 +38,7 @@ public class Microservice {
                 "\n\t classRelationList = " + classRelationList +
                 "\n\t interfaceList = " + interfaceList +
                 "\n\t qualitySupportDegree = " + qualitySupportDegree +
+                "\n\t deployLocationSet" + deployLocationSet +
                 "\n ---------------------------------------------------------\n";
     }
 

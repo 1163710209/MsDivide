@@ -100,13 +100,18 @@ public class MainSystem {
         for (int i=0; i< msSolutionList.size(); i++) {
             boolean meet = true;
             for (Microservice microservice : msSolutionList.get(i)) {
-                if (microservice.getClassList().size() > 1) {
-                    if (!checkDeployLocation(microservice, classList)) {
+                if (microservice.getClassList().size() == 1) {
+                    microservice.setDeployLocationSet(inputData.getClassDiagram().getUmlClassByName(microservice.getClassList().get(0).getName()).getDeploy().getLocations());
+                } else if (microservice.getClassList().size() > 1) {
+                    Set<Deploy.Location> locations = checkDeployLocation(microservice, classList);
+                    if (locations.size() == 0) {
                         log.warn("微服务划分方案：[" + msSolutionList.get(i) + "] 不符合部署位置约束！");
                         msSolutionList.remove(i);
                         i--;
                         meet = false;
                         break;
+                    } else {
+                        microservice.setDeployLocationSet(locations);
                     }
                 }
             }
@@ -117,7 +122,7 @@ public class MainSystem {
         return msSolutionList;
     }
 
-    public static boolean checkDeployLocation(Microservice microservice, List<UmlClass> classList) {
+    public static Set<Deploy.Location> checkDeployLocation(Microservice microservice, List<UmlClass> classList) {
         Set<Deploy.Location> locations = new HashSet<>();
         locations.add(Deploy.Location.Cloud);
         locations.add(Deploy.Location.Edge);
@@ -131,7 +136,7 @@ public class MainSystem {
             locations.retainAll(umlClass.getDeploy().getLocations());
         });
 
-        return locations.size() > 0 ;
+        return locations;
     }
 
     private static UmlClass getClass(List<UmlClass> classList, UmlClass emptyClass) {
