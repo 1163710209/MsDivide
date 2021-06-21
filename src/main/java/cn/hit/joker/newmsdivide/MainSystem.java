@@ -26,20 +26,40 @@ import java.util.Set;
  */
 @Slf4j
 public class MainSystem {
+    private static InputData inputData;
     public static InputData getInputData() {
-        String classPath = "cases/case1 ddd cargo transport/class.json";
-        String sequencePath = "cases/case1 ddd cargo transport/sequence.json";
-        InputData inputData = null;
+
+        if (inputData != null) {
+            return inputData;
+        }
+        String path0 = "cases/healthPension/class.json";
+        String path1 = "cases/healthPension/nurseServiceSequence.json";
+        String path2 = "cases/healthPension/bodyInfoCollectSequence.json";
+        String path3 = "cases/healthPension/homeDoctorServiceSequence.json";
+        String path4 = "cases/healthPension/slowSickTreatmentSequence.json";
+
         try {
-            ClassDiagram classDiagram = ImporterUtils.importClassDiagram(classPath);
-            SequenceDiagram sequenceDiagram = ImporterUtils.importSequenceDiagram(sequencePath);
+            ClassDiagram classDiagram = ImporterUtils.importClassDiagram(path0);
+            System.out.println(classDiagram);
+
+            SequenceDiagram sequenceDiagram1 = ImporterUtils.importSequenceDiagram(path1);
+            SequenceDiagram sequenceDiagram2 = ImporterUtils.importSequenceDiagram(path2);
+            SequenceDiagram sequenceDiagram3 = ImporterUtils.importSequenceDiagram(path3);
+            SequenceDiagram sequenceDiagram4 = ImporterUtils.importSequenceDiagram(path4);
+
             List<SequenceDiagram> sequenceDiagrams = new ArrayList<>();
-            sequenceDiagrams.add(sequenceDiagram);
+            sequenceDiagrams.add(sequenceDiagram1);
+            sequenceDiagrams.add(sequenceDiagram2);
+            sequenceDiagrams.add(sequenceDiagram3);
+            sequenceDiagrams.add(sequenceDiagram4);
+
             inputData = new InputData(classDiagram, sequenceDiagrams);
+            return inputData;
+
         } catch (Exception e) {
             e.printStackTrace();
         }
-        return inputData;
+        return null;
     }
 
     /**
@@ -90,10 +110,52 @@ public class MainSystem {
         }
 
         // add other algorithm result
-        if (algorithm.equals(SolveSystem.MODE_GEPHI)) {
-            msSolutionList.add(start(SolveSystem.MODE_CW, 0, msDivideSystem));
-            msSolutionList.add(start(SolveSystem.MODE_MARKOV, 0, msDivideSystem));
-            msSolutionList.add(start(SolveSystem.MODE_FAST_NEWMAN, 0, msDivideSystem));
+//        if (algorithm.equals(SolveSystem.MODE_GEPHI)) {
+//            msSolutionList.add(start(SolveSystem.MODE_CW, 0, msDivideSystem));
+//            msSolutionList.add(start(SolveSystem.MODE_MARKOV, 0, msDivideSystem));
+//            msSolutionList.add(start(SolveSystem.MODE_FAST_NEWMAN, 0, msDivideSystem));
+//        }
+
+        // check deployLocation constraint
+        for (int i=0; i< msSolutionList.size(); i++) {
+            boolean meet = true;
+            for (Microservice microservice : msSolutionList.get(i)) {
+                if (microservice.getClassList().size() == 1) {
+                    microservice.setDeployLocationSet(inputData.getClassDiagram().getUmlClassByName(microservice.getClassList().get(0).getName()).getDeploy().getLocations());
+                } else if (microservice.getClassList().size() > 1) {
+                    Set<Deploy.Location> locations = checkDeployLocation(microservice, classList);
+                    if (locations.size() == 0) {
+                        log.warn("微服务划分方案：[" + msSolutionList.get(i) + "] 不符合部署位置约束！");
+                        msSolutionList.remove(i);
+                        i--;
+                        meet = false;
+                        break;
+                    } else {
+                        microservice.setDeployLocationSet(locations);
+                    }
+                }
+            }
+            if (meet) {
+                log.info("微服务划分方案：[" + msSolutionList.get(i) + "] 符合部署位置约束！");
+            }
+        }
+        return msSolutionList;
+    }
+
+    /**
+     * get all microservice solution in deployment constraint of input algorithm
+     *
+     * @param algorithm
+     * @param inputData
+     * @return
+     */
+    public static List<List<Microservice>> getRandomDivideResult(String algorithm, InputData inputData, int times) {
+        List<List<Microservice>> msSolutionList = new ArrayList<>();
+        List<UmlClass> classList = inputData.getClassDiagram().getClassList();
+        MsDivideSystem msDivideSystem = inputData.getMsDivideSystem();
+        for (int i=1; i<=times; i++) {
+            List<Microservice> msList = start(algorithm, i, msDivideSystem);
+            msSolutionList.add(msList);
         }
 
         // check deployLocation constraint

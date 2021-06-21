@@ -66,6 +66,8 @@ public class HealthCareImportTest
 
             double cohesionDegree = MicroserviceAnalyzer.getCohesionDegree(microserviceList, inputData.getClassDiagram());
             double coupingDegree = MicroserviceAnalyzer.getCoupingDegree(microserviceList, inputData.getClassDiagram());
+            double communicatePrice = MicroserviceAnalyzer.getCommunicatePrice(microserviceList, inputData.getSequenceDiagramList());
+            double[] value = MicroserviceAnalyzer.getAverageValueSupport(microserviceList);
 
             StringBuilder builder = new StringBuilder();
             builder.append("------------------------------\n")
@@ -74,6 +76,9 @@ public class HealthCareImportTest
                     .append("微服务为：" + microserviceList + "\n")
                     .append("聚合度为：" + cohesionDegree + "\n")
                     .append("耦合度为：" + coupingDegree + "\n")
+                    .append("通讯代价为：" + communicatePrice + "\n")
+                    .append("平均每个微服务支持的质量指标数：" + value[0] + "\n")
+                    .append("平均每个质量指标关联的微服务数：" + value[1] + "\n")
                     .append("-------------------------------------------\n");
 
             String fileName = microserviceList.size() + ".txt";
@@ -89,12 +94,49 @@ public class HealthCareImportTest
     }
 
     @Test
+    public void getRandomMsDivideSystemTest() {
+        InputData inputData = getInputData();
+        List<List<Microservice>> solutionList = MainSystem.getRandomDivideResult(SolveSystem.MODE_FAST_NEWMAN, inputData, 1);
+        String path = "src/main/resources/cases/healthPension/randomDivideResult";
+        // 删除文件
+//        WriteFile.delAllFile(path);
+        for (int i = 0; i < solutionList.size(); i++) {
+            List<Microservice> microserviceList = solutionList.get(i);
+            MicroserviceAnalyzer.addAllToMs(microserviceList, inputData);
+
+            double cohesionDegree = MicroserviceAnalyzer.getCohesionDegree(microserviceList, inputData.getClassDiagram());
+            double coupingDegree = MicroserviceAnalyzer.getCoupingDegree(microserviceList, inputData.getClassDiagram());
+            double communicatePrice = MicroserviceAnalyzer.getCommunicatePrice(microserviceList, inputData.getSequenceDiagramList());
+            double[] value = MicroserviceAnalyzer.getAverageValueSupport(microserviceList);
+
+            StringBuilder builder = new StringBuilder();
+            builder.append("------------------------------\n")
+                    .append("微服务划分方案为：\n")
+                    .append("微服务的数量为：" + microserviceList.size() + "\n")
+                    .append("微服务为：" + microserviceList + "\n")
+                    .append("聚合度为：" + cohesionDegree + "\n")
+                    .append("耦合度为：" + coupingDegree + "\n")
+                    .append("通讯代价为：" + communicatePrice + "\n")
+                    .append("平均每个微服务支持的质量指标数：" + value[0] + "\n")
+                    .append("平均每个质量指标关联的微服务数：" + value[1] + "\n")
+                    .append("-------------------------------------------\n");
+
+            String fileName = "算法" + SolveSystem.MODE_FAST_NEWMAN + "_" + i  + "--" + microserviceList.size() + ".txt";
+            WriteFile.writeToFile(path, builder.toString(), fileName);
+        }
+
+    }
+
+    @Test
     public void FastNewManTest() {
         InputData inputData = getInputData();
         MsDivideSystem msDivideSystem = inputData.getMsDivideSystem();
         List<Microservice> msList = MainSystem.start(SolveSystem.MODE_FAST_NEWMAN, 0, msDivideSystem);
+        MicroserviceAnalyzer.addAllToMs(msList, inputData);
+
         double cohesionDegree = MicroserviceAnalyzer.getCohesionDegree(msList, inputData.getClassDiagram());
         double coupingDegree = MicroserviceAnalyzer.getCoupingDegree(msList, inputData.getClassDiagram());
+        double[] value = MicroserviceAnalyzer.getAverageValueSupport(msList);
 //        System.out.println("\n\n-----------------------------------");
 //        System.out.println("微服务的数量为：" + msList.size());
 //        System.out.println("聚合度为：" + cohesionDegree);
@@ -107,10 +149,32 @@ public class HealthCareImportTest
                 .append("微服务为：" + msList + "\n")
                 .append("聚合度为：" + cohesionDegree + "\n")
                 .append("耦合度为：" + coupingDegree + "\n")
+                .append("平均每个微服务支持的质量指标数：" + value[0] + "\n")
+                .append("平均每个质量指标关联的微服务数：" + value[1] + "\n")
                 .append("-------------------------------------------\n");
 
-        String path = "src/main/resources/cases/healthPension/divideResult";
-        String fileName = msList.size() + ".txt";
-        WriteFile.writeToFile(path, builder.toString(), fileName);
+        System.out.println(builder);
+//        String path = "src/main/resources/cases/healthPension/divideResult";
+//        String fileName = msList.size() + ".txt";
+//        WriteFile.writeToFile(path, builder.toString(), fileName);
+    }
+
+    @Test
+    public void resultAnalyze() {
+        InputData inputData = getInputData();
+        MsDivideSystem msDivideSystem = inputData.getMsDivideSystem();
+        List<Microservice> msList = MainSystem.start(SolveSystem.MODE_FAST_NEWMAN, 0, msDivideSystem);
+        msList.forEach(microservice -> {
+            microservice.setDeployLocationSet(MainSystem.checkDeployLocation(microservice, inputData.getClassDiagram().getClassList()));
+        });
+        System.out.println(msList);
+        double cohesionDegree = MicroserviceAnalyzer.getCohesionDegree(msList, inputData.getClassDiagram());
+        double coupingDegree = MicroserviceAnalyzer.getCoupingDegree(msList, inputData.getClassDiagram());
+        double communicatePrice = MicroserviceAnalyzer.getCommunicatePrice(msList, inputData.getSequenceDiagramList());
+        System.out.println("\n\n-----------------------------------");
+        System.out.println("微服务的数量为：" + msList.size());
+        System.out.println("聚合度为：" + cohesionDegree);
+        System.out.println("耦合度为：" + coupingDegree);
+        System.out.println("通信代价为：" + communicatePrice);
     }
 }

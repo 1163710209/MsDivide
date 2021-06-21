@@ -93,7 +93,7 @@
 微服务service12
 	 classList = [NurseService, Nurse]
 	 classRelationList = [ClassRelation(origin=NurseService, destination=Nurse, type=ClassAssociation)]
-	 interfaceList = [MsInterface(className=NurseService, methodName=sendMessage, msNameList=[service16]), MsInterface(className=NurseService, methodName=sendMessage, msNameList=[service16]), MsInterface(className=Nurse, methodName=appointment, msNameList=[service15])]
+	 interfaceList = [MsInterface(className=Nurse, methodName=appointment, msNameList=[service15]), MsInterface(className=NurseService, methodName=sendMessage, msNameList=[service16]), MsInterface(className=NurseService, methodName=sendMessage, msNameList=[service16])]
 	 qualitySupportDegree = {NurseResponseTime=0.33, NurseSystemReliability=0.2, NurseServiceQuality=0.5}
 	 deployLocationSet[Cloud, Edge]
  ---------------------------------------------------------
@@ -125,7 +125,7 @@
 微服务service16
 	 classList = [DailyInfo, HealthInfo, SickTreat, TreatRecord, DrugInfo, NurseCareRecord, MedicineInfo, HealthWarning, HealthFile]
 	 classRelationList = [ClassRelation(origin=DailyInfo, destination=HealthWarning, type=ClassDependency), ClassRelation(origin=HealthWarning, destination=DailyInfo, type=ClassDependency), ClassRelation(origin=DailyInfo, destination=HealthFile, type=ClassAggregate), ClassRelation(origin=HealthInfo, destination=HealthFile, type=ClassAggregate), ClassRelation(origin=TreatRecord, destination=HealthFile, type=ClassAggregate), ClassRelation(origin=DrugInfo, destination=HealthFile, type=ClassAggregate), ClassRelation(origin=MedicineInfo, destination=HealthFile, type=ClassAggregate)]
-	 interfaceList = [MsInterface(className=HealthFile, methodName=getHealthFile, msNameList=[service12]), MsInterface(className=SickTreat, methodName=transportData, msNameList=[service14]), MsInterface(className=HealthWarning, methodName=updateData, msNameList=[service4]), MsInterface(className=SickTreat, methodName=treatment, msNameList=[service18]), MsInterface(className=NurseCareRecord, methodName=addRecord, msNameList=[service12]), MsInterface(className=HealthFile, methodName=createHealthFile, msNameList=[service18]), MsInterface(className=HealthWarning, methodName=updateData, msNameList=[service3]), MsInterface(className=HealthWarning, methodName=updateData, msNameList=[service17]), MsInterface(className=HealthWarning, methodName=updateData, msNameList=[service6])]
+	 interfaceList = [MsInterface(className=HealthFile, methodName=getHealthFile, msNameList=[service12]), MsInterface(className=SickTreat, methodName=transportData, msNameList=[service14]), MsInterface(className=NurseCareRecord, methodName=addRecord, msNameList=[service12]), MsInterface(className=HealthWarning, methodName=updateData, msNameList=[service17]), MsInterface(className=HealthWarning, methodName=updateData, msNameList=[service3]), MsInterface(className=HealthFile, methodName=createHealthFile, msNameList=[service18]), MsInterface(className=HealthWarning, methodName=updateData, msNameList=[service6]), MsInterface(className=HealthWarning, methodName=updateData, msNameList=[service4]), MsInterface(className=SickTreat, methodName=treatment, msNameList=[service18])]
 	 qualitySupportDegree = {dataHandleSpeed=1.0, ResponseTime=0.8, Reliability=0.8, NurseServiceQuality=0.5}
 	 deployLocationSet[Edge]
  ---------------------------------------------------------
@@ -141,11 +141,14 @@
 微服务service18
 	 classList = [Drug, HealthEvaluate, Hospital]
 	 classRelationList = [ClassRelation(origin=Drug, destination=Hospital, type=ClassAggregate), ClassRelation(origin=HealthEvaluate, destination=Hospital, type=ClassAssociation)]
-	 interfaceList = [MsInterface(className=Hospital, methodName=sendMessage, msNameList=[service16]), MsInterface(className=Hospital, methodName=register, msNameList=[service15])]
+	 interfaceList = [MsInterface(className=Hospital, methodName=register, msNameList=[service15]), MsInterface(className=Hospital, methodName=sendMessage, msNameList=[service16])]
 	 qualitySupportDegree = {}
 	 deployLocationSet[Cloud, Edge]
  ---------------------------------------------------------
 ]
 聚合度为：0.8827160493827161
 耦合度为：2.7222222222222223
+通讯代价为：8.149999999999999
+平均每个微服务支持的质量指标数：1.4444444444444444
+平均每个质量指标关联的微服务数：1.7333333333333334
 -------------------------------------------

@@ -70,6 +70,13 @@
             <version>0.8.6</version>
         </dependency>
 
+        <!-- dependency for NSGA2 algorithm -->
+        <dependency>
+            <groupId>com.debacharya</groupId>
+            <artifactId>nsgaii</artifactId>
+            <version>3.2.0</version>
+        </dependency>
+
     </dependencies>
 
     <build>

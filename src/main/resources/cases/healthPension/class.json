@@ -339,134 +339,6 @@
       }
     },
     {
-      "name": "WristBand",
-      "type": "Entity",
-      "attributes": [
-        "oldManId",
-        "id"
-      ],
-      "methods": [
-      ],
-      "deploy": {
-        "locations": [
-          "End"
-        ],
-        "resources":{
-          "memory": "",
-          "compute": ""
-        }
-      }
-    },
-    {
-      "name": "BloodPressure",
-      "type": "Entity",
-      "attributes": [
-        "oldManId",
-        "time",
-        "data"
-      ],
-      "methods": [
-        "collectData",
-        "uploadData"
-      ],
-      "deploy": {
-        "locations": [
-          "End"
-        ],
-        "resources":{
-          "memory": "",
-          "compute": ""
-        }
-      }
-    },
-    {
-      "name": "BloodSugar",
-      "type": "Entity",
-      "attributes": [
-        "oldManId",
-        "time",
-        "data"
-      ],
-      "methods": [
-        "collectData",
-        "uploadData"
-      ],
-      "deploy": {
-        "locations": [
-          "End"
-        ],
-        "resources":{
-          "memory": "",
-          "compute": ""
-        }
-      }
-    },
-    {
-      "name": "BloodLipid",
-      "type": "Entity",
-      "attributes": [
-        "oldManId",
-        "time",
-        "data"
-      ],
-      "methods": [
-        "collectData",
-        "uploadData"
-      ],
-      "deploy": {
-        "locations": [
-          "End"
-        ],
-        "resources":{
-          "memory": "",
-          "compute": ""
-        }
-      }
-    },
-    {
-      "name": "HeartRate",
-      "type": "Entity",
-      "attributes": [
-        "oldManId",
-        "time",
-        "data"
-      ],
-      "methods": [
-        "collectData",
-        "uploadData"
-      ],
-      "deploy": {
-        "locations": [
-          "End"
-        ],
-        "resources":{
-          "memory": "",
-          "compute": ""
-        }
-      }
-    },
-    {
-      "name": "HealthWarning",
-      "type": "Control",
-      "attributes": [
-      ],
-      "methods": [
-        "handleData",
-        "dataUpload",
-        "sendMessage",
-        "isNormal"
-      ],
-      "deploy": {
-        "locations": [
-          "Edge"
-        ],
-        "resources":{
-          "memory": "",
-          "compute": ""
-        }
-      }
-    },
-    {
       "name": "HealthEvaluate",
       "type": "Control",
       "attributes": [
@@ -687,6 +559,134 @@
       "deploy": {
         "locations": [
           "Cloud"
+        ],
+        "resources":{
+          "memory": "",
+          "compute": ""
+        }
+      }
+    },
+    {
+      "name": "WristBand",
+      "type": "Entity",
+      "attributes": [
+        "oldManId",
+        "id"
+      ],
+      "methods": [
+      ],
+      "deploy": {
+        "locations": [
+          "End"
+        ],
+        "resources":{
+          "memory": "",
+          "compute": ""
+        }
+      }
+    },
+    {
+      "name": "BloodPressure",
+      "type": "Entity",
+      "attributes": [
+        "oldManId",
+        "time",
+        "data"
+      ],
+      "methods": [
+        "collectData",
+        "uploadData"
+      ],
+      "deploy": {
+        "locations": [
+          "End"
+        ],
+        "resources":{
+          "memory": "",
+          "compute": ""
+        }
+      }
+    },
+    {
+      "name": "BloodSugar",
+      "type": "Entity",
+      "attributes": [
+        "oldManId",
+        "time",
+        "data"
+      ],
+      "methods": [
+        "collectData",
+        "uploadData"
+      ],
+      "deploy": {
+        "locations": [
+          "End"
+        ],
+        "resources":{
+          "memory": "",
+          "compute": ""
+        }
+      }
+    },
+    {
+      "name": "BloodLipid",
+      "type": "Entity",
+      "attributes": [
+        "oldManId",
+        "time",
+        "data"
+      ],
+      "methods": [
+        "collectData",
+        "uploadData"
+      ],
+      "deploy": {
+        "locations": [
+          "End"
+        ],
+        "resources":{
+          "memory": "",
+          "compute": ""
+        }
+      }
+    },
+    {
+      "name": "HeartRate",
+      "type": "Entity",
+      "attributes": [
+        "oldManId",
+        "time",
+        "data"
+      ],
+      "methods": [
+        "collectData",
+        "uploadData"
+      ],
+      "deploy": {
+        "locations": [
+          "End"
+        ],
+        "resources":{
+          "memory": "",
+          "compute": ""
+        }
+      }
+    },
+    {
+      "name": "HealthWarning",
+      "type": "Control",
+      "attributes": [
+      ],
+      "methods": [
+        "handleData",
+        "dataUpload",
+        "sendMessage",
+        "isNormal"
+      ],
+      "deploy": {
+        "locations": [
+          "Edge"
         ],
         "resources":{
           "memory": "",

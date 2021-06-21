@@ -13,7 +13,7 @@
 微服务serviceB
 	 classList = [Nurse, NurseCareRecord, NurseReserveRecord, NursePayRecord, NurseService, HealthFile, NurseOrder]
 	 classRelationList = [ClassRelation(origin=NurseCareRecord, destination=Nurse, type=ClassAssociation), ClassRelation(origin=NurseReserveRecord, destination=Nurse, type=ClassAssociation), ClassRelation(origin=NurseService, destination=Nurse, type=ClassAssociation), ClassRelation(origin=NurseOrder, destination=Nurse, type=ClassAssociation), ClassRelation(origin=NurseService, destination=NurseCareRecord, type=ClassDependency), ClassRelation(origin=NurseOrder, destination=NursePayRecord, type=ClassAssociation), ClassRelation(origin=NurseService, destination=HealthFile, type=ClassDependency)]
-	 interfaceList = [MsInterface(className=NurseReserveRecord, methodName=addRecord, msNameList=[serviceA]), MsInterface(className=HealthFile, methodName=createHealthFile, msNameList=[serviceO]), MsInterface(className=HealthFile, methodName=uploadData, msNameList=[serviceR]), MsInterface(className=NurseService, methodName=sendMessage, msNameList=[serviceN]), MsInterface(className=HealthFile, methodName=uploadData, msNameList=[serviceS]), MsInterface(className=NurseOrder, methodName=addOrder, msNameList=[serviceA]), MsInterface(className=Nurse, methodName=appointment, msNameList=[serviceA]), MsInterface(className=NurseService, methodName=sendMessage, msNameList=[serviceN])]
+	 interfaceList = [MsInterface(className=HealthFile, methodName=createHealthFile, msNameList=[serviceO]), MsInterface(className=HealthFile, methodName=uploadData, msNameList=[serviceS]), MsInterface(className=Nurse, methodName=appointment, msNameList=[serviceA]), MsInterface(className=NurseService, methodName=sendMessage, msNameList=[serviceN]), MsInterface(className=NurseOrder, methodName=addOrder, msNameList=[serviceA]), MsInterface(className=HealthFile, methodName=uploadData, msNameList=[serviceR]), MsInterface(className=NurseService, methodName=sendMessage, msNameList=[serviceN]), MsInterface(className=NurseReserveRecord, methodName=addRecord, msNameList=[serviceA])]
 	 qualitySupportDegree = {NurseProfit=1.0, NurseResponseTime=0.66, ResponseTime=0.5, Reliability=0.5, NurseSystemReliability=0.8, NurseServiceQuality=1.0}
 	 deployLocationSet[Cloud, Edge]
  ---------------------------------------------------------
@@ -61,7 +61,7 @@
 微服务serviceH
 	 classList = [DoctorPayRecord, DoctorEvaluate]
 	 classRelationList = []
-	 interfaceList = [MsInterface(className=DoctorPayRecord, methodName=addRecord, msNameList=[serviceA]), MsInterface(className=DoctorEvaluate, methodName=addRecord, msNameList=[serviceA])]
+	 interfaceList = [MsInterface(className=DoctorEvaluate, methodName=addRecord, msNameList=[serviceA]), MsInterface(className=DoctorPayRecord, methodName=addRecord, msNameList=[serviceA])]
 	 qualitySupportDegree = {DoctorProfit=1.0, DoctorServiceSatisfy=1.0}
 	 deployLocationSet[Cloud, Edge]
  ---------------------------------------------------------
@@ -109,7 +109,7 @@
 微服务serviceN
 	 classList = [HealthWarning]
 	 classRelationList = []
-	 interfaceList = [MsInterface(className=HealthWarning, methodName=updateData, msNameList=[serviceL]), MsInterface(className=HealthWarning, methodName=updateData, msNameList=[serviceM]), MsInterface(className=HealthWarning, methodName=updateData, msNameList=[serviceK]), MsInterface(className=HealthWarning, methodName=updateData, msNameList=[serviceJ])]
+	 interfaceList = [MsInterface(className=HealthWarning, methodName=updateData, msNameList=[serviceJ]), MsInterface(className=HealthWarning, methodName=updateData, msNameList=[serviceM]), MsInterface(className=HealthWarning, methodName=updateData, msNameList=[serviceK]), MsInterface(className=HealthWarning, methodName=updateData, msNameList=[serviceL])]
 	 qualitySupportDegree = {dataHandleSpeed=1.0}
 	 deployLocationSet[Edge]
  ---------------------------------------------------------
@@ -196,4 +196,7 @@
 ]
 聚合度为：0.9851190476190476
 耦合度为：2.0833333333333335
+通讯代价为：8.65
+平均每个微服务支持的质量指标数：0.875
+平均每个质量指标关联的微服务数：1.4
 -------------------------------------------

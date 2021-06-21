@@ -118,6 +118,8 @@ public class ServiceCutter {
 
         double cohesionDegree = MicroserviceAnalyzer.getCohesionDegree(msList, inputData.getClassDiagram());
         double coupingDegree = MicroserviceAnalyzer.getCoupingDegree(msList, inputData.getClassDiagram());
+        double communicatePrice = MicroserviceAnalyzer.getCommunicatePrice(msList, inputData.getSequenceDiagramList());
+        double[] value = MicroserviceAnalyzer.getAverageValueSupport(msList);
 
         StringBuilder builder = new StringBuilder();
         builder.append("------------------------------\n")
@@ -126,6 +128,9 @@ public class ServiceCutter {
                 .append("微服务为：" + msList + "\n")
                 .append("聚合度为：" + cohesionDegree + "\n")
                 .append("耦合度为：" + coupingDegree + "\n")
+                .append("通讯代价为：" + communicatePrice + "\n")
+                .append("平均每个微服务支持的质量指标数：" + value[0] + "\n")
+                .append("平均每个质量指标关联的微服务数：" + value[1] + "\n")
                 .append("-------------------------------------------\n");
 
         String outPath = "src/main/resources/cases/healthPension/serviceCutter";

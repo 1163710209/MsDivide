@@ -119,12 +119,18 @@ public class MsAnalyzerTest {
         InputData inputData = getInputData();
         MsDivideSystem msDivideSystem = inputData.getMsDivideSystem();
         List<Microservice> msList = MainSystem.start(SolveSystem.MODE_FAST_NEWMAN, 0, msDivideSystem);
+        msList.forEach(microservice -> {
+            microservice.setDeployLocationSet(MainSystem.checkDeployLocation(microservice, inputData.getClassDiagram().getClassList()));
+        });
+        System.out.println(msList);
         double cohesionDegree = MicroserviceAnalyzer.getCohesionDegree(msList, inputData.getClassDiagram());
         double coupingDegree = MicroserviceAnalyzer.getCoupingDegree(msList, inputData.getClassDiagram());
+        double communicatePrice = MicroserviceAnalyzer.getCommunicatePrice(msList, inputData.getSequenceDiagramList());
         System.out.println("\n\n-----------------------------------");
         System.out.println("微服务的数量为：" + msList.size());
         System.out.println("聚合度为：" + cohesionDegree);
         System.out.println("耦合度为：" + coupingDegree);
+        System.out.println("通信代价为：" + communicatePrice);
     }
 
 }
