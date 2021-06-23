@@ -28,6 +28,8 @@ public class SolveSystem {
     public static final String[] MODES = { MODE_CW, MODE_MARKOV, MODE_FAST_NEWMAN };
 
     public static final String TYPE_NORMAL = "originalScore";
+    public static final String TYPE_QUALITY = "qualityScore";
+    public static final String TYPE_DEPLOY = "deployScore";
     public static final String TYPE_NEW = "Score";
 
     /**
@@ -63,10 +65,19 @@ public class SolveSystem {
         // get scores
         Scorer scorer = new Scorer();
         Map<ClassPair, Map<String, Score>> scores = null;
-        if (type.equals(TYPE_NORMAL)) {
-            scores = scorer.getOriginalScores(msDivideSystem);
-        } else if (type.equals(TYPE_NEW)) {
-            scores = scorer.getScores(msDivideSystem);
+        switch (type) {
+            case TYPE_NORMAL:
+                scores = scorer.getOriginalScores(msDivideSystem);
+                break;
+            case TYPE_QUALITY:
+                scores = scorer.getQualityScores(msDivideSystem);
+                break;
+            case TYPE_DEPLOY:
+                scores = scorer.getDeployScores(msDivideSystem);
+                break;
+            case TYPE_NEW:
+                scores = scorer.getScores(msDivideSystem);
+                break;
         }
         System.out.println("-------------------------");
 

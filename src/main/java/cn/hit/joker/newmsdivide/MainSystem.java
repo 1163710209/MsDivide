@@ -69,7 +69,7 @@ public class MainSystem {
      * @param clusterNum
      * @return
      */
-    public static List<Microservice> start(String algorithm, int clusterNum, MsDivideSystem msDivideSystem) {
+    public static List<Microservice> start(String algorithm, int clusterNum, MsDivideSystem msDivideSystem, int type) {
         SolverConfig solverConfig;
         switch (algorithm) {
             case SolveSystem.MODE_CW:
@@ -87,7 +87,20 @@ public class MainSystem {
             default:
                 throw new IllegalArgumentException("输入的算法不支持");
         }
-        List<Microservice> msList = new SolveSystem().solveSystem(msDivideSystem, solverConfig, SolveSystem.TYPE_NEW);
+        List<Microservice> msList;
+        switch (type) {
+            case 1:
+                msList = new SolveSystem().solveSystem(msDivideSystem, solverConfig, SolveSystem.TYPE_NORMAL);
+                break;
+            case 2:
+                msList = new SolveSystem().solveSystem(msDivideSystem, solverConfig, SolveSystem.TYPE_QUALITY);
+                break;
+            case 3:
+                msList = new SolveSystem().solveSystem(msDivideSystem, solverConfig, SolveSystem.TYPE_DEPLOY);
+                break;
+            default:
+                msList = new SolveSystem().solveSystem(msDivideSystem, solverConfig, SolveSystem.TYPE_NEW);
+        }
         System.out.println(msList);
         return msList;
     }
@@ -98,12 +111,12 @@ public class MainSystem {
      * @param algorithm
      * @return
      */
-    public static List<List<Microservice>> getDivideResult(String algorithm, InputData inputData) {
+    public static List<List<Microservice>> getDivideResult(String algorithm, InputData inputData, int type) {
         List<List<Microservice>> msSolutionList = new ArrayList<>();
         List<UmlClass> classList = inputData.getClassDiagram().getClassList();
         MsDivideSystem msDivideSystem = inputData.getMsDivideSystem();
         for (int i=1; i<=classList.size(); i++) {
-            List<Microservice> msList = start(algorithm, i, msDivideSystem);
+            List<Microservice> msList = start(algorithm, i, msDivideSystem, type);
             if (msList.size() == i) {
                 msSolutionList.add(msList);
             }
@@ -149,12 +162,12 @@ public class MainSystem {
      * @param inputData
      * @return
      */
-    public static List<List<Microservice>> getRandomDivideResult(String algorithm, InputData inputData, int times) {
+    public static List<List<Microservice>> getRandomDivideResult(String algorithm, InputData inputData, int times, int type) {
         List<List<Microservice>> msSolutionList = new ArrayList<>();
         List<UmlClass> classList = inputData.getClassDiagram().getClassList();
         MsDivideSystem msDivideSystem = inputData.getMsDivideSystem();
         for (int i=1; i<=times; i++) {
-            List<Microservice> msList = start(algorithm, i, msDivideSystem);
+            List<Microservice> msList = start(algorithm, i, msDivideSystem, type);
             msSolutionList.add(msList);
         }
 

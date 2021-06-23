@@ -74,8 +74,8 @@
         {
           "num": 10,
           "from": "NurseService",
-          "to": "HealthFile",
-          "method": "getHealthFile",
+          "to": "MedicineInfo",
+          "method": "getMedicineInfo",
           "runTime": {
             "frequency": 4,
             "size": 2
@@ -153,7 +153,7 @@
       "classList": {
         "NurseService": 0.25,
         "Nurse": 0.25,
-        "HealthFile": 0.25,
+        "MedicineInfo": 0.25,
         "NurseCareRecord": 0.25
       }
     },

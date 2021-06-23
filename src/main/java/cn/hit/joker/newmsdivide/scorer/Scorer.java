@@ -63,6 +63,30 @@ public class Scorer {
         return scoreMap;
     }
 
+    public Map<ClassPair, Map<String, Score>> getQualityScores(final MsDivideSystem msDivideSystem) {
+        Map<ClassPair, Map<String, Score>> scoreMap = new HashMap<>();
+
+        // score for criterion instance list
+        criterionScore(scoreMap, msDivideSystem.getCriterionInstanceList());
+        // score for quality instance list
+        qualityScore(scoreMap, msDivideSystem.getQualityInstanceList(), msDivideSystem.getClassList());
+
+        log.info("根据质量规则实例为 classPair 打分完成！");
+        return scoreMap;
+    }
+
+    public Map<ClassPair, Map<String, Score>> getDeployScores(final MsDivideSystem msDivideSystem) {
+        Map<ClassPair, Map<String, Score>> scoreMap = new HashMap<>();
+
+        // score for criterion instance list
+        criterionScore(scoreMap, msDivideSystem.getCriterionInstanceList());
+        // score for communicate instance
+        communicateScore(scoreMap, msDivideSystem.getCommunicateScore());
+
+        log.info("根据质量规则实例为 classPair 打分完成！");
+        return scoreMap;
+    }
+
 
     private void criterionScore(Map<ClassPair, Map<String, Score>> result, List<CriterionInstance> criterionInstanceList) {
         criterionInstanceList.forEach(instance -> {

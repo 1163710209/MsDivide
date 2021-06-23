@@ -98,7 +98,7 @@ public class MsAnalyzerTest {
     @Test
     public void MsSolutionListTest() {
         InputData inputData = getInputData();
-        List<List<Microservice>> solutionList = MainSystem.getDivideResult(SolveSystem.MODE_GEPHI, inputData);
+        List<List<Microservice>> solutionList = MainSystem.getDivideResult(SolveSystem.MODE_GEPHI, inputData, 4);
 
         solutionList.forEach(microserviceList -> {
             MicroserviceAnalyzer.addAllToMs(microserviceList, inputData);
@@ -118,7 +118,7 @@ public class MsAnalyzerTest {
     public void FastNewManTest() {
         InputData inputData = getInputData();
         MsDivideSystem msDivideSystem = inputData.getMsDivideSystem();
-        List<Microservice> msList = MainSystem.start(SolveSystem.MODE_FAST_NEWMAN, 0, msDivideSystem);
+        List<Microservice> msList = MainSystem.start(SolveSystem.MODE_FAST_NEWMAN, 0, msDivideSystem, 4);
         msList.forEach(microservice -> {
             microservice.setDeployLocationSet(MainSystem.checkDeployLocation(microservice, inputData.getClassDiagram().getClassList()));
         });

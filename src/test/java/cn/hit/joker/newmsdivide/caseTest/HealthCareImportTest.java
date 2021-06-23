@@ -51,13 +51,10 @@ public class HealthCareImportTest
     }
 
     @Test
-    public void getMsDivideSystemTest() {
+    public void getMsDivideSystemNormalResultTest() {
         InputData inputData = getInputData();
-//        MsDivideSystem msDivideSystem = inputData.getMsDivideSystem();
-//        System.out.println(msDivideSystem);
-        List<List<Microservice>> solutionList = MainSystem.getDivideResult(SolveSystem.MODE_GEPHI, inputData);
-
-        String path = "src/main/resources/cases/healthPension/divideResult";
+        List<List<Microservice>> solutionList = MainSystem.getDivideResult(SolveSystem.MODE_GEPHI, inputData, 1);
+        String path = "src/main/resources/cases/healthPension/divideResult/normalResult";
         // 删除文件
         WriteFile.delAllFile(path);
 
@@ -83,20 +80,112 @@ public class HealthCareImportTest
 
             String fileName = microserviceList.size() + ".txt";
             WriteFile.writeToFile(path, builder.toString(), fileName);
-
-//            System.out.println("微服务划分方案为：");
-//            System.out.println("微服务的数量为：" + microserviceList.size());
-//            System.out.println("微服务为：" + microserviceList);
-//            System.out.println("聚合度为：" + cohesionDegree);
-//            System.out.println("耦合度为：" + coupingDegree);
-//            System.out.println("-----------------------------------------------");
         });
+    }
+
+    @Test
+    public void getMsDivideSystemQualityResultTest() {
+        InputData inputData = getInputData();
+        List<List<Microservice>> solutionList = MainSystem.getDivideResult(SolveSystem.MODE_GEPHI, inputData, 2);
+        String path = "src/main/resources/cases/healthPension/divideResult/qualityResult";
+        // 删除文件
+        WriteFile.delAllFile(path);
+
+        solutionList.forEach(microserviceList -> {
+            MicroserviceAnalyzer.addAllToMs(microserviceList, inputData);
+
+            double cohesionDegree = MicroserviceAnalyzer.getCohesionDegree(microserviceList, inputData.getClassDiagram());
+            double coupingDegree = MicroserviceAnalyzer.getCoupingDegree(microserviceList, inputData.getClassDiagram());
+            double communicatePrice = MicroserviceAnalyzer.getCommunicatePrice(microserviceList, inputData.getSequenceDiagramList());
+            double[] value = MicroserviceAnalyzer.getAverageValueSupport(microserviceList);
+
+            StringBuilder builder = new StringBuilder();
+            builder.append("------------------------------\n")
+                    .append("微服务划分方案为：\n")
+                    .append("微服务的数量为：" + microserviceList.size() + "\n")
+                    .append("微服务为：" + microserviceList + "\n")
+                    .append("聚合度为：" + cohesionDegree + "\n")
+                    .append("耦合度为：" + coupingDegree + "\n")
+                    .append("通讯代价为：" + communicatePrice + "\n")
+                    .append("平均每个微服务支持的质量指标数：" + value[0] + "\n")
+                    .append("平均每个质量指标关联的微服务数：" + value[1] + "\n")
+                    .append("-------------------------------------------\n");
+
+            String fileName = microserviceList.size() + ".txt";
+            WriteFile.writeToFile(path, builder.toString(), fileName);
+        });
+    }
+
+    @Test
+    public void getMsDivideSystemDeployResultTest() {
+        InputData inputData = getInputData();
+        List<List<Microservice>> solutionList = MainSystem.getDivideResult(SolveSystem.MODE_GEPHI, inputData, 3);
+        String path = "src/main/resources/cases/healthPension/divideResult/deployResult";
+        // 删除文件
+        WriteFile.delAllFile(path);
+
+        solutionList.forEach(microserviceList -> {
+            MicroserviceAnalyzer.addAllToMs(microserviceList, inputData);
+
+            double cohesionDegree = MicroserviceAnalyzer.getCohesionDegree(microserviceList, inputData.getClassDiagram());
+            double coupingDegree = MicroserviceAnalyzer.getCoupingDegree(microserviceList, inputData.getClassDiagram());
+            double communicatePrice = MicroserviceAnalyzer.getCommunicatePrice(microserviceList, inputData.getSequenceDiagramList());
+            double[] value = MicroserviceAnalyzer.getAverageValueSupport(microserviceList);
+
+            StringBuilder builder = new StringBuilder();
+            builder.append("------------------------------\n")
+                    .append("微服务划分方案为：\n")
+                    .append("微服务的数量为：" + microserviceList.size() + "\n")
+                    .append("微服务为：" + microserviceList + "\n")
+                    .append("聚合度为：" + cohesionDegree + "\n")
+                    .append("耦合度为：" + coupingDegree + "\n")
+                    .append("通讯代价为：" + communicatePrice + "\n")
+                    .append("平均每个微服务支持的质量指标数：" + value[0] + "\n")
+                    .append("平均每个质量指标关联的微服务数：" + value[1] + "\n")
+                    .append("-------------------------------------------\n");
+
+            String fileName = microserviceList.size() + ".txt";
+            WriteFile.writeToFile(path, builder.toString(), fileName);
+        });
+    }
+
+    @Test
+    public void getMsDivideSystemNewResultTest() {
+        InputData inputData = getInputData();
+        List<List<Microservice>> solutionList = MainSystem.getDivideResult(SolveSystem.MODE_GEPHI, inputData, 4);
+        String path = "src/main/resources/cases/healthPension/divideResult/newResult";
+        // 删除文件
+        WriteFile.delAllFile(path);
+
+        solutionList.forEach(microserviceList -> {
+            MicroserviceAnalyzer.addAllToMs(microserviceList, inputData);
+
+            double cohesionDegree = MicroserviceAnalyzer.getCohesionDegree(microserviceList, inputData.getClassDiagram());
+            double coupingDegree = MicroserviceAnalyzer.getCoupingDegree(microserviceList, inputData.getClassDiagram());
+            double communicatePrice = MicroserviceAnalyzer.getCommunicatePrice(microserviceList, inputData.getSequenceDiagramList());
+            double[] value = MicroserviceAnalyzer.getAverageValueSupport(microserviceList);
+
+            StringBuilder builder = new StringBuilder();
+            builder.append("------------------------------\n")
+                    .append("微服务划分方案为：\n")
+                    .append("微服务的数量为：" + microserviceList.size() + "\n")
+                    .append("微服务为：" + microserviceList + "\n")
+                    .append("聚合度为：" + cohesionDegree + "\n")
+                    .append("耦合度为：" + coupingDegree + "\n")
+                    .append("通讯代价为：" + communicatePrice + "\n")
+                    .append("平均每个微服务支持的质量指标数：" + value[0] + "\n")
+                    .append("平均每个质量指标关联的微服务数：" + value[1] + "\n")
+                    .append("-------------------------------------------\n");
+
+            String fileName = microserviceList.size() + ".txt";
+            WriteFile.writeToFile(path, builder.toString(), fileName);
+       });
     }
 
     @Test
     public void getRandomMsDivideSystemTest() {
         InputData inputData = getInputData();
-        List<List<Microservice>> solutionList = MainSystem.getRandomDivideResult(SolveSystem.MODE_FAST_NEWMAN, inputData, 1);
+        List<List<Microservice>> solutionList = MainSystem.getRandomDivideResult(SolveSystem.MODE_FAST_NEWMAN, inputData, 1, 4);
         String path = "src/main/resources/cases/healthPension/randomDivideResult";
         // 删除文件
 //        WriteFile.delAllFile(path);
@@ -131,7 +220,7 @@ public class HealthCareImportTest
     public void FastNewManTest() {
         InputData inputData = getInputData();
         MsDivideSystem msDivideSystem = inputData.getMsDivideSystem();
-        List<Microservice> msList = MainSystem.start(SolveSystem.MODE_FAST_NEWMAN, 0, msDivideSystem);
+        List<Microservice> msList = MainSystem.start(SolveSystem.MODE_FAST_NEWMAN, 0, msDivideSystem, 4);
         MicroserviceAnalyzer.addAllToMs(msList, inputData);
 
         double cohesionDegree = MicroserviceAnalyzer.getCohesionDegree(msList, inputData.getClassDiagram());
@@ -163,7 +252,7 @@ public class HealthCareImportTest
     public void resultAnalyze() {
         InputData inputData = getInputData();
         MsDivideSystem msDivideSystem = inputData.getMsDivideSystem();
-        List<Microservice> msList = MainSystem.start(SolveSystem.MODE_FAST_NEWMAN, 0, msDivideSystem);
+        List<Microservice> msList = MainSystem.start(SolveSystem.MODE_FAST_NEWMAN, 0, msDivideSystem, 4);
         msList.forEach(microservice -> {
             microservice.setDeployLocationSet(MainSystem.checkDeployLocation(microservice, inputData.getClassDiagram().getClassList()));
         });

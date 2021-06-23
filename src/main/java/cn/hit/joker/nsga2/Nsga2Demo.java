@@ -31,8 +31,8 @@ public class Nsga2Demo {
         List<AbstractObjectiveFunction> functionList = new ArrayList<>();
         functionList.add(new CohesionDegreeFunction());
         functionList.add(new CouplingDegreeFunction());
-        functionList.add(new AvgMsFunction());
         functionList.add(new AvgQualityFunction());
+        functionList.add(new AvgMsFunction());
         functionList.add(new CommunicatePriceFunction());
         configuration.objectives = functionList;
         // 设置初始父代产生的方法:无需设置，使用默认方法

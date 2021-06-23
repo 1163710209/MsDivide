@@ -39,26 +39,26 @@ public class SolverTest {
 
     @Test
     public void ChineseWhisperSolverTest() {
-        MainSystem.start(SolveSystem.MODE_CW, 0, getInputData().getMsDivideSystem());
+        MainSystem.start(SolveSystem.MODE_CW, 0, getInputData().getMsDivideSystem(), 4);
     }
 
     @Test
     public void MarkovSolverTest() {
-        MainSystem.start(SolveSystem.MODE_MARKOV, 0, getInputData().getMsDivideSystem());
+        MainSystem.start(SolveSystem.MODE_MARKOV, 0, getInputData().getMsDivideSystem(), 4);
     }
 
     @Test
     public void FastNewmanSolverTest() {
-        MainSystem.start(SolveSystem.MODE_FAST_NEWMAN, 0, getInputData().getMsDivideSystem());
+        MainSystem.start(SolveSystem.MODE_FAST_NEWMAN, 0, getInputData().getMsDivideSystem(), 4);
     }
 
     @Test
     public void GNSolverTest() {
-        MainSystem.start(SolveSystem.MODE_GEPHI, 3, getInputData().getMsDivideSystem());
+        MainSystem.start(SolveSystem.MODE_GEPHI, 3, getInputData().getMsDivideSystem(), 4);
     }
 
     @Test
     public void DivideResultTest() {
-        MainSystem.getDivideResult(SolveSystem.MODE_GEPHI, getInputData());
+        MainSystem.getDivideResult(SolveSystem.MODE_GEPHI, getInputData(), 4);
     }
 }
