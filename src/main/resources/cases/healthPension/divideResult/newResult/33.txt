@@ -141,7 +141,7 @@
 微服务serviceR
 	 classList = [HealthFile]
 	 classRelationList = []
-	 interfaceList = [MsInterface(className=HealthFile, methodName=uploadData, msNameList=[serviceU]), MsInterface(className=HealthFile, methodName=createHealthFile, msNameList=[serviceQ]), MsInterface(className=HealthFile, methodName=uploadData, msNameList=[serviceV])]
+	 interfaceList = [MsInterface(className=HealthFile, methodName=uploadData, msNameList=[serviceV]), MsInterface(className=HealthFile, methodName=createHealthFile, msNameList=[serviceQ]), MsInterface(className=HealthFile, methodName=uploadData, msNameList=[serviceU])]
 	 qualitySupportDegree = {ResponseTime=0.5, Reliability=0.5}
 	 deployLocationSet[Cloud, Edge]
  ---------------------------------------------------------
@@ -205,7 +205,7 @@
 微服务serviceZ
 	 classList = [SickTreat]
 	 classRelationList = []
-	 interfaceList = [MsInterface(className=SickTreat, methodName=treatment, msNameList=[serviceY]), MsInterface(className=SickTreat, methodName=transportData, msNameList=[service[])]
+	 interfaceList = [MsInterface(className=SickTreat, methodName=transportData, msNameList=[service[]), MsInterface(className=SickTreat, methodName=treatment, msNameList=[serviceY])]
 	 qualitySupportDegree = {}
 	 deployLocationSet[Cloud, Edge]
  ---------------------------------------------------------
@@ -261,7 +261,7 @@
 微服务servicea
 	 classList = [HealthWarning]
 	 classRelationList = []
-	 interfaceList = [MsInterface(className=HealthWarning, methodName=updateData, msNameList=[service`]), MsInterface(className=HealthWarning, methodName=updateData, msNameList=[service_]), MsInterface(className=HealthWarning, methodName=updateData, msNameList=[service]]), MsInterface(className=HealthWarning, methodName=updateData, msNameList=[service^])]
+	 interfaceList = [MsInterface(className=HealthWarning, methodName=updateData, msNameList=[service`]), MsInterface(className=HealthWarning, methodName=updateData, msNameList=[service]]), MsInterface(className=HealthWarning, methodName=updateData, msNameList=[service^]), MsInterface(className=HealthWarning, methodName=updateData, msNameList=[service_])]
 	 qualitySupportDegree = {dataHandleSpeed=1.0}
 	 deployLocationSet[Edge]
  ---------------------------------------------------------

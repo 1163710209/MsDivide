@@ -77,7 +77,7 @@
 微服务serviceJ
 	 classList = [NurseService]
 	 classRelationList = []
-	 interfaceList = [MsInterface(className=NurseService, methodName=sendMessage, msNameList=[servicea]), MsInterface(className=NurseService, methodName=applyService, msNameList=[serviceB]), MsInterface(className=NurseService, methodName=sendMessage, msNameList=[servicea])]
+	 interfaceList = [MsInterface(className=NurseService, methodName=sendMessage, msNameList=[servicea]), MsInterface(className=NurseService, methodName=sendMessage, msNameList=[servicea]), MsInterface(className=NurseService, methodName=applyService, msNameList=[serviceB])]
 	 qualitySupportDegree = {NurseServiceQuality=0.25}
 	 deployLocationSet[Cloud, Edge]
  ---------------------------------------------------------
@@ -141,8 +141,8 @@
 微服务serviceR
 	 classList = [HealthFile]
 	 classRelationList = []
-	 interfaceList = [MsInterface(className=HealthFile, methodName=createHealthFile, msNameList=[serviceQ]), MsInterface(className=HealthFile, methodName=uploadData, msNameList=[serviceV]), MsInterface(className=HealthFile, methodName=getHealthFile, msNameList=[serviceJ]), MsInterface(className=HealthFile, methodName=uploadData, msNameList=[serviceU])]
-	 qualitySupportDegree = {ResponseTime=0.5, Reliability=0.5, NurseServiceQuality=0.25}
+	 interfaceList = [MsInterface(className=HealthFile, methodName=uploadData, msNameList=[serviceV]), MsInterface(className=HealthFile, methodName=uploadData, msNameList=[serviceU]), MsInterface(className=HealthFile, methodName=createHealthFile, msNameList=[serviceQ])]
+	 qualitySupportDegree = {ResponseTime=0.5, Reliability=0.5}
 	 deployLocationSet[Cloud, Edge]
  ---------------------------------------------------------
 , 
@@ -157,8 +157,8 @@
 微服务serviceT
 	 classList = [MedicineInfo]
 	 classRelationList = []
-	 interfaceList = []
-	 qualitySupportDegree = {}
+	 interfaceList = [MsInterface(className=MedicineInfo, methodName=getMedicineInfo, msNameList=[serviceJ])]
+	 qualitySupportDegree = {NurseServiceQuality=0.25}
 	 deployLocationSet[Cloud, Edge]
  ---------------------------------------------------------
 , 

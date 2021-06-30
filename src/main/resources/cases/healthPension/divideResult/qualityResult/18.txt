@@ -11,14 +11,38 @@
  ---------------------------------------------------------
 , 
 微服务serviceB
-	 classList = [Nurse, NurseLevel, NurseService, NurseCareRecord, NurseReserveRecord, NursePayRecord, MedicineInfo, NurseOrder, OrderItem]
-	 classRelationList = [ClassRelation(origin=Nurse, destination=NurseLevel, type=ClassAssociation), ClassRelation(origin=NurseService, destination=Nurse, type=ClassAssociation), ClassRelation(origin=NurseCareRecord, destination=Nurse, type=ClassAssociation), ClassRelation(origin=NurseReserveRecord, destination=Nurse, type=ClassAssociation), ClassRelation(origin=NurseOrder, destination=Nurse, type=ClassAssociation), ClassRelation(origin=NurseService, destination=NurseCareRecord, type=ClassDependency), ClassRelation(origin=NurseService, destination=MedicineInfo, type=ClassDependency), ClassRelation(origin=NurseOrder, destination=NursePayRecord, type=ClassAssociation), ClassRelation(origin=OrderItem, destination=NurseOrder, type=ClassAssociation)]
-	 interfaceList = [MsInterface(className=NurseReserveRecord, methodName=addRecord, msNameList=[serviceA]), MsInterface(className=NurseService, methodName=sendMessage, msNameList=[serviceR]), MsInterface(className=Nurse, methodName=appointment, msNameList=[serviceA]), MsInterface(className=NurseOrder, methodName=addOrder, msNameList=[serviceA]), MsInterface(className=NurseService, methodName=sendMessage, msNameList=[serviceR])]
-	 qualitySupportDegree = {NurseProfit=1.0, NurseResponseTime=0.66, NurseSystemReliability=0.8, NurseServiceQuality=1.0}
+	 classList = [Nurse, NurseCareRecord, MedicineInfo, NurseService]
+	 classRelationList = [ClassRelation(origin=NurseCareRecord, destination=Nurse, type=ClassAssociation), ClassRelation(origin=NurseService, destination=Nurse, type=ClassAssociation), ClassRelation(origin=NurseService, destination=NurseCareRecord, type=ClassDependency), ClassRelation(origin=NurseService, destination=MedicineInfo, type=ClassDependency)]
+	 interfaceList = [MsInterface(className=NurseService, methodName=sendMessage, msNameList=[serviceK]), MsInterface(className=Nurse, methodName=appointment, msNameList=[serviceA]), MsInterface(className=NurseService, methodName=sendMessage, msNameList=[serviceK])]
+	 qualitySupportDegree = {NurseResponseTime=0.33, NurseSystemReliability=0.2, NurseServiceQuality=1.0}
 	 deployLocationSet[Cloud, Edge]
  ---------------------------------------------------------
 , 
 微服务serviceC
+	 classList = [NurseLevel]
+	 classRelationList = []
+	 interfaceList = []
+	 qualitySupportDegree = {}
+	 deployLocationSet[Cloud, Edge]
+ ---------------------------------------------------------
+, 
+微服务serviceD
+	 classList = [NurseOrder, NurseReserveRecord, NursePayRecord]
+	 classRelationList = [ClassRelation(origin=NurseOrder, destination=NursePayRecord, type=ClassAssociation)]
+	 interfaceList = [MsInterface(className=NurseOrder, methodName=addOrder, msNameList=[serviceA]), MsInterface(className=NurseReserveRecord, methodName=addRecord, msNameList=[serviceA])]
+	 qualitySupportDegree = {NurseProfit=1.0, NurseResponseTime=0.33, NurseSystemReliability=0.6000000000000001}
+	 deployLocationSet[Cloud, Edge]
+ ---------------------------------------------------------
+, 
+微服务serviceE
+	 classList = [OrderItem]
+	 classRelationList = []
+	 interfaceList = []
+	 qualitySupportDegree = {}
+	 deployLocationSet[Cloud, Edge]
+ ---------------------------------------------------------
+, 
+微服务serviceF
 	 classList = [NurseServiceEvaluate]
 	 classRelationList = []
 	 interfaceList = [MsInterface(className=NurseServiceEvaluate, methodName=evaluate, msNameList=[serviceA])]
@@ -26,79 +50,63 @@
 	 deployLocationSet[Cloud, Edge]
  ---------------------------------------------------------
 , 
-微服务serviceD
-	 classList = [HomeDoctor]
+微服务serviceG
+	 classList = [HomeDoctor, DoctorOrder, DoctorVisitRecord, DoctorEvaluate, DoctorPayRecord, DoctorService]
+	 classRelationList = [ClassRelation(origin=DoctorOrder, destination=HomeDoctor, type=ClassAssociation), ClassRelation(origin=DoctorVisitRecord, destination=HomeDoctor, type=ClassAssociation), ClassRelation(origin=DoctorEvaluate, destination=HomeDoctor, type=ClassAssociation), ClassRelation(origin=DoctorPayRecord, destination=DoctorOrder, type=ClassAssociation), ClassRelation(origin=DoctorService, destination=DoctorVisitRecord, type=ClassDependency), ClassRelation(origin=DoctorEvaluate, destination=DoctorService, type=ClassDependency)]
+	 interfaceList = [MsInterface(className=DoctorOrder, methodName=addOrder, msNameList=[serviceA]), MsInterface(className=DoctorEvaluate, methodName=addRecord, msNameList=[serviceA]), MsInterface(className=DoctorPayRecord, methodName=addRecord, msNameList=[serviceA])]
+	 qualitySupportDegree = {DoctorServiceQuality=1.0, DoctorProfit=1.0, DoctorServiceSatisfy=1.0}
+	 deployLocationSet[Cloud, Edge]
+ ---------------------------------------------------------
+, 
+微服务serviceH
+	 classList = [HealthEvaluate, Hospital, TreatRecord, Drug, SickTreat]
+	 classRelationList = [ClassRelation(origin=HealthEvaluate, destination=Hospital, type=ClassAssociation), ClassRelation(origin=TreatRecord, destination=HealthEvaluate, type=ClassDependency), ClassRelation(origin=Drug, destination=Hospital, type=ClassAggregate), ClassRelation(origin=SickTreat, destination=Hospital, type=ClassAssociation), ClassRelation(origin=TreatRecord, destination=SickTreat, type=ClassDependency)]
+	 interfaceList = [MsInterface(className=Hospital, methodName=register, msNameList=[serviceA]), MsInterface(className=SickTreat, methodName=transportData, msNameList=[serviceM]), MsInterface(className=Hospital, methodName=sendMessage, msNameList=[serviceK])]
+	 qualitySupportDegree = {}
+	 deployLocationSet[Cloud, Edge]
+ ---------------------------------------------------------
+, 
+微服务serviceI
+	 classList = [HealthFile]
+	 classRelationList = []
+	 interfaceList = [MsInterface(className=HealthFile, methodName=uploadData, msNameList=[serviceK]), MsInterface(className=HealthFile, methodName=createHealthFile, msNameList=[serviceH]), MsInterface(className=HealthFile, methodName=uploadData, msNameList=[serviceH])]
+	 qualitySupportDegree = {ResponseTime=0.5, Reliability=0.5}
+	 deployLocationSet[Cloud, Edge]
+ ---------------------------------------------------------
+, 
+微服务serviceJ
+	 classList = [HealthInfo]
 	 classRelationList = []
 	 interfaceList = []
 	 qualitySupportDegree = {}
 	 deployLocationSet[Cloud, Edge]
  ---------------------------------------------------------
 , 
-微服务serviceE
-	 classList = [DoctorOrder]
-	 classRelationList = []
-	 interfaceList = [MsInterface(className=DoctorOrder, methodName=addOrder, msNameList=[serviceA])]
-	 qualitySupportDegree = {}
-	 deployLocationSet[Cloud, Edge]
- ---------------------------------------------------------
-, 
-微服务serviceF
-	 classList = [DoctorPayRecord, DoctorEvaluate]
-	 classRelationList = []
-	 interfaceList = [MsInterface(className=DoctorPayRecord, methodName=addRecord, msNameList=[serviceA]), MsInterface(className=DoctorEvaluate, methodName=addRecord, msNameList=[serviceA])]
-	 qualitySupportDegree = {DoctorProfit=1.0, DoctorServiceSatisfy=1.0}
-	 deployLocationSet[Cloud, Edge]
- ---------------------------------------------------------
-, 
-微服务serviceG
-	 classList = [DoctorVisitRecord, DoctorService]
-	 classRelationList = [ClassRelation(origin=DoctorService, destination=DoctorVisitRecord, type=ClassDependency)]
-	 interfaceList = [MsInterface(className=DoctorService, methodName=provideService, msNameList=[serviceD])]
-	 qualitySupportDegree = {DoctorServiceQuality=1.0}
-	 deployLocationSet[Cloud, Edge]
- ---------------------------------------------------------
-, 
-微服务serviceH
-	 classList = [HealthEvaluate]
-	 classRelationList = []
-	 interfaceList = [MsInterface(className=HealthEvaluate, methodName=checkOldMan, msNameList=[serviceJ])]
-	 qualitySupportDegree = {}
-	 deployLocationSet[Cloud, Edge]
- ---------------------------------------------------------
-, 
-微服务serviceI
-	 classList = [HealthFile, HealthInfo, TreatRecord, DailyInfo, DrugInfo]
-	 classRelationList = [ClassRelation(origin=HealthInfo, destination=HealthFile, type=ClassAggregate), ClassRelation(origin=TreatRecord, destination=HealthFile, type=ClassAggregate), ClassRelation(origin=DailyInfo, destination=HealthFile, type=ClassAggregate), ClassRelation(origin=DrugInfo, destination=HealthFile, type=ClassAggregate)]
-	 interfaceList = [MsInterface(className=DailyInfo, methodName=uploadData, msNameList=[serviceR]), MsInterface(className=HealthFile, methodName=createHealthFile, msNameList=[serviceH]), MsInterface(className=TreatRecord, methodName=addRecord, msNameList=[serviceK])]
-	 qualitySupportDegree = {ResponseTime=0.8, Reliability=0.8}
-	 deployLocationSet[Cloud, Edge]
- ---------------------------------------------------------
-, 
-微服务serviceJ
-	 classList = [Drug, Hospital]
-	 classRelationList = [ClassRelation(origin=Drug, destination=Hospital, type=ClassAggregate)]
-	 interfaceList = [MsInterface(className=Hospital, methodName=register, msNameList=[serviceA]), MsInterface(className=Hospital, methodName=sendMessage, msNameList=[serviceR])]
-	 qualitySupportDegree = {}
-	 deployLocationSet[Cloud, Edge]
- ---------------------------------------------------------
-, 
 微服务serviceK
-	 classList = [SickTreat]
-	 classRelationList = []
-	 interfaceList = [MsInterface(className=SickTreat, methodName=treatment, msNameList=[serviceJ]), MsInterface(className=SickTreat, methodName=transportData, msNameList=[serviceL])]
-	 qualitySupportDegree = {}
-	 deployLocationSet[Cloud, Edge]
+	 classList = [DailyInfo, HealthWarning]
+	 classRelationList = [ClassRelation(origin=DailyInfo, destination=HealthWarning, type=ClassDependency), ClassRelation(origin=HealthWarning, destination=DailyInfo, type=ClassDependency)]
+	 interfaceList = [MsInterface(className=HealthWarning, methodName=updateData, msNameList=[serviceQ]), MsInterface(className=HealthWarning, methodName=updateData, msNameList=[serviceO]), MsInterface(className=HealthWarning, methodName=updateData, msNameList=[serviceP]), MsInterface(className=HealthWarning, methodName=updateData, msNameList=[serviceR])]
+	 qualitySupportDegree = {dataHandleSpeed=1.0, ResponseTime=0.3, Reliability=0.3}
+	 deployLocationSet[Edge]
  ---------------------------------------------------------
 , 
 微服务serviceL
+	 classList = [DrugInfo]
+	 classRelationList = []
+	 interfaceList = []
+	 qualitySupportDegree = {}
+	 deployLocationSet[Cloud, Edge]
+ ---------------------------------------------------------
+, 
+微服务serviceM
 	 classList = [DataAnalyze]
 	 classRelationList = []
-	 interfaceList = [MsInterface(className=DataAnalyze, methodName=uploadData, msNameList=[serviceI])]
+	 interfaceList = [MsInterface(className=DataAnalyze, methodName=uploadData, msNameList=[serviceK])]
 	 qualitySupportDegree = {ResponseTime=0.2, Reliability=0.2}
 	 deployLocationSet[Cloud]
  ---------------------------------------------------------
 , 
-微服务serviceM
+微服务serviceN
 	 classList = [WristBand]
 	 classRelationList = []
 	 interfaceList = []
@@ -106,7 +114,7 @@
 	 deployLocationSet[End]
  ---------------------------------------------------------
 , 
-微服务serviceN
+微服务serviceO
 	 classList = [BloodPressure]
 	 classRelationList = []
 	 interfaceList = [MsInterface(className=BloodPressure, methodName=collectData, msNameList=[serviceA])]
@@ -114,7 +122,7 @@
 	 deployLocationSet[End]
  ---------------------------------------------------------
 , 
-微服务serviceO
+微服务serviceP
 	 classList = [BloodSugar]
 	 classRelationList = []
 	 interfaceList = [MsInterface(className=BloodSugar, methodName=collectData, msNameList=[serviceA])]
@@ -122,7 +130,7 @@
 	 deployLocationSet[End]
  ---------------------------------------------------------
 , 
-微服务serviceP
+微服务serviceQ
 	 classList = [BloodLipid]
 	 classRelationList = []
 	 interfaceList = [MsInterface(className=BloodLipid, methodName=collectData, msNameList=[serviceA])]
@@ -130,25 +138,18 @@
 	 deployLocationSet[End]
  ---------------------------------------------------------
 , 
-微服务serviceQ
+微服务serviceR
 	 classList = [HeartRate]
 	 classRelationList = []
 	 interfaceList = [MsInterface(className=HeartRate, methodName=collectData, msNameList=[serviceA])]
 	 qualitySupportDegree = {HeartRateUploadTime=1.0}
 	 deployLocationSet[End]
  ---------------------------------------------------------
-, 
-微服务serviceR
-	 classList = [HealthWarning]
-	 classRelationList = []
-	 interfaceList = [MsInterface(className=HealthWarning, methodName=updateData, msNameList=[serviceQ]), MsInterface(className=HealthWarning, methodName=updateData, msNameList=[serviceP]), MsInterface(className=HealthWarning, methodName=updateData, msNameList=[serviceO]), MsInterface(className=HealthWarning, methodName=updateData, msNameList=[serviceN])]
-	 qualitySupportDegree = {dataHandleSpeed=1.0}
-	 deployLocationSet[Edge]
- ---------------------------------------------------------
 ]
-聚合度为：0.9783950617283951
-耦合度为：2.4444444444444446
-通讯代价为：7.525
-平均每个微服务支持的质量指标数：1.0555555555555556
-平均每个质量指标关联的微服务数：1.2666666666666666
+聚合度为：1.0435185185185185
+耦合度为：2.2777777777777777
+是否符合部署位置约束：true
+通讯代价为：7.15
+平均每个微服务支持的质量指标数：1.2777777777777777
+平均每个质量指标关联的微服务数：1.5333333333333334
 -------------------------------------------

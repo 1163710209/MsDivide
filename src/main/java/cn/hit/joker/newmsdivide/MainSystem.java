@@ -156,6 +156,27 @@ public class MainSystem {
     }
 
     /**
+     * get all microservice solution without check deployment constraint
+     *
+     * @param algorithm algorithm
+     * @param inputData inputdata
+     * @param type type
+     * @return msSolution list
+     */
+    public static List<List<Microservice>> getNoDeployDivideResult(String algorithm, InputData inputData, int type) {
+        List<List<Microservice>> msSolutionList = new ArrayList<>();
+        List<UmlClass> classList = inputData.getClassDiagram().getClassList();
+        MsDivideSystem msDivideSystem = inputData.getMsDivideSystem();
+        for (int i=1; i<=classList.size(); i++) {
+            List<Microservice> msList = start(algorithm, i, msDivideSystem, type);
+            if (msList.size() == i) {
+                msSolutionList.add(msList);
+            }
+        }
+        return msSolutionList;
+    }
+
+    /**
      * get all microservice solution in deployment constraint of input algorithm
      *
      * @param algorithm

@@ -90,6 +90,9 @@ public class InputData {
         CriterionInstance classAggregate = CriterionInstance.getCriterionInstance(CriterionName.ClassAggregate);
         CriterionInstance classComposition = CriterionInstance.getCriterionInstance(CriterionName.ClassComposition);
         CriterionInstance classInheritance = CriterionInstance.getCriterionInstance(CriterionName.ClassInheritance);
+        CriterionInstance classAssociation = CriterionInstance.getCriterionInstance(CriterionName.ClassAssociation);
+        CriterionInstance classDependency = CriterionInstance.getCriterionInstance(CriterionName.ClassDependency);
+
 
         // add entity relation to criterionInstance
         classDiagram.getClassRelationList().forEach(relation -> {
@@ -110,6 +113,12 @@ public class InputData {
                 case ClassInheritance:
                     addClassPairToInstance(classInheritance, nameA, nameB);
                     break;
+                case ClassAssociation:
+                    addClassPairToInstance(classAssociation, nameA, nameB);
+                    break;
+                case ClassDependency:
+                    addClassPairToInstance(classDependency, nameA, nameB);
+                    break;
             }
         });
 
@@ -117,6 +126,8 @@ public class InputData {
         instanceList.add(classAggregate);
         instanceList.add(classComposition);
         instanceList.add(classInheritance);
+        instanceList.add(classAssociation);
+        instanceList.add(classDependency);
     }
 
     private void addClassPairToInstance(CriterionInstance instance, String nameA, String nameB) {
@@ -124,7 +135,7 @@ public class InputData {
         UmlClass umlClassB = classDiagram.getUmlClassByName(nameB);
 
         if (umlClassA == null || umlClassB == null) {
-            throw new IllegalArgumentException("类关系列表中输入的类称错误，应在提供的类范围内！");
+            throw new IllegalArgumentException("类关系列表中输入的类称错误，应在提供的类范围内！[" + nameA + ", " + nameB + "]");
         }
         instance.getClassPairList().add(new ClassPair(umlClassA, umlClassB));
     }

@@ -5,16 +5,20 @@ import cn.hit.joker.newmsdivide.analyzer.MicroserviceAnalyzer;
 import cn.hit.joker.newmsdivide.importer.ImporterUtils;
 import cn.hit.joker.newmsdivide.importer.InputData;
 import cn.hit.joker.newmsdivide.importer.classImporter.ClassDiagram;
+import cn.hit.joker.newmsdivide.importer.classImporter.Deploy;
+import cn.hit.joker.newmsdivide.importer.classImporter.UmlClass;
 import cn.hit.joker.newmsdivide.importer.sequenceImporter.SequenceDiagram;
 import cn.hit.joker.newmsdivide.model.MsDivideSystem;
 import cn.hit.joker.newmsdivide.model.result.Microservice;
 import cn.hit.joker.newmsdivide.solver.SolveSystem;
 import cn.hit.joker.newmsdivide.utils.ChangeToServiceCutterInput;
 import cn.hit.joker.newmsdivide.utils.WriteFile;
+import com.debacharya.nsgaii.datastructure.Population;
 import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Set;
 
 public class HealthCareImportTest
 {
@@ -53,7 +57,13 @@ public class HealthCareImportTest
     @Test
     public void getMsDivideSystemNormalResultTest() {
         InputData inputData = getInputData();
-        List<List<Microservice>> solutionList = MainSystem.getDivideResult(SolveSystem.MODE_GEPHI, inputData, 1);
+        List<UmlClass> classList = inputData.getClassDiagram().getClassList();
+        // 计算运行时间
+        long startTime = System.currentTimeMillis();
+        List<List<Microservice>> solutionList = MainSystem.getNoDeployDivideResult(SolveSystem.MODE_GEPHI, inputData, 1);
+        long endTime = System.currentTimeMillis();
+        System.out.printf("执行时长：%d 毫秒.\n", (endTime - startTime));
+
         String path = "src/main/resources/cases/healthPension/divideResult/normalResult";
         // 删除文件
         WriteFile.delAllFile(path);
@@ -63,6 +73,23 @@ public class HealthCareImportTest
 
             double cohesionDegree = MicroserviceAnalyzer.getCohesionDegree(microserviceList, inputData.getClassDiagram());
             double coupingDegree = MicroserviceAnalyzer.getCoupingDegree(microserviceList, inputData.getClassDiagram());
+
+            // check satisfy deployment constraint
+            boolean meet = true;
+            for (Microservice microservice : microserviceList) {
+                if (microservice.getClassList().size() == 1) {
+                    microservice.setDeployLocationSet(inputData.getClassDiagram().getUmlClassByName(microservice.getClassList().get(0).getName()).getDeploy().getLocations());
+                } else if (microservice.getClassList().size() > 1) {
+                    Set<Deploy.Location> locations = MainSystem.checkDeployLocation(microservice, classList);
+                    if (locations.size() == 0) {
+                        meet = false;
+                        break;
+                    } else {
+                        microservice.setDeployLocationSet(locations);
+                    }
+                }
+            }
+
             double communicatePrice = MicroserviceAnalyzer.getCommunicatePrice(microserviceList, inputData.getSequenceDiagramList());
             double[] value = MicroserviceAnalyzer.getAverageValueSupport(microserviceList);
 
@@ -73,6 +100,7 @@ public class HealthCareImportTest
                     .append("微服务为：" + microserviceList + "\n")
                     .append("聚合度为：" + cohesionDegree + "\n")
                     .append("耦合度为：" + coupingDegree + "\n")
+                    .append("是否符合部署位置约束：" + meet + "\n")
                     .append("通讯代价为：" + communicatePrice + "\n")
                     .append("平均每个微服务支持的质量指标数：" + value[0] + "\n")
                     .append("平均每个质量指标关联的微服务数：" + value[1] + "\n")
@@ -86,7 +114,14 @@ public class HealthCareImportTest
     @Test
     public void getMsDivideSystemQualityResultTest() {
         InputData inputData = getInputData();
-        List<List<Microservice>> solutionList = MainSystem.getDivideResult(SolveSystem.MODE_GEPHI, inputData, 2);
+        List<UmlClass> classList = inputData.getClassDiagram().getClassList();
+
+        // 计算执行时间
+        long startTime = System.currentTimeMillis();
+        List<List<Microservice>> solutionList = MainSystem.getNoDeployDivideResult(SolveSystem.MODE_GEPHI, inputData, 2);
+        long endTime = System.currentTimeMillis();
+        System.out.printf("执行时长：%d 毫秒.\n", (endTime - startTime));
+
         String path = "src/main/resources/cases/healthPension/divideResult/qualityResult";
         // 删除文件
         WriteFile.delAllFile(path);
@@ -96,6 +131,23 @@ public class HealthCareImportTest
 
             double cohesionDegree = MicroserviceAnalyzer.getCohesionDegree(microserviceList, inputData.getClassDiagram());
             double coupingDegree = MicroserviceAnalyzer.getCoupingDegree(microserviceList, inputData.getClassDiagram());
+
+            // check satisfy deployment constraint
+            boolean meet = true;
+            for (Microservice microservice : microserviceList) {
+                if (microservice.getClassList().size() == 1) {
+                    microservice.setDeployLocationSet(inputData.getClassDiagram().getUmlClassByName(microservice.getClassList().get(0).getName()).getDeploy().getLocations());
+                } else if (microservice.getClassList().size() > 1) {
+                    Set<Deploy.Location> locations = MainSystem.checkDeployLocation(microservice, classList);
+                    if (locations.size() == 0) {
+                        meet = false;
+                        break;
+                    } else {
+                        microservice.setDeployLocationSet(locations);
+                    }
+                }
+            }
+
             double communicatePrice = MicroserviceAnalyzer.getCommunicatePrice(microserviceList, inputData.getSequenceDiagramList());
             double[] value = MicroserviceAnalyzer.getAverageValueSupport(microserviceList);
 
@@ -106,6 +158,7 @@ public class HealthCareImportTest
                     .append("微服务为：" + microserviceList + "\n")
                     .append("聚合度为：" + cohesionDegree + "\n")
                     .append("耦合度为：" + coupingDegree + "\n")
+                    .append("是否符合部署位置约束：" + meet + "\n")
                     .append("通讯代价为：" + communicatePrice + "\n")
                     .append("平均每个微服务支持的质量指标数：" + value[0] + "\n")
                     .append("平均每个质量指标关联的微服务数：" + value[1] + "\n")
@@ -119,7 +172,13 @@ public class HealthCareImportTest
     @Test
     public void getMsDivideSystemDeployResultTest() {
         InputData inputData = getInputData();
+
+        // 计算执行时间
+        long startTime = System.currentTimeMillis();
         List<List<Microservice>> solutionList = MainSystem.getDivideResult(SolveSystem.MODE_GEPHI, inputData, 3);
+        long endTime = System.currentTimeMillis();
+        System.out.printf("执行时长：%d 毫秒.\n", (endTime - startTime));
+
         String path = "src/main/resources/cases/healthPension/divideResult/deployResult";
         // 删除文件
         WriteFile.delAllFile(path);
@@ -152,7 +211,12 @@ public class HealthCareImportTest
     @Test
     public void getMsDivideSystemNewResultTest() {
         InputData inputData = getInputData();
+        // 计算执行时间
+        long startTime = System.currentTimeMillis();
         List<List<Microservice>> solutionList = MainSystem.getDivideResult(SolveSystem.MODE_GEPHI, inputData, 4);
+        long endTime = System.currentTimeMillis();
+        System.out.printf("执行时长：%d 毫秒.\n", (endTime - startTime));
+
         String path = "src/main/resources/cases/healthPension/divideResult/newResult";
         // 删除文件
         WriteFile.delAllFile(path);

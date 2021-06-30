@@ -132,8 +132,8 @@
 , 
 微服务serviceB
 	 classList = [Hospital, OldMan, HealthFile, Drug, DrugInfo, MedicineInfo, DailyInfo, SickTreat, TreatRecord]
-	 classRelationList = [ClassRelation(origin=Drug, destination=Hospital, type=ClassAggregate), ClassRelation(origin=SickTreat, destination=Hospital, type=ClassAssociation), ClassRelation(origin=HealthFile, destination=OldMan, type=ClassAssociation), ClassRelation(origin=SickTreat, destination=OldMan, type=ClassAssociation), ClassRelation(origin=DrugInfo, destination=HealthFile, type=ClassAggregate), ClassRelation(origin=MedicineInfo, destination=HealthFile, type=ClassAggregate), ClassRelation(origin=DailyInfo, destination=HealthFile, type=ClassAggregate), ClassRelation(origin=TreatRecord, destination=HealthFile, type=ClassAggregate), ClassRelation(origin=DrugInfo, destination=Drug, type=ClassAssociation)]
-	 interfaceList = [MsInterface(className=HealthFile, methodName=getHealthFile, msNameList=[serviceJ]), MsInterface(className=Hospital, methodName=sendMessage, msNameList=[serviceG]), MsInterface(className=SickTreat, methodName=transportData, msNameList=[serviceR]), MsInterface(className=HealthFile, methodName=createHealthFile, msNameList=[serviceD]), MsInterface(className=DailyInfo, methodName=uploadData, msNameList=[serviceG])]
+	 classRelationList = [ClassRelation(origin=Drug, destination=Hospital, type=ClassAggregate), ClassRelation(origin=SickTreat, destination=Hospital, type=ClassAssociation), ClassRelation(origin=HealthFile, destination=OldMan, type=ClassAssociation), ClassRelation(origin=SickTreat, destination=OldMan, type=ClassAssociation), ClassRelation(origin=DrugInfo, destination=HealthFile, type=ClassAggregate), ClassRelation(origin=MedicineInfo, destination=HealthFile, type=ClassAggregate), ClassRelation(origin=DailyInfo, destination=HealthFile, type=ClassAggregate), ClassRelation(origin=TreatRecord, destination=HealthFile, type=ClassAggregate), ClassRelation(origin=DrugInfo, destination=Drug, type=ClassAssociation), ClassRelation(origin=TreatRecord, destination=SickTreat, type=ClassDependency)]
+	 interfaceList = [MsInterface(className=MedicineInfo, methodName=getMedicineInfo, msNameList=[serviceJ]), MsInterface(className=Hospital, methodName=sendMessage, msNameList=[serviceG]), MsInterface(className=SickTreat, methodName=transportData, msNameList=[serviceR]), MsInterface(className=HealthFile, methodName=createHealthFile, msNameList=[serviceD]), MsInterface(className=DailyInfo, methodName=uploadData, msNameList=[serviceG])]
 	 qualitySupportDegree = {NurseResponseTime=0.33, ResponseTime=0.8, Reliability=0.8, NurseSystemReliability=0.2, NurseServiceQuality=0.25}
 	 deployLocationSet[Edge, Cloud]
  ---------------------------------------------------------
@@ -162,8 +162,8 @@
 	 deployLocationSet[End]
  ---------------------------------------------------------
 ]
-聚合度为：0.9805555555555555
-耦合度为：2.35
+聚合度为：0.986111111111111
+耦合度为：2.3
 通讯代价为：9.024999999999999
 平均每个微服务支持的质量指标数：1.5
 平均每个质量指标关联的微服务数：2.0

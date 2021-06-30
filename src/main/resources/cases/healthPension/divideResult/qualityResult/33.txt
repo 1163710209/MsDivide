@@ -77,7 +77,7 @@
 微服务serviceJ
 	 classList = [NurseService]
 	 classRelationList = []
-	 interfaceList = [MsInterface(className=NurseService, methodName=sendMessage, msNameList=[servicea]), MsInterface(className=NurseService, methodName=sendMessage, msNameList=[servicea]), MsInterface(className=NurseService, methodName=applyService, msNameList=[serviceB])]
+	 interfaceList = [MsInterface(className=NurseService, methodName=sendMessage, msNameList=[servicea]), MsInterface(className=NurseService, methodName=applyService, msNameList=[serviceB]), MsInterface(className=NurseService, methodName=sendMessage, msNameList=[servicea])]
 	 qualitySupportDegree = {NurseServiceQuality=0.25}
 	 deployLocationSet[Cloud, Edge]
  ---------------------------------------------------------
@@ -141,7 +141,7 @@
 微服务serviceR
 	 classList = [HealthFile]
 	 classRelationList = []
-	 interfaceList = [MsInterface(className=HealthFile, methodName=createHealthFile, msNameList=[serviceQ]), MsInterface(className=HealthFile, methodName=uploadData, msNameList=[serviceU]), MsInterface(className=HealthFile, methodName=uploadData, msNameList=[serviceV])]
+	 interfaceList = [MsInterface(className=HealthFile, methodName=uploadData, msNameList=[serviceV]), MsInterface(className=HealthFile, methodName=uploadData, msNameList=[serviceU]), MsInterface(className=HealthFile, methodName=createHealthFile, msNameList=[serviceQ])]
 	 qualitySupportDegree = {ResponseTime=0.5, Reliability=0.5}
 	 deployLocationSet[Cloud, Edge]
  ---------------------------------------------------------
@@ -205,7 +205,7 @@
 微服务serviceZ
 	 classList = [SickTreat]
 	 classRelationList = []
-	 interfaceList = [MsInterface(className=SickTreat, methodName=treatment, msNameList=[serviceY]), MsInterface(className=SickTreat, methodName=transportData, msNameList=[service[])]
+	 interfaceList = [MsInterface(className=SickTreat, methodName=transportData, msNameList=[service[]), MsInterface(className=SickTreat, methodName=treatment, msNameList=[serviceY])]
 	 qualitySupportDegree = {}
 	 deployLocationSet[Cloud, Edge]
  ---------------------------------------------------------
@@ -261,13 +261,14 @@
 微服务servicea
 	 classList = [HealthWarning]
 	 classRelationList = []
-	 interfaceList = [MsInterface(className=HealthWarning, methodName=updateData, msNameList=[service^]), MsInterface(className=HealthWarning, methodName=updateData, msNameList=[service]]), MsInterface(className=HealthWarning, methodName=updateData, msNameList=[service_]), MsInterface(className=HealthWarning, methodName=updateData, msNameList=[service`])]
+	 interfaceList = [MsInterface(className=HealthWarning, methodName=updateData, msNameList=[service]]), MsInterface(className=HealthWarning, methodName=updateData, msNameList=[service_]), MsInterface(className=HealthWarning, methodName=updateData, msNameList=[service^]), MsInterface(className=HealthWarning, methodName=updateData, msNameList=[service`])]
 	 qualitySupportDegree = {dataHandleSpeed=1.0}
 	 deployLocationSet[Edge]
  ---------------------------------------------------------
 ]
 聚合度为：1.0
 耦合度为：1.7878787878787878
+是否符合部署位置约束：true
 通讯代价为：11.024999999999999
 平均每个微服务支持的质量指标数：0.9696969696969697
 平均每个质量指标关联的微服务数：2.1333333333333333

@@ -918,7 +918,7 @@
     },
     {
       "origin": "TreatRecord",
-      "destination": "sickTreat",
+      "destination": "SickTreat",
       "type": "ClassDependency"
     },
     {

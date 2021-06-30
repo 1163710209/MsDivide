@@ -41,13 +41,18 @@ public class Nsga2Demo {
         // 使用默认提供的交叉方法
         configuration.setCrossover(new MyCrossover(CrossoverParticipantCreatorProvider.selectByBinaryTournamentSelection()));
         // 设置变异方法
-        configuration.setMutation(new MyMutation(1, 33));
+        configuration.setMutation(new MyMutation(1, 26));
         // 设置生成子代群体的方法
 
 
         NSGA2 nsga2 = new NSGA2(configuration);
         System.out.println(configuration.isSetup());
+
+        // 计算运行时间
+        long startTime = System.currentTimeMillis();
         Population population = nsga2.run();
+        long endTime = System.currentTimeMillis();
+        System.out.printf("执行时长：%d 毫秒.\n", (endTime - startTime));
         System.out.println("----------------------------------");
         System.out.println(population.toString());
     }
