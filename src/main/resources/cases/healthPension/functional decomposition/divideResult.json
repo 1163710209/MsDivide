@@ -1,0 +1,59 @@
+{
+  "serviceA": [
+    "Nurse",
+    "NurseLevel"
+  ],
+  "serviceB": [
+    "MedicineInfo",
+    "NurseService",
+    "NurseCareRecord"
+  ],
+  "serviceC": [
+    "NurseOrder",
+    "OrderItem",
+    "NurseServiceEvaluate",
+    "NursePayRecord"
+  ],
+  "serviceD": [
+    "HomeDoctor"
+  ],
+  "serviceE": [
+    "OldMan"
+  ],
+  "serviceF": [
+    "Drug"
+  ],
+  "serviceG": [
+    "NurseReserveRecord"
+  ],
+  "serviceH": [
+    "Hospital"
+  ],
+  "serviceI": [
+    "HealthWarning",
+    "HeartRate",
+    "WristBand",
+    "BloodSugar",
+    "BloodLipid",
+    "BloodPressure"
+  ],
+  "serviceJ": [
+    "DoctorOrder",
+    "DoctorPayRecord",
+    "DoctorEvaluate"
+  ],
+  "serviceK": [
+    "DoctorVisitRecord",
+    "DoctorService"
+  ],
+  "serviceL": [
+    "HealthEvaluate",
+    "HealthInfo",
+    "HealthFile",
+    "DrugInfo",
+    "DailyInfo",
+    "TreatRecord",
+    "SickTreat",
+    "DataAnalyze"
+  ]
+}
