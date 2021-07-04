@@ -1,0 +1,75 @@
+------------------------------
+微服务划分方案为：
+微服务的数量为：8
+微服务为：[
+微服务serviceA
+	 classList = [Cargo]
+	 classRelationList = []
+	 interfaceList = []
+	 qualitySupportDegree = {Profit=0.35, Cost=0.35}
+	 deployLocationSet[Cloud, Edge]
+ ---------------------------------------------------------
+, 
+微服务serviceB
+	 classList = [RouteSpecification]
+	 classRelationList = []
+	 interfaceList = []
+	 qualitySupportDegree = {Profit=0.25}
+	 deployLocationSet[Cloud, Edge]
+ ---------------------------------------------------------
+, 
+微服务serviceC
+	 classList = [Leg]
+	 classRelationList = []
+	 interfaceList = [MsInterface(className=Leg, methodName=routeCargo, msNameList=[serviceA])]
+	 qualitySupportDegree = {Profit=0.4}
+	 deployLocationSet[Cloud, Edge]
+ ---------------------------------------------------------
+, 
+微服务serviceD
+	 classList = [Voyage]
+	 classRelationList = []
+	 interfaceList = []
+	 qualitySupportDegree = {UserSatisfaction=0.35}
+	 deployLocationSet[Cloud, Edge]
+ ---------------------------------------------------------
+, 
+微服务serviceE
+	 classList = [CarrierMovement]
+	 classRelationList = []
+	 interfaceList = [MsInterface(className=CarrierMovement, methodName=addCarrierMovement, msNameList=[serviceD])]
+	 qualitySupportDegree = {UserSatisfaction=0.65}
+	 deployLocationSet[Cloud, Edge]
+ ---------------------------------------------------------
+, 
+微服务serviceF
+	 classList = [Itinerary]
+	 classRelationList = []
+	 interfaceList = [MsInterface(className=Itinerary, methodName=routeCargo, msNameList=[serviceA])]
+	 qualitySupportDegree = {}
+	 deployLocationSet[Cloud, Edge]
+ ---------------------------------------------------------
+, 
+微服务serviceG
+	 classList = [Delivery, HandlingEvent]
+	 classRelationList = []
+	 interfaceList = [MsInterface(className=Delivery, methodName=handleCargoEvent, msNameList=[serviceA])]
+	 qualitySupportDegree = {ResponseTime=1.0, Cost=0.65}
+	 deployLocationSet[Cloud, Edge]
+ ---------------------------------------------------------
+, 
+微服务serviceH
+	 classList = [Location]
+	 classRelationList = []
+	 interfaceList = []
+	 qualitySupportDegree = {}
+	 deployLocationSet[Edge]
+ ---------------------------------------------------------
+]
+聚合度为：0.9375
+耦合度为：2.0
+是否符合部署位置约束：true
+通讯代价为：2.75
+平均每个微服务支持的质量指标数：1.0
+平均每个质量指标关联的微服务数：2.0
+-------------------------------------------

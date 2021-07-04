@@ -2,6 +2,7 @@ package cn.hit.joker.nsga2.objectiveFunction;
 
 import cn.hit.joker.newmsdivide.MainSystem;
 import cn.hit.joker.newmsdivide.analyzer.MicroserviceAnalyzer;
+import cn.hit.joker.newmsdivide.importer.InputData;
 import cn.hit.joker.newmsdivide.model.result.Microservice;
 import com.debacharya.nsgaii.datastructure.Chromosome;
 import com.debacharya.nsgaii.objectivefunction.AbstractObjectiveFunction;
@@ -15,9 +16,13 @@ import java.util.List;
  * @description compute cohesion degree of divide solution, bigger is better
  */
 public class CohesionDegreeFunction extends AbstractObjectiveFunction {
-
+    private InputData inputData;
     public CohesionDegreeFunction() {
         super();
+    }
+    public CohesionDegreeFunction(InputData inputData) {
+        super();
+        this.inputData = inputData;
     }
 
     @Override
@@ -27,9 +32,9 @@ public class CohesionDegreeFunction extends AbstractObjectiveFunction {
 
     @Override
     public double getValue(Chromosome chromosome) {
-        List<Microservice> msList = MicroserviceAnalyzer.getMsListFromChromosome(chromosome);
-        MicroserviceAnalyzer.addAllToMs(msList, MainSystem.getInputData());
-        double cohesionDegree = MicroserviceAnalyzer.getCohesionDegree(msList, MainSystem.getInputData().getClassDiagram());
+        List<Microservice> msList = MicroserviceAnalyzer.getMsListFromChromosome(chromosome, inputData);
+        MicroserviceAnalyzer.addAllToMs(msList, inputData);
+        double cohesionDegree = MicroserviceAnalyzer.getCohesionDegree(msList, inputData.getClassDiagram());
         return cohesionDegree;
     }
 }

@@ -2,6 +2,7 @@ package cn.hit.joker.nsga2.objectiveFunction;
 
 import cn.hit.joker.newmsdivide.MainSystem;
 import cn.hit.joker.newmsdivide.analyzer.MicroserviceAnalyzer;
+import cn.hit.joker.newmsdivide.importer.InputData;
 import cn.hit.joker.newmsdivide.model.result.Microservice;
 import com.debacharya.nsgaii.datastructure.Chromosome;
 import com.debacharya.nsgaii.objectivefunction.AbstractObjectiveFunction;
@@ -16,8 +17,15 @@ import java.util.List;
  */
 public class AvgQualityFunction extends AbstractObjectiveFunction {
 
+    private InputData inputData;
+
     public AvgQualityFunction() {
         super();
+    }
+
+    public AvgQualityFunction(InputData inputData) {
+        super();
+        this.inputData = inputData;
     }
 
     @Override
@@ -27,8 +35,8 @@ public class AvgQualityFunction extends AbstractObjectiveFunction {
 
     @Override
     public double getValue(Chromosome chromosome) {
-        List<Microservice> msList = MicroserviceAnalyzer.getMsListFromChromosome(chromosome);
-        MicroserviceAnalyzer.addAllToMs(msList, MainSystem.getInputData());
+        List<Microservice> msList = MicroserviceAnalyzer.getMsListFromChromosome(chromosome, inputData);
+        MicroserviceAnalyzer.addAllToMs(msList,inputData);
         double[] avgQuality = MicroserviceAnalyzer.getAverageValueSupport(msList);
         return -avgQuality[0];
     }

@@ -1,5 +1,10 @@
 package cn.hit.joker.nsga2;
 
+import cn.hit.joker.newmsdivide.MainSystem;
+import cn.hit.joker.newmsdivide.importer.ImporterUtils;
+import cn.hit.joker.newmsdivide.importer.InputData;
+import cn.hit.joker.newmsdivide.importer.classImporter.ClassDiagram;
+import cn.hit.joker.newmsdivide.importer.sequenceImporter.SequenceDiagram;
 import cn.hit.joker.nsga2.objectiveFunction.*;
 import com.debacharya.nsgaii.Configuration;
 import com.debacharya.nsgaii.NSGA2;
@@ -16,24 +21,42 @@ import java.util.List;
  * @date 2021/6/18 14:21
  * @description a demo of nsga2
  */
-public class Nsga2Demo {
+public class Nsga2DDDCargoDemo {
+    // get input data
+    public static InputData getInputData() {
+        String classPath = "cases/dddCargo/class.json";
+        String sequencePath = "cases/dddCargo/sequence.json";
+        InputData inputData = null;
+        try {
+            ClassDiagram classDiagram = ImporterUtils.importClassDiagram(classPath);
+            SequenceDiagram sequenceDiagram = ImporterUtils.importSequenceDiagram(sequencePath);
+            List<SequenceDiagram> sequenceDiagrams = new ArrayList<>();
+            sequenceDiagrams.add(sequenceDiagram);
+            inputData = new InputData(classDiagram, sequenceDiagrams);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return inputData;
+    }
+
     public static void main(String[] args) {
         Configuration configuration = new Configuration();
         // 设置染色体长度，这里是（类图中类的数目）
-        configuration.setChromosomeLength(26);
+        configuration.setChromosomeLength(9);
         // 设置世代数
-        configuration.setGenerations(100);
+        configuration.setGenerations(50);
         // 设置每个世代的染色体总数，即划分方案总数
         configuration.setPopulationSize(10);
         // 设置创建遗传代码的类，即随机的生成每个类属于哪个微服务
-        configuration.setGeneticCodeProducer(new DivideSolutionProducer(26));
+        configuration.setGeneticCodeProducer(new DivideSolutionProducer(9));
         // 设置目标函数
         List<AbstractObjectiveFunction> functionList = new ArrayList<>();
-        functionList.add(new CohesionDegreeFunction());
-        functionList.add(new CouplingDegreeFunction());
-        functionList.add(new AvgQualityFunction());
-        functionList.add(new AvgMsFunction());
-        functionList.add(new CommunicatePriceFunction());
+        InputData inputData = getInputData();
+        functionList.add(new CohesionDegreeFunction(inputData));
+        functionList.add(new CouplingDegreeFunction(inputData));
+        functionList.add(new AvgQualityFunction(inputData));
+        functionList.add(new AvgMsFunction(inputData));
+        functionList.add(new CommunicatePriceFunction(inputData));
         configuration.objectives = functionList;
         // 设置初始父代产生的方法:无需设置，使用默认方法
 
@@ -41,7 +64,7 @@ public class Nsga2Demo {
         // 使用默认提供的交叉方法
         configuration.setCrossover(new MyCrossover(CrossoverParticipantCreatorProvider.selectByBinaryTournamentSelection()));
         // 设置变异方法
-        configuration.setMutation(new MyMutation(1, 26));
+        configuration.setMutation(new MyMutation(1, 9));
         // 设置生成子代群体的方法
 
 

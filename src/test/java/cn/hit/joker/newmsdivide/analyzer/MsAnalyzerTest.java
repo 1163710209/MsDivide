@@ -23,8 +23,8 @@ import java.util.List;
 public class MsAnalyzerTest {
 
     private InputData getInputData() {
-        String classPath = "cases/case1 ddd cargo transport/class.json";
-        String sequencePath = "cases/case1 ddd cargo transport/sequence.json";
+        String classPath = "cases/dddCargo/class.json";
+        String sequencePath = "cases/dddCargo/sequence.json";
         InputData inputData = null;
         try {
             ClassDiagram classDiagram = ImporterUtils.importClassDiagram(classPath);

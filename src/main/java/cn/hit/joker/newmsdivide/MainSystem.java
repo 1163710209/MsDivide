@@ -179,18 +179,22 @@ public class MainSystem {
     /**
      * get all microservice solution in deployment constraint of input algorithm
      *
-     * @param algorithm
      * @param inputData
      * @return
      */
-    public static List<List<Microservice>> getRandomDivideResult(String algorithm, InputData inputData, int times, int type) {
+    public static List<List<Microservice>> getRandomDivideResult(InputData inputData, int times, int type) {
         List<List<Microservice>> msSolutionList = new ArrayList<>();
         List<UmlClass> classList = inputData.getClassDiagram().getClassList();
         MsDivideSystem msDivideSystem = inputData.getMsDivideSystem();
-        for (int i=1; i<=times; i++) {
-            List<Microservice> msList = start(algorithm, i, msDivideSystem, type);
-            msSolutionList.add(msList);
-        }
+
+        List<Microservice> msList1 = start(SolveSystem.MODE_FAST_NEWMAN, 0, msDivideSystem, type);
+        msSolutionList.add(msList1);
+
+        List<Microservice> msList2 = start(SolveSystem.MODE_CW, 0, msDivideSystem, type);
+        msSolutionList.add(msList2);
+
+        List<Microservice> msList3 = start(SolveSystem.MODE_MARKOV, 0, msDivideSystem, type);
+        msSolutionList.add(msList3);
 
         // check deployLocation constraint
         for (int i=0; i< msSolutionList.size(); i++) {

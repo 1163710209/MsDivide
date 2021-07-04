@@ -152,6 +152,9 @@ public class MicroserviceAnalyzer {
             return microservice.getClassRelationList().size();
         }).sum();
 
+        System.out.println(degree);
+        System.out.println(classDiagram.getClassRelationList().size());
+
         return (classDiagram.getClassRelationList().size() - degree) / microserviceList.size();
     }
 
@@ -248,13 +251,11 @@ public class MicroserviceAnalyzer {
      * @param chromosome chromosome
      * @return ms list
      */
-    public static List<Microservice> getMsListFromChromosome(Chromosome chromosome) {
+    public static List<Microservice> getMsListFromChromosome(Chromosome chromosome, InputData inputData) {
         List<Integer> list = new ArrayList<>();
         chromosome.getGeneticCode().forEach(allele -> {
             list.add((Integer) allele.getGene());
         });
-
-        InputData inputData = MainSystem.getInputData();
         if (inputData == null) {
             throw new IllegalArgumentException("inputData 为空！");
         }

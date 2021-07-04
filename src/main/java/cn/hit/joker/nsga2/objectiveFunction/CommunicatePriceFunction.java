@@ -2,6 +2,7 @@ package cn.hit.joker.nsga2.objectiveFunction;
 
 import cn.hit.joker.newmsdivide.MainSystem;
 import cn.hit.joker.newmsdivide.analyzer.MicroserviceAnalyzer;
+import cn.hit.joker.newmsdivide.importer.InputData;
 import cn.hit.joker.newmsdivide.importer.classImporter.Deploy;
 import cn.hit.joker.newmsdivide.model.result.Microservice;
 import com.debacharya.nsgaii.datastructure.Chromosome;
@@ -17,9 +18,13 @@ import java.util.Set;
  * @description
  */
 public class CommunicatePriceFunction extends AbstractObjectiveFunction {
-
+    private InputData inputData;
     public CommunicatePriceFunction() {
         super();
+    }
+    public CommunicatePriceFunction(InputData inputData) {
+        super();
+        this.inputData = inputData;
     }
 
     @Override
@@ -29,12 +34,12 @@ public class CommunicatePriceFunction extends AbstractObjectiveFunction {
 
     @Override
     public double getValue(Chromosome chromosome) {
-        List<Microservice> msList = MicroserviceAnalyzer.getMsListFromChromosome(chromosome);
+        List<Microservice> msList = MicroserviceAnalyzer.getMsListFromChromosome(chromosome, inputData);
 
         // add deploy location for each microservice
         boolean suit = true;
         for (Microservice microservice : msList) {
-            Set<Deploy.Location> deploySet = MainSystem.checkDeployLocation(microservice, MainSystem.getInputData().getClassDiagram().getClassList());
+            Set<Deploy.Location> deploySet = MainSystem.checkDeployLocation(microservice,inputData.getClassDiagram().getClassList());
             if (deploySet.size() > 0) {
                 microservice.setDeployLocationSet(deploySet);
             } else {
@@ -48,9 +53,9 @@ public class CommunicatePriceFunction extends AbstractObjectiveFunction {
             System.out.println("当前划分满足部署位置约束！");
         }
 
-        MicroserviceAnalyzer.addAllToMs(msList, MainSystem.getInputData());
+        MicroserviceAnalyzer.addAllToMs(msList, inputData);
         System.out.println(msList);
-        double communicatePrice = MicroserviceAnalyzer.getCommunicatePrice(msList, MainSystem.getInputData().getSequenceDiagramList());
+        double communicatePrice = MicroserviceAnalyzer.getCommunicatePrice(msList, inputData.getSequenceDiagramList());
         return -communicatePrice;
     }
 }

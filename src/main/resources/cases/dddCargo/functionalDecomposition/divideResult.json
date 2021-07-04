@@ -1,0 +1,17 @@
+{
+  "serviceA": [
+    "Delivery",
+    "Cargo",
+    "Itinerary",
+    "Leg",
+    "RouteSpecification"
+  ],
+  "serviceB": [
+    "HandlingEvent",
+    "Location"
+  ],
+  "serviceC": [
+    "Voyage",
+    "CarrierMovement"
+  ]
+}

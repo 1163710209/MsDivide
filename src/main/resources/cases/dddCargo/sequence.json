@@ -65,17 +65,15 @@
       "priority": 0.5,
       "classList": {
         "Voyage": 0.35,
-        "CarrierMovement": 0.25,
-        "Itinerary": 0.4
+        "CarrierMovement": 0.65
       }
     },
     {
       "name": "ResponseTime",
       "priority": 0.8,
       "classList": {
-        "Delivery": 0.35,
-        "Location": 0.25,
-        "HandlingEvent": 0.4
+        "Delivery": 0.45,
+        "HandlingEvent": 0.55
       }
     },
     {
@@ -83,17 +81,8 @@
       "priority": 0.8,
       "classList": {
         "Cargo": 0.35,
-        "Itinerary": 0.25,
-        "Location": 0.4
-      }
-    },
-    {
-      "name": "Reliability",
-      "priority": 0.6,
-      "classList": {
-        "Cargo": 0.35,
-        "RouteSpecification": 0.25,
-        "Leg": 0.4
+        "HandlingEvent": 0.25,
+        "Delivery": 0.4
       }
     }
   ]

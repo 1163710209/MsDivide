@@ -5,10 +5,7 @@ import cn.hit.joker.newmsdivide.importer.ImporterUtils;
 import cn.hit.joker.newmsdivide.importer.InputData;
 import cn.hit.joker.newmsdivide.importer.classImporter.ClassDiagram;
 import cn.hit.joker.newmsdivide.importer.sequenceImporter.SequenceDiagram;
-import cn.hit.joker.newmsdivide.model.MsDivideSystem;
-import cn.hit.joker.newmsdivide.model.result.Microservice;
 import cn.hit.joker.newmsdivide.solver.SolveSystem;
-import cn.hit.joker.newmsdivide.solver.SolverConfig;
 import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
@@ -22,8 +19,8 @@ import java.util.List;
  */
 public class SolverTest {
     private InputData getInputData() {
-        String classPath = "cases/case1 ddd cargo transport/class.json";
-        String sequencePath = "cases/case1 ddd cargo transport/sequence.json";
+        String classPath = "cases/dddCargo/class.json";
+        String sequencePath = "cases/dddCargo/sequence.json";
         InputData inputData = null;
         try {
             ClassDiagram classDiagram = ImporterUtils.importClassDiagram(classPath);

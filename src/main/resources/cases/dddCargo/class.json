@@ -147,7 +147,8 @@
       ],
       "deploy": {
         "locations": [
-          "Edge"
+          "Edge",
+          "Cloud"
         ],
         "resources":{
           "memory": "",
@@ -286,25 +287,7 @@
     {
       "name": "DDDValueObject",
       "classList": [
-        "Cargo",
-        "HandlingEvent",
-        "Delivery"
-      ]
-    },
-    {
-      "name": "DDDAggregate",
-      "classList": [
-        "Cargo",
-        "Leg",
-        "HandlingEvent"
-      ]
-    },
-    {
-      "name": "DDDService",
-      "classList": [
-        "Cargo",
-        "Leg",
-        "Delivery"
+        "Location"
       ]
     }
   ]

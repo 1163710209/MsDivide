@@ -12,7 +12,7 @@ import org.junit.jupiter.api.Test;
 public class ReadFileTest {
     @Test
     public void readFileTest() {
-        String path = "cases/case1 ddd cargo transport/class.json";
+        String path = "cases/dddCargo/class.json";
         try {
             String fileData = ReadFile.readFromJsonFile(path);
             System.out.println(fileData);

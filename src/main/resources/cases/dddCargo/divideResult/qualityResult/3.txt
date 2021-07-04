@@ -1,0 +1,35 @@
+------------------------------
+微服务划分方案为：
+微服务的数量为：3
+微服务为：[
+微服务serviceA
+	 classList = [Cargo, RouteSpecification, Leg, Itinerary, Delivery, Voyage, HandlingEvent]
+	 classRelationList = [ClassRelation(origin=Cargo, destination=RouteSpecification, type=ClassComposition), ClassRelation(origin=Cargo, destination=Leg, type=ClassAggregate), ClassRelation(origin=Cargo, destination=Itinerary, type=ClassComposition), ClassRelation(origin=Cargo, destination=Delivery, type=ClassComposition), ClassRelation(origin=HandlingEvent, destination=Cargo, type=ClassAggregate), ClassRelation(origin=Itinerary, destination=Leg, type=ClassComposition), ClassRelation(origin=Leg, destination=Voyage, type=ClassAggregate), ClassRelation(origin=Delivery, destination=Voyage, type=ClassAggregate), ClassRelation(origin=HandlingEvent, destination=Voyage, type=ClassAggregate)]
+	 interfaceList = []
+	 qualitySupportDegree = {UserSatisfaction=0.35, Profit=1.0, ResponseTime=1.0, Cost=1.0}
+	 deployLocationSet[Cloud, Edge]
+ ---------------------------------------------------------
+, 
+微服务serviceB
+	 classList = [CarrierMovement]
+	 classRelationList = []
+	 interfaceList = [MsInterface(className=CarrierMovement, methodName=addCarrierMovement, msNameList=[serviceA])]
+	 qualitySupportDegree = {UserSatisfaction=0.65}
+	 deployLocationSet[Cloud, Edge]
+ ---------------------------------------------------------
+, 
+微服务serviceC
+	 classList = [Location]
+	 classRelationList = []
+	 interfaceList = []
+	 qualitySupportDegree = {}
+	 deployLocationSet[Edge]
+ ---------------------------------------------------------
+]
+聚合度为：1.142857142857143
+耦合度为：2.3333333333333335
+是否符合部署位置约束：true
+通讯代价为：0.75
+平均每个微服务支持的质量指标数：1.6666666666666667
+平均每个质量指标关联的微服务数：1.25
+-------------------------------------------
