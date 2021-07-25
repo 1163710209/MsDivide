@@ -21,7 +21,7 @@
 微服务serviceC
 	 classList = [Leg]
 	 classRelationList = []
-	 interfaceList = [MsInterface(className=Leg, methodName=routeCargo, msNameList=[serviceA])]
+	 interfaceList = [MsInterface(className=Leg, methodName=routeCargo, msNameList=[serviceD]), MsInterface(className=Leg, methodName=routeCargo, msNameList=[serviceA])]
 	 qualitySupportDegree = {Profit=0.4}
 	 deployLocationSet[Cloud, Edge]
  ---------------------------------------------------------
@@ -53,7 +53,7 @@
 微服务serviceG
 	 classList = [Delivery]
 	 classRelationList = []
-	 interfaceList = [MsInterface(className=Delivery, methodName=handleCargoEvent, msNameList=[serviceA])]
+	 interfaceList = [MsInterface(className=Delivery, methodName=handleCargoEvent, msNameList=[serviceA]), MsInterface(className=Delivery, methodName=handleCargoEvent, msNameList=[serviceA])]
 	 qualitySupportDegree = {ResponseTime=0.45, Cost=0.4}
 	 deployLocationSet[Cloud, Edge]
  ---------------------------------------------------------
@@ -61,7 +61,7 @@
 微服务serviceH
 	 classList = [Location]
 	 classRelationList = []
-	 interfaceList = []
+	 interfaceList = [MsInterface(className=Location, methodName=getLocation, msNameList=[serviceI]), MsInterface(className=Location, methodName=getLocation, msNameList=[serviceC]), MsInterface(className=Location, methodName=getLocation, msNameList=[serviceE])]
 	 qualitySupportDegree = {}
 	 deployLocationSet[Edge]
  ---------------------------------------------------------
@@ -69,14 +69,14 @@
 微服务serviceI
 	 classList = [HandlingEvent]
 	 classRelationList = []
-	 interfaceList = []
+	 interfaceList = [MsInterface(className=HandlingEvent, methodName=handleCargoEvent, msNameList=[serviceA])]
 	 qualitySupportDegree = {ResponseTime=0.55, Cost=0.25}
 	 deployLocationSet[Cloud, Edge]
  ---------------------------------------------------------
 ]
 聚合度为：1.0
 耦合度为：1.7777777777777777
-通讯代价为：2.75
+通讯代价为：5.25
 平均每个微服务支持的质量指标数：1.1111111111111112
 平均每个质量指标关联的微服务数：2.5
 -------------------------------------------

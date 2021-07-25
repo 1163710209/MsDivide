@@ -46,6 +46,66 @@
             "frequency": 3,
             "size": 4
           }
+        },
+        {
+          "num": 5,
+          "from": "Cargo",
+          "to": "HandlingEvent",
+          "method": "handleCargoEvent",
+          "runTime": {
+            "frequency": 3,
+            "size": 2
+          }
+        },
+        {
+          "num": 6,
+          "from": "Voyage",
+          "to": "Leg",
+          "method": "routeCargo",
+          "runTime": {
+            "frequency": 3,
+            "size": 3
+          }
+        },
+        {
+          "num": 7,
+          "from": "Cargo",
+          "to": "Delivery",
+          "method": "handleCargoEvent",
+          "runTime": {
+            "frequency": 3,
+            "size": 4
+          }
+        },
+        {
+          "num": 8,
+          "from": "CarrierMovement",
+          "to": "Location",
+          "method": "getLocation",
+          "runTime": {
+            "frequency": 2,
+            "size": 4
+          }
+        },
+        {
+          "num": 9,
+          "from": "HandlingEvent",
+          "to": "Location",
+          "method": "getLocation",
+          "runTime": {
+            "frequency": 3,
+            "size": 4
+          }
+        },
+        {
+          "num": 10,
+          "from": "Leg",
+          "to": "Location",
+          "method": "getLocation",
+          "runTime": {
+            "frequency": 3,
+            "size": 4
+          }
         }
       ]
     }

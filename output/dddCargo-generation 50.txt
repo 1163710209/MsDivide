@@ -1,0 +1,3853 @@
+
+[ 2021-07-10T11:17:51.740 ]
+
+** To stop reporter from printing to console, change Reporter.silent to true or call Configuration.beSilent()
+** Reporter is writing to disk at output\NSGA-II-report-12746.txt.
+** Plotting pareto front.
+** Plotting compiled graph for all generations
+** To change this behavior, change Reporter.writeToDisk or call Cofiguration.writeToDisk(boolean).
+** To change location and file name of where to save the file, change Reporter.filename.
+
+------------------------------------------------
+   NON-DOMINATED SORTING GENETIC ALGORITHM-II   
+------------------------------------------------
+
+Population Size: 10 [valid]
+Generations: 50 [valid]
+Chromosome Length: 9 [valid]
+Population Producer: [valid]
+Child Population Producer: [valid]
+Genetic Code Producer: [valid]
+Objectives: [valid]
+Crossover Operator: [provided]
+Mutation Operator: [provided]
+Generation Driver: [provided]
+Fitness Calculator: [not provided]
+
+++++++++++++++++ GENERATION: 0 ++++++++++++++++
+
+[ START ]
+
+Parent Population: 10
+Child Population: 10
+
+======== PARENT ========
+
+# [ 3 1 9 7 8 3 5 4 4 ]
+>> Objective values: [ 1.0 -2.0 -1.4286 -2.5 -3.75 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 7 7 7 7 3 6 3 ]
+>> Objective values: [ 0.9 -2.6 -1.4 -1.75 -4.0 ] | Rank: 1 | Crowding Distance: 1.5867
+
+# [ 9 3 7 2 2 5 1 5 1 ]
+>> Objective values: [ 0.8333 -2.5 -1.1667 -1.75 -4.5 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 2 4 7 8 8 8 3 6 5 ]
+>> Objective values: [ 0.9524 -2.1429 -1.2857 -2.25 -4.5 ] | Rank: 1 | Crowding Distance: 0.8348
+
+# [ 5 3 7 6 8 3 2 2 2 ]
+>> Objective values: [ 0.9167 -2.3333 -1.3333 -2.0 -5.0 ] | Rank: 1 | Crowding Distance: 1.0262
+
+# [ 5 8 6 4 6 7 7 4 5 ]
+>> Objective values: [ 0.7 -3.0 -1.8 -2.25 -4.5 ] | Rank: 2 | Crowding Distance: 1.7976931348623157E308
+
+# [ 1 2 8 8 5 5 8 1 8 ]
+>> Objective values: [ 0.875 -3.0 -2.0 -2.0 -4.75 ] | Rank: 2 | Crowding Distance: 1.7976931348623157E308
+
+# [ 5 8 7 5 2 6 2 2 4 ]
+>> Objective values: [ 0.9167 -2.3333 -1.6667 -2.5 -4.75 ] | Rank: 2 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 9 6 5 1 6 6 3 7 ]
+>> Objective values: [ 0.9524 -2.1429 -1.4286 -2.5 -5.25 ] | Rank: 2 | Crowding Distance: 0.6695
+
+# [ 2 9 7 8 1 4 4 4 8 ]
+>> Objective values: [ 0.9444 -2.3333 -1.6667 -2.5 -5.25 ] | Rank: 2 | Crowding Distance: 1.7976931348623157E308
+
+
+======== CHILD ========
+
+# [ 5 8 7 2 2 6 2 2 4 ]
+>> Objective values: [ 1.0417 -2.0 -1.5 -2.25 -4.0 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 3 1 9 7 7 8 5 4 4 ]
+>> Objective values: [ 1.0 -2.0 -1.2857 -2.25 -4.25 ] | Rank: 1 | Crowding Distance: 1.3301
+
+# [ 8 1 7 7 8 7 3 6 3 ]
+>> Objective values: [ 0.8 -2.8 -1.6 -2.0 -4.75 ] | Rank: 1 | Crowding Distance: 0.8196
+
+# [ 3 1 9 5 2 7 8 4 4 ]
+>> Objective values: [ 1.0 -1.875 -1.25 -2.5 -5.0 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 9 3 7 5 2 5 1 5 1 ]
+>> Objective values: [ 0.8056 -2.6667 -1.3333 -2.0 -5.25 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 2 1 7 7 7 7 3 6 8 ]
+>> Objective values: [ 1.0 -2.1667 -1.5 -2.25 -4.0 ] | Rank: 2 | Crowding Distance: 0.3208
+
+# [ 8 1 7 7 8 3 3 6 3 ]
+>> Objective values: [ 0.7667 -3.0 -1.6 -2.0 -4.75 ] | Rank: 2 | Crowding Distance: 1.7976931348623157E308
+
+# [ 9 3 7 6 8 3 2 2 1 ]
+>> Objective values: [ 0.9286 -2.1429 -1.4286 -2.5 -5.25 ] | Rank: 2 | Crowding Distance: 1.7976931348623157E308
+
+# [ 4 8 7 7 8 6 2 2 4 ]
+>> Objective values: [ 0.9 -2.6 -1.8 -2.25 -4.0 ] | Rank: 3 | Crowding Distance: 1.7976931348623157E308
+
+# [ 3 1 9 7 7 7 8 4 7 ]
+>> Objective values: [ 0.9583 -2.3333 -1.5 -2.25 -4.5 ] | Rank: 3 | Crowding Distance: 1.2266
+
+
+[ END ]
+
+++++++++++++++++ GENERATION: 1 ++++++++++++++++
+
+[ START ]
+
+Parent Population: 10
+Child Population: 10
+
+======== PARENT ========
+
+# [ 3 1 9 7 8 3 5 4 4 ]
+>> Objective values: [ 1.0 -2.0 -1.4286 -2.5 -3.75 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 7 7 7 7 3 6 3 ]
+>> Objective values: [ 0.9 -2.6 -1.4 -1.75 -4.0 ] | Rank: 1 | Crowding Distance: 2.3389
+
+# [ 5 8 7 2 2 6 2 2 4 ]
+>> Objective values: [ 1.0417 -2.0 -1.5 -2.25 -4.0 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 3 1 9 7 7 8 5 4 4 ]
+>> Objective values: [ 1.0 -2.0 -1.2857 -2.25 -4.25 ] | Rank: 1 | Crowding Distance: 2.1665
+
+# [ 9 3 7 2 2 5 1 5 1 ]
+>> Objective values: [ 0.8333 -2.5 -1.1667 -1.75 -4.5 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 5 3 7 6 8 3 2 2 2 ]
+>> Objective values: [ 0.9167 -2.3333 -1.3333 -2.0 -5.0 ] | Rank: 1 | Crowding Distance: 1.6181
+
+# [ 3 1 9 5 2 7 8 4 4 ]
+>> Objective values: [ 1.0 -1.875 -1.25 -2.5 -5.0 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 5 8 6 4 6 7 7 4 5 ]
+>> Objective values: [ 0.7 -3.0 -1.8 -2.25 -4.5 ] | Rank: 2 | Crowding Distance: 1.7976931348623157E308
+
+# [ 1 2 8 8 5 5 8 1 8 ]
+>> Objective values: [ 0.875 -3.0 -2.0 -2.0 -4.75 ] | Rank: 2 | Crowding Distance: 1.7976931348623157E308
+
+# [ 5 8 7 5 2 6 2 2 4 ]
+>> Objective values: [ 0.9167 -2.3333 -1.6667 -2.5 -4.75 ] | Rank: 2 | Crowding Distance: 1.7976931348623157E308
+
+
+======== CHILD ========
+
+# [ 8 1 9 7 7 8 5 4 6 ]
+>> Objective values: [ 1.0 -2.0 -1.2857 -2.25 -3.25 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 6 1 9 5 2 7 8 4 3 ]
+>> Objective values: [ 1.0 -1.7778 -1.1111 -2.5 -5.25 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 5 2 8 8 5 5 3 7 6 ]
+>> Objective values: [ 0.9444 -2.3333 -1.6667 -2.5 -3.5 ] | Rank: 2 | Crowding Distance: 1.0469
+
+# [ 3 1 7 6 8 3 2 7 5 ]
+>> Objective values: [ 1.0 -2.0 -1.4286 -2.5 -3.75 ] | Rank: 2 | Crowding Distance: 1.0263
+
+# [ 8 5 4 7 7 7 3 6 9 ]
+>> Objective values: [ 0.9524 -2.1429 -1.2857 -2.25 -4.5 ] | Rank: 2 | Crowding Distance: 0.7582
+
+# [ 9 5 4 6 8 3 2 2 7 ]
+>> Objective values: [ 1.0 -1.875 -1.25 -2.5 -5.25 ] | Rank: 2 | Crowding Distance: 1.7976931348623157E308
+
+# [ 3 1 7 2 2 5 1 9 8 ]
+>> Objective values: [ 0.9286 -2.1429 -1.2857 -2.25 -4.5 ] | Rank: 3 | Crowding Distance: 0.1882
+
+# [ 9 3 9 7 8 3 5 2 1 ]
+>> Objective values: [ 0.9286 -2.1429 -1.2857 -2.25 -4.75 ] | Rank: 4 | Crowding Distance: 0.9776
+
+# [ 2 3 7 6 8 3 2 5 8 ]
+>> Objective values: [ 0.8333 -2.5 -1.5 -2.25 -4.75 ] | Rank: 5 | Crowding Distance: 2.768
+
+# [ 5 3 9 5 2 7 8 7 2 ]
+>> Objective values: [ 0.75 -2.6667 -1.6667 -2.5 -5.25 ] | Rank: 6 | Crowding Distance: 1.7976931348623157E308
+
+
+[ END ]
+
+++++++++++++++++ GENERATION: 2 ++++++++++++++++
+
+[ START ]
+
+Parent Population: 10
+Child Population: 10
+
+======== PARENT ========
+
+# [ 8 1 9 7 7 8 5 4 6 ]
+>> Objective values: [ 1.0 -2.0 -1.2857 -2.25 -3.25 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 7 7 7 7 3 6 3 ]
+>> Objective values: [ 0.9 -2.6 -1.4 -1.75 -4.0 ] | Rank: 1 | Crowding Distance: 3.1628
+
+# [ 5 8 7 2 2 6 2 2 4 ]
+>> Objective values: [ 1.0417 -2.0 -1.5 -2.25 -4.0 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 9 3 7 2 2 5 1 5 1 ]
+>> Objective values: [ 0.8333 -2.5 -1.1667 -1.75 -4.5 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 5 3 7 6 8 3 2 2 2 ]
+>> Objective values: [ 0.9167 -2.3333 -1.3333 -2.0 -5.0 ] | Rank: 1 | Crowding Distance: 2.2398
+
+# [ 3 1 9 5 2 7 8 4 4 ]
+>> Objective values: [ 1.0 -1.875 -1.25 -2.5 -5.0 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 6 1 9 5 2 7 8 4 3 ]
+>> Objective values: [ 1.0 -1.7778 -1.1111 -2.5 -5.25 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 3 1 9 7 8 3 5 4 4 ]
+>> Objective values: [ 1.0 -2.0 -1.4286 -2.5 -3.75 ] | Rank: 2 | Crowding Distance: 1.7976931348623157E308
+
+# [ 1 2 8 8 5 5 8 1 8 ]
+>> Objective values: [ 0.875 -3.0 -2.0 -2.0 -4.75 ] | Rank: 2 | Crowding Distance: 1.7976931348623157E308
+
+# [ 9 5 4 6 8 3 2 2 7 ]
+>> Objective values: [ 1.0 -1.875 -1.25 -2.5 -5.25 ] | Rank: 2 | Crowding Distance: 1.7976931348623157E308
+
+
+======== CHILD ========
+
+# [ 5 1 9 7 7 8 5 6 2 ]
+>> Objective values: [ 1.0 -2.0 -1.1429 -2.0 -4.0 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 9 3 9 5 2 1 1 5 1 ]
+>> Objective values: [ 0.7667 -3.0 -1.4 -1.75 -4.75 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 9 5 2 7 8 4 6 ]
+>> Objective values: [ 1.0 -1.875 -1.125 -2.25 -4.75 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 3 1 7 2 2 9 5 4 4 ]
+>> Objective values: [ 1.0 -2.0 -1.2857 -2.25 -4.25 ] | Rank: 2 | Crowding Distance: 0.4752
+
+# [ 1 2 8 5 2 7 8 1 8 ]
+>> Objective values: [ 0.7667 -3.0 -1.6 -2.0 -5.25 ] | Rank: 2 | Crowding Distance: 1.7976931348623157E308
+
+# [ 5 8 7 2 3 6 2 1 9 ]
+>> Objective values: [ 1.0 -1.875 -1.25 -2.5 -5.25 ] | Rank: 2 | Crowding Distance: 1.7976931348623157E308
+
+# [ 6 1 7 2 2 5 1 9 8 ]
+>> Objective values: [ 0.9286 -2.1429 -1.2857 -2.25 -4.5 ] | Rank: 3 | Crowding Distance: 1.4125
+
+# [ 6 1 9 8 5 5 2 7 3 ]
+>> Objective values: [ 0.9375 -2.0 -1.25 -2.5 -5.25 ] | Rank: 3 | Crowding Distance: 0.2679
+
+# [ 5 2 8 4 7 7 3 6 9 ]
+>> Objective values: [ 0.9375 -2.0 -1.25 -2.5 -5.25 ] | Rank: 3 | Crowding Distance: 1.7976931348623157E308
+
+# [ 9 3 9 5 9 7 8 5 1 ]
+>> Objective values: [ 0.8611 -2.5 -1.5 -2.25 -4.75 ] | Rank: 4 | Crowding Distance: 2.6103
+
+
+[ END ]
+
+++++++++++++++++ GENERATION: 3 ++++++++++++++++
+
+[ START ]
+
+Parent Population: 10
+Child Population: 10
+
+======== PARENT ========
+
+# [ 8 1 9 7 7 8 5 4 6 ]
+>> Objective values: [ 1.0 -2.0 -1.2857 -2.25 -3.25 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 7 7 7 7 3 6 3 ]
+>> Objective values: [ 0.9 -2.6 -1.4 -1.75 -4.0 ] | Rank: 1 | Crowding Distance: 3.9235
+
+# [ 5 1 9 7 7 8 5 6 2 ]
+>> Objective values: [ 1.0 -2.0 -1.1429 -2.0 -4.0 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 5 8 7 2 2 6 2 2 4 ]
+>> Objective values: [ 1.0417 -2.0 -1.5 -2.25 -4.0 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 9 3 7 2 2 5 1 5 1 ]
+>> Objective values: [ 0.8333 -2.5 -1.1667 -1.75 -4.5 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 9 5 2 7 8 4 6 ]
+>> Objective values: [ 1.0 -1.875 -1.125 -2.25 -4.75 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 6 1 9 5 2 7 8 4 3 ]
+>> Objective values: [ 1.0 -1.7778 -1.1111 -2.5 -5.25 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 3 1 9 7 8 3 5 4 4 ]
+>> Objective values: [ 1.0 -2.0 -1.4286 -2.5 -3.75 ] | Rank: 2 | Crowding Distance: 1.7976931348623157E308
+
+# [ 9 3 9 5 2 1 1 5 1 ]
+>> Objective values: [ 0.7667 -3.0 -1.4 -1.75 -4.75 ] | Rank: 2 | Crowding Distance: 1.7976931348623157E308
+
+# [ 1 2 8 8 5 5 8 1 8 ]
+>> Objective values: [ 0.875 -3.0 -2.0 -2.0 -4.75 ] | Rank: 2 | Crowding Distance: 1.7976931348623157E308
+
+
+======== CHILD ========
+
+# [ 8 1 7 2 2 9 5 4 8 ]
+>> Objective values: [ 1.0 -2.0 -1.1429 -2.0 -3.75 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 7 2 2 6 2 2 3 ]
+>> Objective values: [ 1.0417 -2.0 -1.5 -2.25 -4.0 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 3 7 2 2 1 9 4 6 ]
+>> Objective values: [ 1.0 -1.875 -1.125 -2.25 -4.5 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 6 1 9 7 7 5 2 4 3 ]
+>> Objective values: [ 1.0 -1.875 -1.125 -2.25 -4.5 ] | Rank: 1 | Crowding Distance: 0.0477
+
+# [ 9 3 9 5 2 7 1 5 1 ]
+>> Objective values: [ 0.8333 -2.5 -1.1667 -1.75 -4.75 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 9 8 7 7 7 7 3 6 2 ]
+>> Objective values: [ 1.0 -2.1667 -1.5 -2.25 -4.0 ] | Rank: 2 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 7 2 2 5 9 4 4 ]
+>> Objective values: [ 1.0 -2.0 -1.2857 -2.25 -4.25 ] | Rank: 2 | Crowding Distance: 0.4285
+
+# [ 8 1 9 7 7 3 2 5 1 ]
+>> Objective values: [ 0.9286 -2.1429 -1.2857 -2.25 -4.5 ] | Rank: 2 | Crowding Distance: 1.6144
+
+# [ 1 8 9 5 2 7 2 2 4 ]
+>> Objective values: [ 1.0 -2.0 -1.4286 -2.5 -4.75 ] | Rank: 2 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 9 5 2 7 5 4 6 ]
+>> Objective values: [ 1.0 -1.875 -1.25 -2.5 -5.25 ] | Rank: 2 | Crowding Distance: 1.7976931348623157E308
+
+
+[ END ]
+
+++++++++++++++++ GENERATION: 4 ++++++++++++++++
+
+[ START ]
+
+Parent Population: 10
+Child Population: 10
+
+======== PARENT ========
+
+# [ 8 1 9 7 7 8 5 4 6 ]
+>> Objective values: [ 1.0 -2.0 -1.2857 -2.25 -3.25 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 7 2 2 9 5 4 8 ]
+>> Objective values: [ 1.0 -2.0 -1.1429 -2.0 -3.75 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 7 7 7 7 3 6 3 ]
+>> Objective values: [ 0.9 -2.6 -1.4 -1.75 -4.0 ] | Rank: 1 | Crowding Distance: 4.7811
+
+# [ 5 8 7 2 2 6 2 2 4 ]
+>> Objective values: [ 1.0417 -2.0 -1.5 -2.25 -4.0 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 7 2 2 6 2 2 3 ]
+>> Objective values: [ 1.0417 -2.0 -1.5 -2.25 -4.0 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 9 3 7 2 2 5 1 5 1 ]
+>> Objective values: [ 0.8333 -2.5 -1.1667 -1.75 -4.5 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 3 7 2 2 1 9 4 6 ]
+>> Objective values: [ 1.0 -1.875 -1.125 -2.25 -4.5 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 6 1 9 7 7 5 2 4 3 ]
+>> Objective values: [ 1.0 -1.875 -1.125 -2.25 -4.5 ] | Rank: 1 | Crowding Distance: 0.0678
+
+# [ 6 1 9 5 2 7 8 4 3 ]
+>> Objective values: [ 1.0 -1.7778 -1.1111 -2.5 -5.25 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 3 1 9 7 8 3 5 4 4 ]
+>> Objective values: [ 1.0 -2.0 -1.4286 -2.5 -3.75 ] | Rank: 2 | Crowding Distance: 1.7976931348623157E308
+
+
+======== CHILD ========
+
+# [ 8 1 7 2 2 9 5 4 8 ]
+>> Objective values: [ 1.0 -2.0 -1.1429 -2.0 -3.75 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 9 5 2 7 8 4 8 ]
+>> Objective values: [ 1.0 -2.0 -1.0 -1.75 -4.0 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 9 4 7 2 2 6 2 2 1 ]
+>> Objective values: [ 1.0417 -2.0 -1.5 -2.25 -4.0 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 5 8 7 2 2 6 2 2 4 ]
+>> Objective values: [ 1.0417 -2.0 -1.5 -2.25 -4.0 ] | Rank: 1 | Crowding Distance: 0.1766
+
+# [ 6 1 7 2 2 9 5 4 8 ]
+>> Objective values: [ 1.0 -1.875 -1.125 -2.25 -4.5 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 6 1 9 2 2 5 8 4 3 ]
+>> Objective values: [ 1.0 -1.875 -1.125 -2.25 -4.5 ] | Rank: 1 | Crowding Distance: 0.0
+
+# [ 8 1 9 2 2 7 5 4 6 ]
+>> Objective values: [ 1.0 -1.875 -1.125 -2.25 -4.5 ] | Rank: 1 | Crowding Distance: 1.0465
+
+# [ 8 1 7 7 7 6 2 2 3 ]
+>> Objective values: [ 1.0 -2.1667 -1.5 -2.25 -4.0 ] | Rank: 2 | Crowding Distance: 0.5877
+
+# [ 9 3 7 5 2 5 1 5 1 ]
+>> Objective values: [ 0.8056 -2.6667 -1.3333 -2.0 -5.25 ] | Rank: 2 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 7 2 2 1 9 4 4 ]
+>> Objective values: [ 0.9167 -2.3333 -1.5 -2.25 -4.25 ] | Rank: 3 | Crowding Distance: 1.7976931348623157E308
+
+
+[ END ]
+
+++++++++++++++++ GENERATION: 5 ++++++++++++++++
+
+[ START ]
+
+Parent Population: 10
+Child Population: 10
+
+======== PARENT ========
+
+# [ 8 1 9 7 7 8 5 4 6 ]
+>> Objective values: [ 1.0 -2.0 -1.2857 -2.25 -3.25 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 7 2 2 9 5 4 8 ]
+>> Objective values: [ 1.0 -2.0 -1.1429 -2.0 -3.75 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 7 2 2 9 5 4 8 ]
+>> Objective values: [ 1.0 -2.0 -1.1429 -2.0 -3.75 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 9 5 2 7 8 4 8 ]
+>> Objective values: [ 1.0 -2.0 -1.0 -1.75 -4.0 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 5 8 7 2 2 6 2 2 4 ]
+>> Objective values: [ 1.0417 -2.0 -1.5 -2.25 -4.0 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 7 2 2 6 2 2 3 ]
+>> Objective values: [ 1.0417 -2.0 -1.5 -2.25 -4.0 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 9 4 7 2 2 6 2 2 1 ]
+>> Objective values: [ 1.0417 -2.0 -1.5 -2.25 -4.0 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 3 7 2 2 1 9 4 6 ]
+>> Objective values: [ 1.0 -1.875 -1.125 -2.25 -4.5 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 6 1 7 2 2 9 5 4 8 ]
+>> Objective values: [ 1.0 -1.875 -1.125 -2.25 -4.5 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 6 1 9 5 2 7 8 4 3 ]
+>> Objective values: [ 1.0 -1.7778 -1.1111 -2.5 -5.25 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+
+======== CHILD ========
+
+# [ 9 4 8 2 2 9 5 6 1 ]
+>> Objective values: [ 1.0 -2.0 -1.2857 -2.25 -3.25 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 9 4 7 2 2 6 2 2 1 ]
+>> Objective values: [ 1.0417 -2.0 -1.5 -2.25 -4.0 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 6 1 7 2 2 9 5 4 3 ]
+>> Objective values: [ 1.0 -1.875 -1.125 -2.25 -4.5 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 6 1 7 2 2 9 5 4 8 ]
+>> Objective values: [ 1.0 -1.875 -1.125 -2.25 -4.5 ] | Rank: 1 | Crowding Distance: 1.4883
+
+# [ 6 1 7 2 2 6 2 9 5 ]
+>> Objective values: [ 1.0 -2.1667 -1.5 -2.25 -3.25 ] | Rank: 2 | Crowding Distance: 1.7976931348623157E308
+
+# [ 6 1 9 7 7 5 5 4 2 ]
+>> Objective values: [ 0.9286 -2.1429 -1.2857 -2.25 -4.5 ] | Rank: 2 | Crowding Distance: 1.1212
+
+# [ 8 1 7 2 2 9 5 4 7 ]
+>> Objective values: [ 0.9286 -2.1429 -1.2857 -2.25 -4.5 ] | Rank: 2 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 9 5 2 7 2 2 3 ]
+>> Objective values: [ 1.0 -2.0 -1.4286 -2.5 -4.75 ] | Rank: 2 | Crowding Distance: 1.3811
+
+# [ 8 1 9 5 2 7 2 2 3 ]
+>> Objective values: [ 1.0 -2.0 -1.4286 -2.5 -4.75 ] | Rank: 2 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 8 5 4 2 6 2 2 1 ]
+>> Objective values: [ 1.0 -2.1667 -1.5 -2.25 -4.75 ] | Rank: 3 | Crowding Distance: 0.617
+
+
+[ END ]
+
+++++++++++++++++ GENERATION: 6 ++++++++++++++++
+
+[ START ]
+
+Parent Population: 10
+Child Population: 10
+
+======== PARENT ========
+
+# [ 8 1 9 7 7 8 5 4 6 ]
+>> Objective values: [ 1.0 -2.0 -1.2857 -2.25 -3.25 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 9 4 8 2 2 9 5 6 1 ]
+>> Objective values: [ 1.0 -2.0 -1.2857 -2.25 -3.25 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 7 2 2 9 5 4 8 ]
+>> Objective values: [ 1.0 -2.0 -1.1429 -2.0 -3.75 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 7 2 2 9 5 4 8 ]
+>> Objective values: [ 1.0 -2.0 -1.1429 -2.0 -3.75 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 9 5 2 7 8 4 8 ]
+>> Objective values: [ 1.0 -2.0 -1.0 -1.75 -4.0 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 5 8 7 2 2 6 2 2 4 ]
+>> Objective values: [ 1.0417 -2.0 -1.5 -2.25 -4.0 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 7 2 2 6 2 2 3 ]
+>> Objective values: [ 1.0417 -2.0 -1.5 -2.25 -4.0 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 9 4 7 2 2 6 2 2 1 ]
+>> Objective values: [ 1.0417 -2.0 -1.5 -2.25 -4.0 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 9 4 7 2 2 6 2 2 1 ]
+>> Objective values: [ 1.0417 -2.0 -1.5 -2.25 -4.0 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 3 7 2 2 1 9 4 6 ]
+>> Objective values: [ 1.0 -1.875 -1.125 -2.25 -4.5 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+
+======== CHILD ========
+
+# [ 8 1 7 7 7 8 3 2 3 ]
+>> Objective values: [ 0.9 -2.6 -1.4 -1.75 -2.75 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 9 7 7 5 2 4 8 ]
+>> Objective values: [ 1.0 -2.0 -1.1429 -2.0 -3.75 ] | Rank: 1 | Crowding Distance: 1.2156
+
+# [ 8 3 7 2 2 9 5 4 1 ]
+>> Objective values: [ 1.0 -1.875 -1.125 -2.25 -4.5 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 9 4 7 2 2 1 9 4 6 ]
+>> Objective values: [ 1.0 -2.1667 -1.3333 -2.0 -4.0 ] | Rank: 2 | Crowding Distance: 0.9569
+
+# [ 8 3 7 2 2 6 2 1 9 ]
+>> Objective values: [ 1.0 -2.0 -1.2857 -2.25 -4.5 ] | Rank: 2 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 9 5 2 7 5 4 6 ]
+>> Objective values: [ 1.0 -1.875 -1.25 -2.5 -5.25 ] | Rank: 2 | Crowding Distance: 1.7976931348623157E308
+
+# [ 9 4 7 2 2 1 9 9 1 ]
+>> Objective values: [ 0.9667 -2.4 -1.6 -2.0 -4.0 ] | Rank: 3 | Crowding Distance: 1.7477
+
+# [ 8 1 7 2 2 1 9 4 5 ]
+>> Objective values: [ 0.9286 -2.1429 -1.2857 -2.25 -4.5 ] | Rank: 3 | Crowding Distance: 0.4111
+
+# [ 8 1 9 2 2 6 7 4 6 ]
+>> Objective values: [ 0.9286 -2.1429 -1.2857 -2.25 -4.5 ] | Rank: 3 | Crowding Distance: 0.6893
+
+# [ 9 4 1 2 2 6 2 2 1 ]
+>> Objective values: [ 0.95 -2.4 -1.8 -2.25 -4.0 ] | Rank: 4 | Crowding Distance: 1.7976931348623157E308
+
+
+[ END ]
+
+++++++++++++++++ GENERATION: 7 ++++++++++++++++
+
+[ START ]
+
+Parent Population: 10
+Child Population: 10
+
+======== PARENT ========
+
+# [ 8 1 7 7 7 8 3 2 3 ]
+>> Objective values: [ 0.9 -2.6 -1.4 -1.75 -2.75 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 9 7 7 8 5 4 6 ]
+>> Objective values: [ 1.0 -2.0 -1.2857 -2.25 -3.25 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 9 4 8 2 2 9 5 6 1 ]
+>> Objective values: [ 1.0 -2.0 -1.2857 -2.25 -3.25 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 7 2 2 9 5 4 8 ]
+>> Objective values: [ 1.0 -2.0 -1.1429 -2.0 -3.75 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 7 2 2 9 5 4 8 ]
+>> Objective values: [ 1.0 -2.0 -1.1429 -2.0 -3.75 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 9 5 2 7 8 4 8 ]
+>> Objective values: [ 1.0 -2.0 -1.0 -1.75 -4.0 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 5 8 7 2 2 6 2 2 4 ]
+>> Objective values: [ 1.0417 -2.0 -1.5 -2.25 -4.0 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 7 2 2 6 2 2 3 ]
+>> Objective values: [ 1.0417 -2.0 -1.5 -2.25 -4.0 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 9 4 7 2 2 6 2 2 1 ]
+>> Objective values: [ 1.0417 -2.0 -1.5 -2.25 -4.0 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 9 4 7 2 2 6 2 2 1 ]
+>> Objective values: [ 1.0417 -2.0 -1.5 -2.25 -4.0 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+
+======== CHILD ========
+
+# [ 8 1 9 7 7 8 5 4 2 ]
+>> Objective values: [ 1.0 -2.0 -1.2857 -2.25 -3.25 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 7 1 7 2 2 6 2 9 5 ]
+>> Objective values: [ 1.0 -2.1667 -1.3333 -2.0 -4.0 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 9 4 8 2 2 6 2 2 5 ]
+>> Objective values: [ 1.0417 -2.0 -1.5 -2.25 -4.0 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 5 4 7 2 2 6 2 2 9 ]
+>> Objective values: [ 1.0417 -2.0 -1.5 -2.25 -4.0 ] | Rank: 1 | Crowding Distance: 0.5003
+
+# [ 8 1 7 2 2 9 5 6 3 ]
+>> Objective values: [ 1.0 -1.875 -1.125 -2.25 -4.5 ] | Rank: 1 | Crowding Distance: 0.8679
+
+# [ 9 4 7 2 2 9 5 4 6 ]
+>> Objective values: [ 1.0 -2.1667 -1.5 -2.25 -3.25 ] | Rank: 2 | Crowding Distance: 0.3637
+
+# [ 8 1 5 5 2 7 8 4 9 ]
+>> Objective values: [ 1.0 -2.0 -1.2857 -2.25 -4.25 ] | Rank: 2 | Crowding Distance: 0.8239
+
+# [ 8 1 9 2 2 9 5 4 7 ]
+>> Objective values: [ 1.0 -2.0 -1.2857 -2.25 -4.5 ] | Rank: 2 | Crowding Distance: 0.1667
+
+# [ 8 1 9 5 2 7 8 4 6 ]
+>> Objective values: [ 1.0 -1.875 -1.125 -2.25 -4.75 ] | Rank: 2 | Crowding Distance: 1.7976931348623157E308
+
+# [ 9 4 7 2 2 9 5 6 4 ]
+>> Objective values: [ 0.9167 -2.3333 -1.5 -2.25 -3.25 ] | Rank: 3 | Crowding Distance: 1.7976931348623157E308
+
+
+[ END ]
+
+++++++++++++++++ GENERATION: 8 ++++++++++++++++
+
+[ START ]
+
+Parent Population: 10
+Child Population: 10
+
+======== PARENT ========
+
+# [ 8 1 7 7 7 8 3 2 3 ]
+>> Objective values: [ 0.9 -2.6 -1.4 -1.75 -2.75 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 9 7 7 8 5 4 6 ]
+>> Objective values: [ 1.0 -2.0 -1.2857 -2.25 -3.25 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 9 4 8 2 2 9 5 6 1 ]
+>> Objective values: [ 1.0 -2.0 -1.2857 -2.25 -3.25 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 9 7 7 8 5 4 2 ]
+>> Objective values: [ 1.0 -2.0 -1.2857 -2.25 -3.25 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 7 2 2 9 5 4 8 ]
+>> Objective values: [ 1.0 -2.0 -1.1429 -2.0 -3.75 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 7 2 2 9 5 4 8 ]
+>> Objective values: [ 1.0 -2.0 -1.1429 -2.0 -3.75 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 9 5 2 7 8 4 8 ]
+>> Objective values: [ 1.0 -2.0 -1.0 -1.75 -4.0 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 5 8 7 2 2 6 2 2 4 ]
+>> Objective values: [ 1.0417 -2.0 -1.5 -2.25 -4.0 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 7 2 2 6 2 2 3 ]
+>> Objective values: [ 1.0417 -2.0 -1.5 -2.25 -4.0 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 9 4 7 2 2 6 2 2 1 ]
+>> Objective values: [ 1.0417 -2.0 -1.5 -2.25 -4.0 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+
+======== CHILD ========
+
+# [ 9 4 7 2 2 9 5 6 1 ]
+>> Objective values: [ 1.0 -2.0 -1.2857 -2.25 -3.25 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 9 4 8 2 2 7 2 2 1 ]
+>> Objective values: [ 1.0417 -2.0 -1.5 -2.25 -4.0 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 5 4 9 2 2 6 2 2 7 ]
+>> Objective values: [ 1.0417 -2.0 -1.5 -2.25 -4.0 ] | Rank: 1 | Crowding Distance: 0.3336
+
+# [ 9 4 7 2 2 8 5 6 1 ]
+>> Objective values: [ 1.0 -1.875 -1.125 -2.25 -4.5 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 6 1 9 7 7 8 5 4 2 ]
+>> Objective values: [ 1.0 -1.875 -1.125 -2.25 -4.5 ] | Rank: 1 | Crowding Distance: 1.481
+
+# [ 6 1 7 7 7 8 3 4 2 ]
+>> Objective values: [ 1.0 -2.0 -1.2857 -2.25 -4.0 ] | Rank: 2 | Crowding Distance: 0.8038
+
+# [ 5 4 7 2 2 6 1 2 9 ]
+>> Objective values: [ 1.0 -2.0 -1.2857 -2.25 -4.0 ] | Rank: 2 | Crowding Distance: 0.3811
+
+# [ 8 4 7 5 2 6 2 1 3 ]
+>> Objective values: [ 0.9375 -2.0 -1.25 -2.5 -5.25 ] | Rank: 2 | Crowding Distance: 2.6865
+
+# [ 6 8 7 7 7 8 5 4 2 ]
+>> Objective values: [ 0.9167 -2.3333 -1.5 -2.25 -4.0 ] | Rank: 3 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 7 2 7 6 2 9 5 ]
+>> Objective values: [ 0.9286 -2.1429 -1.4286 -2.5 -5.25 ] | Rank: 3 | Crowding Distance: 1.7976931348623157E308
+
+
+[ END ]
+
+++++++++++++++++ GENERATION: 9 ++++++++++++++++
+
+[ START ]
+
+Parent Population: 10
+Child Population: 10
+
+======== PARENT ========
+
+# [ 8 1 7 7 7 8 3 2 3 ]
+>> Objective values: [ 0.9 -2.6 -1.4 -1.75 -2.75 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 9 7 7 8 5 4 6 ]
+>> Objective values: [ 1.0 -2.0 -1.2857 -2.25 -3.25 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 9 4 8 2 2 9 5 6 1 ]
+>> Objective values: [ 1.0 -2.0 -1.2857 -2.25 -3.25 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 9 7 7 8 5 4 2 ]
+>> Objective values: [ 1.0 -2.0 -1.2857 -2.25 -3.25 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 9 4 7 2 2 9 5 6 1 ]
+>> Objective values: [ 1.0 -2.0 -1.2857 -2.25 -3.25 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 7 2 2 9 5 4 8 ]
+>> Objective values: [ 1.0 -2.0 -1.1429 -2.0 -3.75 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 7 2 2 9 5 4 8 ]
+>> Objective values: [ 1.0 -2.0 -1.1429 -2.0 -3.75 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 9 5 2 7 8 4 8 ]
+>> Objective values: [ 1.0 -2.0 -1.0 -1.75 -4.0 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 5 8 7 2 2 6 2 2 4 ]
+>> Objective values: [ 1.0417 -2.0 -1.5 -2.25 -4.0 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 7 2 2 6 2 2 3 ]
+>> Objective values: [ 1.0417 -2.0 -1.5 -2.25 -4.0 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+
+======== CHILD ========
+
+# [ 8 4 8 2 2 9 1 7 8 ]
+>> Objective values: [ 1.0 -2.1667 -1.1667 -1.75 -3.25 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 9 7 7 8 5 4 6 ]
+>> Objective values: [ 1.0 -2.0 -1.2857 -2.25 -3.25 ] | Rank: 1 | Crowding Distance: 0.0
+
+# [ 8 1 9 7 7 8 5 4 2 ]
+>> Objective values: [ 1.0 -2.0 -1.2857 -2.25 -3.25 ] | Rank: 1 | Crowding Distance: 0.4906
+
+# [ 5 1 9 7 7 8 5 6 2 ]
+>> Objective values: [ 1.0 -2.0 -1.1429 -2.0 -4.0 ] | Rank: 1 | Crowding Distance: 1.4445
+
+# [ 8 1 9 5 2 7 8 6 3 ]
+>> Objective values: [ 1.0 -1.875 -1.125 -2.25 -4.75 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 7 7 7 2 5 4 8 ]
+>> Objective values: [ 1.0 -2.1667 -1.3333 -2.0 -3.25 ] | Rank: 2 | Crowding Distance: 1.4352
+
+# [ 5 8 7 2 2 6 2 1 9 ]
+>> Objective values: [ 1.0 -2.0 -1.2857 -2.25 -4.5 ] | Rank: 2 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 9 2 2 7 5 4 2 ]
+>> Objective values: [ 1.0 -2.0 -1.2857 -2.25 -4.5 ] | Rank: 2 | Crowding Distance: 0.0
+
+# [ 9 1 7 2 2 9 4 8 1 ]
+>> Objective values: [ 0.9167 -2.3333 -1.5 -2.25 -3.25 ] | Rank: 3 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 7 2 2 6 2 9 6 ]
+>> Objective values: [ 0.9167 -2.3333 -1.5 -2.25 -4.5 ] | Rank: 3 | Crowding Distance: 1.9747
+
+
+[ END ]
+
+++++++++++++++++ GENERATION: 10 ++++++++++++++++
+
+[ START ]
+
+Parent Population: 10
+Child Population: 10
+
+======== PARENT ========
+
+# [ 8 1 7 7 7 8 3 2 3 ]
+>> Objective values: [ 0.9 -2.6 -1.4 -1.75 -2.75 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 4 8 2 2 9 1 7 8 ]
+>> Objective values: [ 1.0 -2.1667 -1.1667 -1.75 -3.25 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 9 7 7 8 5 4 6 ]
+>> Objective values: [ 1.0 -2.0 -1.2857 -2.25 -3.25 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 9 4 8 2 2 9 5 6 1 ]
+>> Objective values: [ 1.0 -2.0 -1.2857 -2.25 -3.25 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 9 7 7 8 5 4 2 ]
+>> Objective values: [ 1.0 -2.0 -1.2857 -2.25 -3.25 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 9 4 7 2 2 9 5 6 1 ]
+>> Objective values: [ 1.0 -2.0 -1.2857 -2.25 -3.25 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 7 2 2 9 5 4 8 ]
+>> Objective values: [ 1.0 -2.0 -1.1429 -2.0 -3.75 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 7 2 2 9 5 4 8 ]
+>> Objective values: [ 1.0 -2.0 -1.1429 -2.0 -3.75 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 9 5 2 7 8 4 8 ]
+>> Objective values: [ 1.0 -2.0 -1.0 -1.75 -4.0 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 5 8 7 2 2 6 2 2 4 ]
+>> Objective values: [ 1.0417 -2.0 -1.5 -2.25 -4.0 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+
+======== CHILD ========
+
+# [ 8 1 9 2 2 5 8 4 8 ]
+>> Objective values: [ 1.0 -2.1667 -1.0 -1.5 -3.25 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 9 4 8 2 2 9 5 6 1 ]
+>> Objective values: [ 1.0 -2.0 -1.2857 -2.25 -3.25 ] | Rank: 1 | Crowding Distance: 1.6464
+
+# [ 8 1 7 2 2 9 5 4 8 ]
+>> Objective values: [ 1.0 -2.0 -1.1429 -2.0 -3.75 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 7 2 2 9 5 4 8 ]
+>> Objective values: [ 1.0 -2.0 -1.1429 -2.0 -3.75 ] | Rank: 1 | Crowding Distance: 0.0
+
+# [ 8 1 7 2 2 9 5 4 8 ]
+>> Objective values: [ 1.0 -2.0 -1.1429 -2.0 -3.75 ] | Rank: 1 | Crowding Distance: 0.2142
+
+# [ 8 1 9 5 2 7 8 4 8 ]
+>> Objective values: [ 1.0 -2.0 -1.0 -1.75 -4.0 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 4 8 2 2 1 1 6 8 ]
+>> Objective values: [ 0.9 -2.6 -1.4 -1.75 -3.25 ] | Rank: 2 | Crowding Distance: 1.7976931348623157E308
+
+# [ 9 1 7 2 2 9 4 6 1 ]
+>> Objective values: [ 0.9167 -2.3333 -1.5 -2.25 -3.25 ] | Rank: 2 | Crowding Distance: 1.5948
+
+# [ 8 4 7 2 2 9 1 4 8 ]
+>> Objective values: [ 1.0 -2.1667 -1.3333 -2.0 -3.75 ] | Rank: 2 | Crowding Distance: 0.8658
+
+# [ 5 8 7 5 2 6 2 2 4 ]
+>> Objective values: [ 0.9167 -2.3333 -1.6667 -2.5 -4.75 ] | Rank: 3 | Crowding Distance: 1.7976931348623157E308
+
+
+[ END ]
+
+++++++++++++++++ GENERATION: 11 ++++++++++++++++
+
+[ START ]
+
+Parent Population: 10
+Child Population: 10
+
+======== PARENT ========
+
+# [ 8 1 7 7 7 8 3 2 3 ]
+>> Objective values: [ 0.9 -2.6 -1.4 -1.75 -2.75 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 9 2 2 5 8 4 8 ]
+>> Objective values: [ 1.0 -2.1667 -1.0 -1.5 -3.25 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 9 7 7 8 5 4 6 ]
+>> Objective values: [ 1.0 -2.0 -1.2857 -2.25 -3.25 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 9 4 8 2 2 9 5 6 1 ]
+>> Objective values: [ 1.0 -2.0 -1.2857 -2.25 -3.25 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 9 7 7 8 5 4 2 ]
+>> Objective values: [ 1.0 -2.0 -1.2857 -2.25 -3.25 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 9 4 7 2 2 9 5 6 1 ]
+>> Objective values: [ 1.0 -2.0 -1.2857 -2.25 -3.25 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 7 2 2 9 5 4 8 ]
+>> Objective values: [ 1.0 -2.0 -1.1429 -2.0 -3.75 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 7 2 2 9 5 4 8 ]
+>> Objective values: [ 1.0 -2.0 -1.1429 -2.0 -3.75 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 7 2 2 9 5 4 8 ]
+>> Objective values: [ 1.0 -2.0 -1.1429 -2.0 -3.75 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 9 5 2 7 8 4 8 ]
+>> Objective values: [ 1.0 -2.0 -1.0 -1.75 -4.0 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+
+======== CHILD ========
+
+# [ 8 1 9 2 2 5 8 7 8 ]
+>> Objective values: [ 1.0 -2.1667 -1.0 -1.5 -3.25 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 9 7 7 8 5 4 6 ]
+>> Objective values: [ 1.0 -2.0 -1.2857 -2.25 -3.25 ] | Rank: 1 | Crowding Distance: 0.6903
+
+# [ 8 1 9 7 7 8 5 4 2 ]
+>> Objective values: [ 1.0 -2.0 -1.2857 -2.25 -3.25 ] | Rank: 1 | Crowding Distance: 0.3333
+
+# [ 8 1 7 2 2 9 5 4 8 ]
+>> Objective values: [ 1.0 -2.0 -1.1429 -2.0 -3.75 ] | Rank: 1 | Crowding Distance: 0.3333
+
+# [ 8 4 7 2 2 9 1 5 8 ]
+>> Objective values: [ 1.0 -2.0 -1.1429 -2.0 -3.75 ] | Rank: 1 | Crowding Distance: 1.9286
+
+# [ 8 1 8 2 2 9 5 4 8 ]
+>> Objective values: [ 1.0 -2.1667 -1.1667 -1.75 -3.25 ] | Rank: 2 | Crowding Distance: 1.2379
+
+# [ 9 4 9 2 2 5 8 6 1 ]
+>> Objective values: [ 1.0 -2.0 -1.1429 -2.0 -4.0 ] | Rank: 2 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 7 2 2 5 8 6 9 ]
+>> Objective values: [ 1.0 -2.0 -1.1429 -2.0 -4.0 ] | Rank: 2 | Crowding Distance: 0.5
+
+# [ 9 1 9 5 2 7 4 6 1 ]
+>> Objective values: [ 0.9286 -2.1429 -1.2857 -2.25 -4.75 ] | Rank: 2 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 9 2 2 9 5 4 8 ]
+>> Objective values: [ 1.0 -2.1667 -1.3333 -2.0 -3.75 ] | Rank: 3 | Crowding Distance: 1.7976931348623157E308
+
+
+[ END ]
+
+++++++++++++++++ GENERATION: 12 ++++++++++++++++
+
+[ START ]
+
+Parent Population: 10
+Child Population: 10
+
+======== PARENT ========
+
+# [ 8 1 7 7 7 8 3 2 3 ]
+>> Objective values: [ 0.9 -2.6 -1.4 -1.75 -2.75 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 9 2 2 5 8 4 8 ]
+>> Objective values: [ 1.0 -2.1667 -1.0 -1.5 -3.25 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 9 2 2 5 8 7 8 ]
+>> Objective values: [ 1.0 -2.1667 -1.0 -1.5 -3.25 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 9 7 7 8 5 4 6 ]
+>> Objective values: [ 1.0 -2.0 -1.2857 -2.25 -3.25 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 9 4 8 2 2 9 5 6 1 ]
+>> Objective values: [ 1.0 -2.0 -1.2857 -2.25 -3.25 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 9 7 7 8 5 4 2 ]
+>> Objective values: [ 1.0 -2.0 -1.2857 -2.25 -3.25 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 9 4 7 2 2 9 5 6 1 ]
+>> Objective values: [ 1.0 -2.0 -1.2857 -2.25 -3.25 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 7 2 2 9 5 4 8 ]
+>> Objective values: [ 1.0 -2.0 -1.1429 -2.0 -3.75 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 7 2 2 9 5 4 8 ]
+>> Objective values: [ 1.0 -2.0 -1.1429 -2.0 -3.75 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 7 2 2 9 5 4 8 ]
+>> Objective values: [ 1.0 -2.0 -1.1429 -2.0 -3.75 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+
+======== CHILD ========
+
+# [ 8 1 9 7 7 8 2 5 8 ]
+>> Objective values: [ 1.0 -2.1667 -1.3333 -2.0 -2.5 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 9 7 7 8 3 2 3 ]
+>> Objective values: [ 0.9167 -2.3333 -1.1667 -1.75 -3.25 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 9 4 7 7 7 8 2 6 1 ]
+>> Objective values: [ 1.0 -2.0 -1.2857 -2.25 -4.0 ] | Rank: 1 | Crowding Distance: 0.59
+
+# [ 8 1 7 2 2 9 5 2 3 ]
+>> Objective values: [ 1.0 -2.0 -1.2857 -2.25 -4.0 ] | Rank: 1 | Crowding Distance: 0.0
+
+# [ 5 1 7 7 7 8 3 2 9 ]
+>> Objective values: [ 1.0 -2.0 -1.2857 -2.25 -4.0 ] | Rank: 1 | Crowding Distance: 0.7406
+
+# [ 8 1 9 2 2 5 7 4 6 ]
+>> Objective values: [ 1.0 -1.875 -1.125 -2.25 -4.5 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 7 7 7 8 9 4 6 ]
+>> Objective values: [ 1.0 -2.1667 -1.5 -2.25 -2.75 ] | Rank: 2 | Crowding Distance: 1.7976931348623157E308
+
+# [ 9 1 9 7 7 4 2 6 1 ]
+>> Objective values: [ 0.9167 -2.3333 -1.3333 -2.0 -4.0 ] | Rank: 2 | Crowding Distance: 2.683
+
+# [ 8 4 7 2 2 1 9 4 2 ]
+>> Objective values: [ 1.0 -2.1667 -1.5 -2.25 -4.5 ] | Rank: 3 | Crowding Distance: 0.4445
+
+# [ 8 1 9 2 2 9 7 4 2 ]
+>> Objective values: [ 1.0 -2.1667 -1.5 -2.25 -4.5 ] | Rank: 3 | Crowding Distance: 1.7976931348623157E308
+
+
+[ END ]
+
+++++++++++++++++ GENERATION: 13 ++++++++++++++++
+
+[ START ]
+
+Parent Population: 10
+Child Population: 10
+
+======== PARENT ========
+
+# [ 8 1 9 7 7 8 2 5 8 ]
+>> Objective values: [ 1.0 -2.1667 -1.3333 -2.0 -2.5 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 7 7 7 8 3 2 3 ]
+>> Objective values: [ 0.9 -2.6 -1.4 -1.75 -2.75 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 9 2 2 5 8 4 8 ]
+>> Objective values: [ 1.0 -2.1667 -1.0 -1.5 -3.25 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 9 2 2 5 8 7 8 ]
+>> Objective values: [ 1.0 -2.1667 -1.0 -1.5 -3.25 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 9 7 7 8 5 4 6 ]
+>> Objective values: [ 1.0 -2.0 -1.2857 -2.25 -3.25 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 9 4 8 2 2 9 5 6 1 ]
+>> Objective values: [ 1.0 -2.0 -1.2857 -2.25 -3.25 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 9 7 7 8 5 4 2 ]
+>> Objective values: [ 1.0 -2.0 -1.2857 -2.25 -3.25 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 9 4 7 2 2 9 5 6 1 ]
+>> Objective values: [ 1.0 -2.0 -1.2857 -2.25 -3.25 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 7 2 2 9 5 4 8 ]
+>> Objective values: [ 1.0 -2.0 -1.1429 -2.0 -3.75 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 7 2 2 9 5 4 8 ]
+>> Objective values: [ 1.0 -2.0 -1.1429 -2.0 -3.75 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+
+======== CHILD ========
+
+# [ 8 1 9 7 7 8 5 2 8 ]
+>> Objective values: [ 1.0 -2.1667 -1.3333 -2.0 -2.5 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 9 7 7 8 2 5 8 ]
+>> Objective values: [ 1.0 -2.1667 -1.3333 -2.0 -2.5 ] | Rank: 1 | Crowding Distance: 1.4933
+
+# [ 8 6 9 7 7 8 5 4 2 ]
+>> Objective values: [ 1.0 -2.0 -1.2857 -2.25 -3.25 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 9 7 7 8 5 4 2 ]
+>> Objective values: [ 1.0 -2.0 -1.2857 -2.25 -3.25 ] | Rank: 1 | Crowding Distance: 0.1818
+
+# [ 8 1 9 2 2 7 5 4 8 ]
+>> Objective values: [ 1.0 -2.0 -1.1429 -2.0 -3.75 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 7 2 2 9 3 4 8 ]
+>> Objective values: [ 1.0 -2.0 -1.1429 -2.0 -3.75 ] | Rank: 1 | Crowding Distance: 0.8743
+
+# [ 8 1 9 7 3 8 2 5 4 ]
+>> Objective values: [ 1.0 -1.875 -1.25 -2.5 -4.0 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 9 2 2 5 7 5 8 ]
+>> Objective values: [ 0.9167 -2.3333 -1.3333 -2.0 -3.75 ] | Rank: 2 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 9 2 7 5 8 4 7 ]
+>> Objective values: [ 0.9286 -2.1429 -1.2857 -2.25 -4.75 ] | Rank: 2 | Crowding Distance: 2.5682
+
+# [ 8 1 7 6 2 9 5 4 6 ]
+>> Objective values: [ 1.0 -1.875 -1.25 -2.5 -5.25 ] | Rank: 2 | Crowding Distance: 1.7976931348623157E308
+
+
+[ END ]
+
+++++++++++++++++ GENERATION: 14 ++++++++++++++++
+
+[ START ]
+
+Parent Population: 10
+Child Population: 10
+
+======== PARENT ========
+
+# [ 8 1 9 7 7 8 2 5 8 ]
+>> Objective values: [ 1.0 -2.1667 -1.3333 -2.0 -2.5 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 9 7 7 8 5 2 8 ]
+>> Objective values: [ 1.0 -2.1667 -1.3333 -2.0 -2.5 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 7 7 7 8 3 2 3 ]
+>> Objective values: [ 0.9 -2.6 -1.4 -1.75 -2.75 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 9 2 2 5 8 4 8 ]
+>> Objective values: [ 1.0 -2.1667 -1.0 -1.5 -3.25 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 9 2 2 5 8 7 8 ]
+>> Objective values: [ 1.0 -2.1667 -1.0 -1.5 -3.25 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 9 7 7 8 5 4 6 ]
+>> Objective values: [ 1.0 -2.0 -1.2857 -2.25 -3.25 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 9 4 8 2 2 9 5 6 1 ]
+>> Objective values: [ 1.0 -2.0 -1.2857 -2.25 -3.25 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 9 7 7 8 5 4 2 ]
+>> Objective values: [ 1.0 -2.0 -1.2857 -2.25 -3.25 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 9 4 7 2 2 9 5 6 1 ]
+>> Objective values: [ 1.0 -2.0 -1.2857 -2.25 -3.25 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 6 9 7 7 8 5 4 2 ]
+>> Objective values: [ 1.0 -2.0 -1.2857 -2.25 -3.25 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+
+======== CHILD ========
+
+# [ 8 1 9 7 7 8 5 2 8 ]
+>> Objective values: [ 1.0 -2.1667 -1.3333 -2.0 -2.5 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 9 2 2 5 8 7 8 ]
+>> Objective values: [ 1.0 -2.1667 -1.0 -1.5 -3.25 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 9 7 7 8 5 4 2 ]
+>> Objective values: [ 1.0 -2.0 -1.2857 -2.25 -3.25 ] | Rank: 1 | Crowding Distance: 0.238
+
+# [ 8 6 9 7 7 8 5 2 4 ]
+>> Objective values: [ 1.0 -2.0 -1.2857 -2.25 -3.25 ] | Rank: 1 | Crowding Distance: 0.0
+
+# [ 8 1 9 7 7 8 6 4 2 ]
+>> Objective values: [ 1.0 -2.0 -1.2857 -2.25 -3.25 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 4 7 2 2 9 5 1 8 ]
+>> Objective values: [ 1.0 -2.0 -1.1429 -2.0 -3.75 ] | Rank: 1 | Crowding Distance: 1.2439
+
+# [ 8 4 7 2 2 9 5 6 1 ]
+>> Objective values: [ 1.0 -1.875 -1.125 -2.25 -4.5 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 6 1 9 7 7 8 2 5 4 ]
+>> Objective values: [ 1.0 -1.875 -1.125 -2.25 -4.5 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 6 1 7 7 8 1 5 8 ]
+>> Objective values: [ 0.9 -2.6 -1.6 -2.0 -2.5 ] | Rank: 2 | Crowding Distance: 1.7976931348623157E308
+
+# [ 9 1 9 2 2 5 8 4 7 ]
+>> Objective values: [ 1.0 -2.0 -1.1429 -2.0 -4.0 ] | Rank: 2 | Crowding Distance: 0.613
+
+
+[ END ]
+
+++++++++++++++++ GENERATION: 15 ++++++++++++++++
+
+[ START ]
+
+Parent Population: 10
+Child Population: 10
+
+======== PARENT ========
+
+# [ 8 1 9 7 7 8 2 5 8 ]
+>> Objective values: [ 1.0 -2.1667 -1.3333 -2.0 -2.5 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 9 7 7 8 5 2 8 ]
+>> Objective values: [ 1.0 -2.1667 -1.3333 -2.0 -2.5 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 9 7 7 8 5 2 8 ]
+>> Objective values: [ 1.0 -2.1667 -1.3333 -2.0 -2.5 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 7 7 7 8 3 2 3 ]
+>> Objective values: [ 0.9 -2.6 -1.4 -1.75 -2.75 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 9 2 2 5 8 4 8 ]
+>> Objective values: [ 1.0 -2.1667 -1.0 -1.5 -3.25 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 9 2 2 5 8 7 8 ]
+>> Objective values: [ 1.0 -2.1667 -1.0 -1.5 -3.25 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 9 2 2 5 8 7 8 ]
+>> Objective values: [ 1.0 -2.1667 -1.0 -1.5 -3.25 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 9 7 7 8 5 4 6 ]
+>> Objective values: [ 1.0 -2.0 -1.2857 -2.25 -3.25 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 9 4 8 2 2 9 5 6 1 ]
+>> Objective values: [ 1.0 -2.0 -1.2857 -2.25 -3.25 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 9 7 7 8 5 4 2 ]
+>> Objective values: [ 1.0 -2.0 -1.2857 -2.25 -3.25 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+
+======== CHILD ========
+
+# [ 8 1 9 7 7 8 8 5 8 ]
+>> Objective values: [ 1.0 -2.4 -1.2 -1.5 -2.0 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 9 2 2 5 8 6 8 ]
+>> Objective values: [ 1.0 -2.1667 -1.0 -1.5 -3.25 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 9 7 7 8 5 4 2 ]
+>> Objective values: [ 1.0 -2.0 -1.2857 -2.25 -3.25 ] | Rank: 1 | Crowding Distance: 0.0
+
+# [ 8 1 9 7 7 8 5 4 6 ]
+>> Objective values: [ 1.0 -2.0 -1.2857 -2.25 -3.25 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 9 2 2 5 8 7 3 ]
+>> Objective values: [ 1.0 -2.0 -1.1429 -2.0 -4.0 ] | Rank: 1 | Crowding Distance: 1.1954
+
+# [ 9 4 9 7 7 8 2 6 1 ]
+>> Objective values: [ 1.0 -2.0 -1.1429 -2.0 -4.0 ] | Rank: 1 | Crowding Distance: 0.1713
+
+# [ 8 1 2 2 2 5 8 7 8 ]
+>> Objective values: [ 1.0 -2.4 -1.2 -1.5 -2.75 ] | Rank: 2 | Crowding Distance: 0.838
+
+# [ 8 1 9 7 7 1 2 5 8 ]
+>> Objective values: [ 0.9167 -2.3333 -1.3333 -2.0 -3.75 ] | Rank: 2 | Crowding Distance: 1.7976931348623157E308
+
+# [ 5 1 7 7 7 8 3 9 2 ]
+>> Objective values: [ 1.0 -2.0 -1.2857 -2.25 -4.0 ] | Rank: 2 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 3 2 2 9 7 4 2 ]
+>> Objective values: [ 1.0 -2.0 -1.2857 -2.25 -4.5 ] | Rank: 3 | Crowding Distance: 1.7976931348623157E308
+
+
+[ END ]
+
+++++++++++++++++ GENERATION: 16 ++++++++++++++++
+
+[ START ]
+
+Parent Population: 10
+Child Population: 10
+
+======== PARENT ========
+
+# [ 8 1 9 7 7 8 8 5 8 ]
+>> Objective values: [ 1.0 -2.4 -1.2 -1.5 -2.0 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 9 7 7 8 2 5 8 ]
+>> Objective values: [ 1.0 -2.1667 -1.3333 -2.0 -2.5 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 9 7 7 8 5 2 8 ]
+>> Objective values: [ 1.0 -2.1667 -1.3333 -2.0 -2.5 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 9 7 7 8 5 2 8 ]
+>> Objective values: [ 1.0 -2.1667 -1.3333 -2.0 -2.5 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 9 2 2 5 8 4 8 ]
+>> Objective values: [ 1.0 -2.1667 -1.0 -1.5 -3.25 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 9 2 2 5 8 7 8 ]
+>> Objective values: [ 1.0 -2.1667 -1.0 -1.5 -3.25 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 9 2 2 5 8 7 8 ]
+>> Objective values: [ 1.0 -2.1667 -1.0 -1.5 -3.25 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 9 2 2 5 8 6 8 ]
+>> Objective values: [ 1.0 -2.1667 -1.0 -1.5 -3.25 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 9 7 7 8 5 4 6 ]
+>> Objective values: [ 1.0 -2.0 -1.2857 -2.25 -3.25 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 9 4 8 2 2 9 5 6 1 ]
+>> Objective values: [ 1.0 -2.0 -1.2857 -2.25 -3.25 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+
+======== CHILD ========
+
+# [ 8 1 9 7 7 8 8 5 8 ]
+>> Objective values: [ 1.0 -2.4 -1.2 -1.5 -2.0 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 9 7 7 8 2 5 8 ]
+>> Objective values: [ 1.0 -2.1667 -1.3333 -2.0 -2.5 ] | Rank: 1 | Crowding Distance: 0.2
+
+# [ 8 1 9 7 7 8 4 2 8 ]
+>> Objective values: [ 1.0 -2.1667 -1.3333 -2.0 -2.5 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 9 7 7 2 8 4 8 ]
+>> Objective values: [ 1.0 -2.1667 -1.0 -1.5 -3.25 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 9 2 2 5 8 7 8 ]
+>> Objective values: [ 1.0 -2.1667 -1.0 -1.5 -3.25 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 9 7 7 8 5 2 3 ]
+>> Objective values: [ 1.0 -2.0 -1.2857 -2.25 -3.25 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 9 2 2 7 5 2 8 ]
+>> Objective values: [ 1.0 -2.1667 -1.3333 -2.0 -3.25 ] | Rank: 2 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 9 2 2 5 7 2 8 ]
+>> Objective values: [ 1.0 -2.1667 -1.3333 -2.0 -3.25 ] | Rank: 2 | Crowding Distance: 0.0
+
+# [ 9 4 8 7 7 8 2 5 6 ]
+>> Objective values: [ 1.0 -2.0 -1.2857 -2.25 -4.5 ] | Rank: 2 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 9 2 2 9 5 6 7 ]
+>> Objective values: [ 1.0 -2.0 -1.2857 -2.25 -4.5 ] | Rank: 2 | Crowding Distance: 1.7976931348623157E308
+
+
+[ END ]
+
+++++++++++++++++ GENERATION: 17 ++++++++++++++++
+
+[ START ]
+
+Parent Population: 10
+Child Population: 10
+
+======== PARENT ========
+
+# [ 8 1 9 7 7 8 8 5 8 ]
+>> Objective values: [ 1.0 -2.4 -1.2 -1.5 -2.0 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 9 7 7 8 8 5 8 ]
+>> Objective values: [ 1.0 -2.4 -1.2 -1.5 -2.0 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 9 7 7 8 2 5 8 ]
+>> Objective values: [ 1.0 -2.1667 -1.3333 -2.0 -2.5 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 9 7 7 8 5 2 8 ]
+>> Objective values: [ 1.0 -2.1667 -1.3333 -2.0 -2.5 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 9 7 7 8 5 2 8 ]
+>> Objective values: [ 1.0 -2.1667 -1.3333 -2.0 -2.5 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 9 7 7 8 4 2 8 ]
+>> Objective values: [ 1.0 -2.1667 -1.3333 -2.0 -2.5 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 9 2 2 5 8 4 8 ]
+>> Objective values: [ 1.0 -2.1667 -1.0 -1.5 -3.25 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 9 2 2 5 8 7 8 ]
+>> Objective values: [ 1.0 -2.1667 -1.0 -1.5 -3.25 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 9 2 2 5 8 7 8 ]
+>> Objective values: [ 1.0 -2.1667 -1.0 -1.5 -3.25 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 9 2 2 5 8 6 8 ]
+>> Objective values: [ 1.0 -2.1667 -1.0 -1.5 -3.25 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+
+======== CHILD ========
+
+# [ 8 1 9 7 7 8 5 2 8 ]
+>> Objective values: [ 1.0 -2.1667 -1.3333 -2.0 -2.5 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 9 2 2 5 8 7 8 ]
+>> Objective values: [ 1.0 -2.1667 -1.0 -1.5 -3.25 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 9 2 2 5 8 7 8 ]
+>> Objective values: [ 1.0 -2.1667 -1.0 -1.5 -3.25 ] | Rank: 1 | Crowding Distance: 0.8334
+
+# [ 8 1 9 7 7 8 5 2 6 ]
+>> Objective values: [ 1.0 -2.0 -1.2857 -2.25 -3.25 ] | Rank: 1 | Crowding Distance: 0.5832
+
+# [ 8 1 9 7 7 8 4 2 5 ]
+>> Objective values: [ 1.0 -2.0 -1.2857 -2.25 -3.25 ] | Rank: 1 | Crowding Distance: 0.0
+
+# [ 8 1 9 7 7 8 5 2 4 ]
+>> Objective values: [ 1.0 -2.0 -1.2857 -2.25 -3.25 ] | Rank: 1 | Crowding Distance: 1.7183
+
+# [ 8 1 9 2 2 5 8 7 4 ]
+>> Objective values: [ 1.0 -2.0 -1.1429 -2.0 -4.0 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 9 2 2 5 8 6 7 ]
+>> Objective values: [ 1.0 -2.0 -1.1429 -2.0 -4.0 ] | Rank: 1 | Crowding Distance: 0.3332
+
+# [ 8 1 9 7 7 8 8 2 5 ]
+>> Objective values: [ 1.0 -2.1667 -1.3333 -2.0 -2.75 ] | Rank: 2 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 9 7 8 8 4 2 5 ]
+>> Objective values: [ 0.9524 -2.1429 -1.4286 -2.5 -4.0 ] | Rank: 2 | Crowding Distance: 1.7976931348623157E308
+
+
+[ END ]
+
+++++++++++++++++ GENERATION: 18 ++++++++++++++++
+
+[ START ]
+
+Parent Population: 10
+Child Population: 10
+
+======== PARENT ========
+
+# [ 8 1 9 7 7 8 8 5 8 ]
+>> Objective values: [ 1.0 -2.4 -1.2 -1.5 -2.0 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 9 7 7 8 8 5 8 ]
+>> Objective values: [ 1.0 -2.4 -1.2 -1.5 -2.0 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 9 7 7 8 2 5 8 ]
+>> Objective values: [ 1.0 -2.1667 -1.3333 -2.0 -2.5 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 9 7 7 8 5 2 8 ]
+>> Objective values: [ 1.0 -2.1667 -1.3333 -2.0 -2.5 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 9 7 7 8 5 2 8 ]
+>> Objective values: [ 1.0 -2.1667 -1.3333 -2.0 -2.5 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 9 7 7 8 4 2 8 ]
+>> Objective values: [ 1.0 -2.1667 -1.3333 -2.0 -2.5 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 9 7 7 8 5 2 8 ]
+>> Objective values: [ 1.0 -2.1667 -1.3333 -2.0 -2.5 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 9 2 2 5 8 4 8 ]
+>> Objective values: [ 1.0 -2.1667 -1.0 -1.5 -3.25 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 9 2 2 5 8 7 8 ]
+>> Objective values: [ 1.0 -2.1667 -1.0 -1.5 -3.25 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 9 2 2 5 8 7 8 ]
+>> Objective values: [ 1.0 -2.1667 -1.0 -1.5 -3.25 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+
+======== CHILD ========
+
+# [ 8 1 9 7 7 8 8 5 8 ]
+>> Objective values: [ 1.0 -2.4 -1.2 -1.5 -2.0 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 9 7 7 8 8 5 8 ]
+>> Objective values: [ 1.0 -2.4 -1.2 -1.5 -2.0 ] | Rank: 1 | Crowding Distance: 0.7555
+
+# [ 8 1 9 7 7 8 5 2 8 ]
+>> Objective values: [ 1.0 -2.1667 -1.3333 -2.0 -2.5 ] | Rank: 1 | Crowding Distance: 0.7556
+
+# [ 8 1 9 5 7 8 8 2 8 ]
+>> Objective values: [ 1.0 -2.1667 -1.1667 -1.75 -2.75 ] | Rank: 1 | Crowding Distance: 1.3285
+
+# [ 8 1 9 2 2 5 8 7 8 ]
+>> Objective values: [ 1.0 -2.1667 -1.0 -1.5 -3.25 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 9 2 2 5 8 4 7 ]
+>> Objective values: [ 1.0 -2.0 -1.1429 -2.0 -4.0 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 9 7 7 8 5 5 8 ]
+>> Objective values: [ 1.0 -2.4 -1.6 -2.0 -2.5 ] | Rank: 2 | Crowding Distance: 0.1667
+
+# [ 8 1 9 7 7 8 5 5 8 ]
+>> Objective values: [ 1.0 -2.4 -1.6 -2.0 -2.5 ] | Rank: 2 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 9 7 7 8 8 5 2 ]
+>> Objective values: [ 1.0 -2.1667 -1.3333 -2.0 -2.75 ] | Rank: 2 | Crowding Distance: 0.4778
+
+# [ 4 8 9 7 7 8 8 5 2 ]
+>> Objective values: [ 0.8889 -2.5 -1.5 -2.25 -4.5 ] | Rank: 2 | Crowding Distance: 1.7976931348623157E308
+
+
+[ END ]
+
+++++++++++++++++ GENERATION: 19 ++++++++++++++++
+
+[ START ]
+
+Parent Population: 10
+Child Population: 10
+
+======== PARENT ========
+
+# [ 8 1 9 7 7 8 8 5 8 ]
+>> Objective values: [ 1.0 -2.4 -1.2 -1.5 -2.0 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 9 7 7 8 8 5 8 ]
+>> Objective values: [ 1.0 -2.4 -1.2 -1.5 -2.0 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 9 7 7 8 8 5 8 ]
+>> Objective values: [ 1.0 -2.4 -1.2 -1.5 -2.0 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 9 7 7 8 2 5 8 ]
+>> Objective values: [ 1.0 -2.1667 -1.3333 -2.0 -2.5 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 9 7 7 8 5 2 8 ]
+>> Objective values: [ 1.0 -2.1667 -1.3333 -2.0 -2.5 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 9 7 7 8 5 2 8 ]
+>> Objective values: [ 1.0 -2.1667 -1.3333 -2.0 -2.5 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 9 7 7 8 4 2 8 ]
+>> Objective values: [ 1.0 -2.1667 -1.3333 -2.0 -2.5 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 9 7 7 8 5 2 8 ]
+>> Objective values: [ 1.0 -2.1667 -1.3333 -2.0 -2.5 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 9 2 2 5 8 4 8 ]
+>> Objective values: [ 1.0 -2.1667 -1.0 -1.5 -3.25 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 9 2 2 5 8 7 8 ]
+>> Objective values: [ 1.0 -2.1667 -1.0 -1.5 -3.25 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+
+======== CHILD ========
+
+# [ 8 1 1 7 7 8 5 2 8 ]
+>> Objective values: [ 0.9 -2.6 -1.4 -1.75 -2.5 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 9 7 7 8 2 5 8 ]
+>> Objective values: [ 1.0 -2.1667 -1.3333 -2.0 -2.5 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 9 7 7 8 5 2 8 ]
+>> Objective values: [ 1.0 -2.1667 -1.3333 -2.0 -2.5 ] | Rank: 1 | Crowding Distance: 0.0
+
+# [ 8 1 9 7 7 8 5 2 8 ]
+>> Objective values: [ 1.0 -2.1667 -1.3333 -2.0 -2.5 ] | Rank: 1 | Crowding Distance: 0.0
+
+# [ 8 1 9 7 7 8 2 5 8 ]
+>> Objective values: [ 1.0 -2.1667 -1.3333 -2.0 -2.5 ] | Rank: 1 | Crowding Distance: 1.3107
+
+# [ 8 1 9 2 2 5 8 7 8 ]
+>> Objective values: [ 1.0 -2.1667 -1.0 -1.5 -3.25 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 9 4 7 8 2 5 8 ]
+>> Objective values: [ 1.0 -2.0 -1.2857 -2.25 -3.25 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 9 7 7 8 8 2 5 ]
+>> Objective values: [ 1.0 -2.1667 -1.3333 -2.0 -2.75 ] | Rank: 2 | Crowding Distance: 0.2
+
+# [ 8 1 9 7 7 8 8 5 2 ]
+>> Objective values: [ 1.0 -2.1667 -1.3333 -2.0 -2.75 ] | Rank: 2 | Crowding Distance: 0.4
+
+# [ 8 1 9 2 2 5 1 7 8 ]
+>> Objective values: [ 0.9167 -2.3333 -1.3333 -2.0 -3.75 ] | Rank: 3 | Crowding Distance: 1.7976931348623157E308
+
+
+[ END ]
+
+++++++++++++++++ GENERATION: 20 ++++++++++++++++
+
+[ START ]
+
+Parent Population: 10
+Child Population: 10
+
+======== PARENT ========
+
+# [ 8 1 9 7 7 8 8 5 8 ]
+>> Objective values: [ 1.0 -2.4 -1.2 -1.5 -2.0 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 9 7 7 8 8 5 8 ]
+>> Objective values: [ 1.0 -2.4 -1.2 -1.5 -2.0 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 9 7 7 8 8 5 8 ]
+>> Objective values: [ 1.0 -2.4 -1.2 -1.5 -2.0 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 9 7 7 8 2 5 8 ]
+>> Objective values: [ 1.0 -2.1667 -1.3333 -2.0 -2.5 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 9 7 7 8 5 2 8 ]
+>> Objective values: [ 1.0 -2.1667 -1.3333 -2.0 -2.5 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 9 7 7 8 5 2 8 ]
+>> Objective values: [ 1.0 -2.1667 -1.3333 -2.0 -2.5 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 9 7 7 8 4 2 8 ]
+>> Objective values: [ 1.0 -2.1667 -1.3333 -2.0 -2.5 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 9 7 7 8 5 2 8 ]
+>> Objective values: [ 1.0 -2.1667 -1.3333 -2.0 -2.5 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 9 7 7 8 2 5 8 ]
+>> Objective values: [ 1.0 -2.1667 -1.3333 -2.0 -2.5 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 9 2 2 5 8 4 8 ]
+>> Objective values: [ 1.0 -2.1667 -1.0 -1.5 -3.25 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+
+======== CHILD ========
+
+# [ 8 1 9 7 7 8 8 2 8 ]
+>> Objective values: [ 1.0 -2.4 -1.2 -1.5 -2.0 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 9 7 7 8 8 5 8 ]
+>> Objective values: [ 1.0 -2.4 -1.2 -1.5 -2.0 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 8 7 7 8 5 2 8 ]
+>> Objective values: [ 1.05 -2.2 -1.4 -1.75 -2.0 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 9 7 7 8 2 5 8 ]
+>> Objective values: [ 1.0 -2.1667 -1.3333 -2.0 -2.5 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 9 7 7 8 5 2 8 ]
+>> Objective values: [ 1.0 -2.1667 -1.3333 -2.0 -2.5 ] | Rank: 1 | Crowding Distance: 0.0
+
+# [ 8 1 9 7 7 8 5 2 8 ]
+>> Objective values: [ 1.0 -2.1667 -1.3333 -2.0 -2.5 ] | Rank: 1 | Crowding Distance: 0.1429
+
+# [ 8 1 9 7 7 2 8 4 8 ]
+>> Objective values: [ 1.0 -2.1667 -1.0 -1.5 -3.25 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 9 2 2 7 8 5 8 ]
+>> Objective values: [ 1.0 -2.1667 -1.0 -1.5 -3.25 ] | Rank: 1 | Crowding Distance: 0.7857
+
+# [ 8 1 9 7 7 8 8 5 2 ]
+>> Objective values: [ 1.0 -2.1667 -1.3333 -2.0 -2.75 ] | Rank: 2 | Crowding Distance: 0.5713
+
+# [ 8 1 9 2 2 5 7 5 8 ]
+>> Objective values: [ 0.9167 -2.3333 -1.3333 -2.0 -3.75 ] | Rank: 3 | Crowding Distance: 1.7976931348623157E308
+
+
+[ END ]
+
+++++++++++++++++ GENERATION: 21 ++++++++++++++++
+
+[ START ]
+
+Parent Population: 10
+Child Population: 10
+
+======== PARENT ========
+
+# [ 8 1 9 7 7 8 8 5 8 ]
+>> Objective values: [ 1.0 -2.4 -1.2 -1.5 -2.0 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 9 7 7 8 8 5 8 ]
+>> Objective values: [ 1.0 -2.4 -1.2 -1.5 -2.0 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 9 7 7 8 8 5 8 ]
+>> Objective values: [ 1.0 -2.4 -1.2 -1.5 -2.0 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 9 7 7 8 8 2 8 ]
+>> Objective values: [ 1.0 -2.4 -1.2 -1.5 -2.0 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 9 7 7 8 8 5 8 ]
+>> Objective values: [ 1.0 -2.4 -1.2 -1.5 -2.0 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 8 7 7 8 5 2 8 ]
+>> Objective values: [ 1.05 -2.2 -1.4 -1.75 -2.0 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 9 7 7 8 2 5 8 ]
+>> Objective values: [ 1.0 -2.1667 -1.3333 -2.0 -2.5 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 9 7 7 8 5 2 8 ]
+>> Objective values: [ 1.0 -2.1667 -1.3333 -2.0 -2.5 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 9 7 7 8 5 2 8 ]
+>> Objective values: [ 1.0 -2.1667 -1.3333 -2.0 -2.5 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 9 7 7 8 4 2 8 ]
+>> Objective values: [ 1.0 -2.1667 -1.3333 -2.0 -2.5 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+
+======== CHILD ========
+
+# [ 8 1 9 7 7 8 8 5 8 ]
+>> Objective values: [ 1.0 -2.4 -1.2 -1.5 -2.0 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 9 7 7 8 8 3 8 ]
+>> Objective values: [ 1.0 -2.4 -1.2 -1.5 -2.0 ] | Rank: 1 | Crowding Distance: 0.0
+
+# [ 8 1 9 7 7 8 8 2 8 ]
+>> Objective values: [ 1.0 -2.4 -1.2 -1.5 -2.0 ] | Rank: 1 | Crowding Distance: 1.5145
+
+# [ 8 1 9 7 7 8 4 2 8 ]
+>> Objective values: [ 1.0 -2.1667 -1.3333 -2.0 -2.5 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 9 7 7 8 4 2 8 ]
+>> Objective values: [ 1.0 -2.1667 -1.3333 -2.0 -2.5 ] | Rank: 1 | Crowding Distance: 0.0
+
+# [ 8 1 9 7 7 8 2 5 8 ]
+>> Objective values: [ 1.0 -2.1667 -1.3333 -2.0 -2.5 ] | Rank: 1 | Crowding Distance: 0.0
+
+# [ 8 1 9 7 7 8 5 2 8 ]
+>> Objective values: [ 1.0 -2.1667 -1.3333 -2.0 -2.5 ] | Rank: 1 | Crowding Distance: 0.7856
+
+# [ 2 1 9 7 7 8 8 5 8 ]
+>> Objective values: [ 0.8889 -2.5 -1.1667 -1.75 -4.5 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 5 7 7 8 5 5 8 ]
+>> Objective values: [ 1.0 -2.75 -2.0 -2.0 -2.25 ] | Rank: 2 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 9 7 6 8 6 5 8 ]
+>> Objective values: [ 0.9167 -2.3333 -1.5 -2.25 -3.25 ] | Rank: 2 | Crowding Distance: 1.7976931348623157E308
+
+
+[ END ]
+
+++++++++++++++++ GENERATION: 22 ++++++++++++++++
+
+[ START ]
+
+Parent Population: 10
+Child Population: 10
+
+======== PARENT ========
+
+# [ 8 1 9 7 7 8 8 5 8 ]
+>> Objective values: [ 1.0 -2.4 -1.2 -1.5 -2.0 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 9 7 7 8 8 5 8 ]
+>> Objective values: [ 1.0 -2.4 -1.2 -1.5 -2.0 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 9 7 7 8 8 5 8 ]
+>> Objective values: [ 1.0 -2.4 -1.2 -1.5 -2.0 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 9 7 7 8 8 2 8 ]
+>> Objective values: [ 1.0 -2.4 -1.2 -1.5 -2.0 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 9 7 7 8 8 5 8 ]
+>> Objective values: [ 1.0 -2.4 -1.2 -1.5 -2.0 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 9 7 7 8 8 5 8 ]
+>> Objective values: [ 1.0 -2.4 -1.2 -1.5 -2.0 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 8 7 7 8 5 2 8 ]
+>> Objective values: [ 1.05 -2.2 -1.4 -1.75 -2.0 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 9 7 7 8 2 5 8 ]
+>> Objective values: [ 1.0 -2.1667 -1.3333 -2.0 -2.5 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 9 7 7 8 5 2 8 ]
+>> Objective values: [ 1.0 -2.1667 -1.3333 -2.0 -2.5 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 9 7 7 8 5 2 8 ]
+>> Objective values: [ 1.0 -2.1667 -1.3333 -2.0 -2.5 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+
+======== CHILD ========
+
+# [ 8 1 9 7 7 8 8 5 8 ]
+>> Objective values: [ 1.0 -2.4 -1.2 -1.5 -2.0 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 9 7 7 8 8 5 8 ]
+>> Objective values: [ 1.0 -2.4 -1.2 -1.5 -2.0 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 8 7 7 8 5 2 8 ]
+>> Objective values: [ 1.05 -2.2 -1.4 -1.75 -2.0 ] | Rank: 1 | Crowding Distance: 2.9835
+
+# [ 8 1 9 7 7 8 5 2 8 ]
+>> Objective values: [ 1.0 -2.1667 -1.3333 -2.0 -2.5 ] | Rank: 1 | Crowding Distance: 0.8523
+
+# [ 8 1 9 7 7 8 5 2 8 ]
+>> Objective values: [ 1.0 -2.1667 -1.3333 -2.0 -2.5 ] | Rank: 1 | Crowding Distance: 0.0
+
+# [ 8 1 9 7 7 8 2 5 8 ]
+>> Objective values: [ 1.0 -2.1667 -1.3333 -2.0 -2.5 ] | Rank: 1 | Crowding Distance: 0.0
+
+# [ 8 1 9 7 7 8 5 2 8 ]
+>> Objective values: [ 1.0 -2.1667 -1.3333 -2.0 -2.5 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 8 7 7 8 7 2 9 ]
+>> Objective values: [ 1.0667 -2.2 -1.6 -2.0 -2.75 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 9 7 7 8 3 5 2 ]
+>> Objective values: [ 1.0 -2.0 -1.2857 -2.25 -3.25 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 9 9 7 8 2 5 8 ]
+>> Objective values: [ 1.0 -2.1667 -1.5 -2.25 -2.75 ] | Rank: 2 | Crowding Distance: 1.7976931348623157E308
+
+
+[ END ]
+
+++++++++++++++++ GENERATION: 23 ++++++++++++++++
+
+[ START ]
+
+Parent Population: 10
+Child Population: 10
+
+======== PARENT ========
+
+# [ 8 1 9 7 7 8 8 5 8 ]
+>> Objective values: [ 1.0 -2.4 -1.2 -1.5 -2.0 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 9 7 7 8 8 5 8 ]
+>> Objective values: [ 1.0 -2.4 -1.2 -1.5 -2.0 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 9 7 7 8 8 5 8 ]
+>> Objective values: [ 1.0 -2.4 -1.2 -1.5 -2.0 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 9 7 7 8 8 2 8 ]
+>> Objective values: [ 1.0 -2.4 -1.2 -1.5 -2.0 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 9 7 7 8 8 5 8 ]
+>> Objective values: [ 1.0 -2.4 -1.2 -1.5 -2.0 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 9 7 7 8 8 5 8 ]
+>> Objective values: [ 1.0 -2.4 -1.2 -1.5 -2.0 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 9 7 7 8 8 5 8 ]
+>> Objective values: [ 1.0 -2.4 -1.2 -1.5 -2.0 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 9 7 7 8 8 5 8 ]
+>> Objective values: [ 1.0 -2.4 -1.2 -1.5 -2.0 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 8 7 7 8 5 2 8 ]
+>> Objective values: [ 1.05 -2.2 -1.4 -1.75 -2.0 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 9 7 7 8 2 5 8 ]
+>> Objective values: [ 1.0 -2.1667 -1.3333 -2.0 -2.5 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+
+======== CHILD ========
+
+# [ 8 1 9 7 7 8 8 5 8 ]
+>> Objective values: [ 1.0 -2.4 -1.2 -1.5 -2.0 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 9 7 7 8 8 5 8 ]
+>> Objective values: [ 1.0 -2.4 -1.2 -1.5 -2.0 ] | Rank: 1 | Crowding Distance: 0.0
+
+# [ 8 1 9 7 7 8 8 5 8 ]
+>> Objective values: [ 1.0 -2.4 -1.2 -1.5 -2.0 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 8 7 7 8 9 2 8 ]
+>> Objective values: [ 1.05 -2.2 -1.4 -1.75 -2.0 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 8 7 7 8 5 2 8 ]
+>> Objective values: [ 1.05 -2.2 -1.4 -1.75 -2.0 ] | Rank: 1 | Crowding Distance: 2.8189
+
+# [ 8 1 9 7 7 8 5 2 8 ]
+>> Objective values: [ 1.0 -2.1667 -1.3333 -2.0 -2.5 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 9 7 7 8 2 5 8 ]
+>> Objective values: [ 1.0 -2.1667 -1.3333 -2.0 -2.5 ] | Rank: 1 | Crowding Distance: 0.0
+
+# [ 8 1 9 7 7 8 2 5 8 ]
+>> Objective values: [ 1.0 -2.1667 -1.3333 -2.0 -2.5 ] | Rank: 1 | Crowding Distance: 0.6299
+
+# [ 8 1 9 4 7 8 8 2 8 ]
+>> Objective values: [ 1.0 -2.1667 -1.1667 -1.75 -2.75 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 7 7 7 8 2 5 8 ]
+>> Objective values: [ 1.0 -2.4 -1.6 -2.0 -2.0 ] | Rank: 2 | Crowding Distance: 1.7976931348623157E308
+
+
+[ END ]
+
+++++++++++++++++ GENERATION: 24 ++++++++++++++++
+
+[ START ]
+
+Parent Population: 10
+Child Population: 10
+
+======== PARENT ========
+
+# [ 8 1 9 7 7 8 8 5 8 ]
+>> Objective values: [ 1.0 -2.4 -1.2 -1.5 -2.0 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 9 7 7 8 8 5 8 ]
+>> Objective values: [ 1.0 -2.4 -1.2 -1.5 -2.0 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 9 7 7 8 8 5 8 ]
+>> Objective values: [ 1.0 -2.4 -1.2 -1.5 -2.0 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 9 7 7 8 8 2 8 ]
+>> Objective values: [ 1.0 -2.4 -1.2 -1.5 -2.0 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 9 7 7 8 8 5 8 ]
+>> Objective values: [ 1.0 -2.4 -1.2 -1.5 -2.0 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 9 7 7 8 8 5 8 ]
+>> Objective values: [ 1.0 -2.4 -1.2 -1.5 -2.0 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 9 7 7 8 8 5 8 ]
+>> Objective values: [ 1.0 -2.4 -1.2 -1.5 -2.0 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 9 7 7 8 8 5 8 ]
+>> Objective values: [ 1.0 -2.4 -1.2 -1.5 -2.0 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 9 7 7 8 8 5 8 ]
+>> Objective values: [ 1.0 -2.4 -1.2 -1.5 -2.0 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 9 7 7 8 8 5 8 ]
+>> Objective values: [ 1.0 -2.4 -1.2 -1.5 -2.0 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+
+======== CHILD ========
+
+# [ 8 1 1 7 7 8 8 2 8 ]
+>> Objective values: [ 0.875 -3.0 -1.25 -1.25 -2.0 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 9 7 7 8 8 5 8 ]
+>> Objective values: [ 1.0 -2.4 -1.2 -1.5 -2.0 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 9 7 7 8 8 5 8 ]
+>> Objective values: [ 1.0 -2.4 -1.2 -1.5 -2.0 ] | Rank: 1 | Crowding Distance: 0.0
+
+# [ 8 1 6 7 7 8 8 2 8 ]
+>> Objective values: [ 1.0 -2.4 -1.2 -1.5 -2.0 ] | Rank: 1 | Crowding Distance: 0.0
+
+# [ 8 1 9 7 7 8 8 2 8 ]
+>> Objective values: [ 1.0 -2.4 -1.2 -1.5 -2.0 ] | Rank: 1 | Crowding Distance: 0.0
+
+# [ 8 1 9 7 7 8 8 5 8 ]
+>> Objective values: [ 1.0 -2.4 -1.2 -1.5 -2.0 ] | Rank: 1 | Crowding Distance: 0.7
+
+# [ 8 1 9 7 7 8 8 5 2 ]
+>> Objective values: [ 1.0 -2.1667 -1.3333 -2.0 -2.75 ] | Rank: 1 | Crowding Distance: 2.1976
+
+# [ 8 1 9 6 7 8 8 2 5 ]
+>> Objective values: [ 1.0 -2.0 -1.2857 -2.25 -3.5 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 9 7 7 8 3 2 7 ]
+>> Objective values: [ 1.0 -2.1667 -1.5 -2.25 -3.25 ] | Rank: 2 | Crowding Distance: 1.7976931348623157E308
+
+# [ 1 1 9 7 7 8 8 5 8 ]
+>> Objective values: [ 0.8667 -2.8 -1.2 -1.5 -4.5 ] | Rank: 2 | Crowding Distance: 1.7976931348623157E308
+
+
+[ END ]
+
+++++++++++++++++ GENERATION: 25 ++++++++++++++++
+
+[ START ]
+
+Parent Population: 10
+Child Population: 10
+
+======== PARENT ========
+
+# [ 8 1 1 7 7 8 8 2 8 ]
+>> Objective values: [ 0.875 -3.0 -1.25 -1.25 -2.0 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 9 7 7 8 8 5 8 ]
+>> Objective values: [ 1.0 -2.4 -1.2 -1.5 -2.0 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 9 7 7 8 8 5 8 ]
+>> Objective values: [ 1.0 -2.4 -1.2 -1.5 -2.0 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 9 7 7 8 8 5 8 ]
+>> Objective values: [ 1.0 -2.4 -1.2 -1.5 -2.0 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 9 7 7 8 8 2 8 ]
+>> Objective values: [ 1.0 -2.4 -1.2 -1.5 -2.0 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 9 7 7 8 8 5 8 ]
+>> Objective values: [ 1.0 -2.4 -1.2 -1.5 -2.0 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 9 7 7 8 8 5 8 ]
+>> Objective values: [ 1.0 -2.4 -1.2 -1.5 -2.0 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 9 7 7 8 8 5 8 ]
+>> Objective values: [ 1.0 -2.4 -1.2 -1.5 -2.0 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 9 7 7 8 8 5 8 ]
+>> Objective values: [ 1.0 -2.4 -1.2 -1.5 -2.0 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 9 7 7 8 8 5 8 ]
+>> Objective values: [ 1.0 -2.4 -1.2 -1.5 -2.0 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+
+======== CHILD ========
+
+# [ 8 1 3 7 7 8 8 2 8 ]
+>> Objective values: [ 1.0 -2.4 -1.2 -1.5 -2.0 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 9 7 7 8 8 5 8 ]
+>> Objective values: [ 1.0 -2.4 -1.2 -1.5 -2.0 ] | Rank: 1 | Crowding Distance: 0.0
+
+# [ 8 1 9 7 7 8 8 2 8 ]
+>> Objective values: [ 1.0 -2.4 -1.2 -1.5 -2.0 ] | Rank: 1 | Crowding Distance: 0.0
+
+# [ 8 1 9 7 7 8 8 5 8 ]
+>> Objective values: [ 1.0 -2.4 -1.2 -1.5 -2.0 ] | Rank: 1 | Crowding Distance: 0.0
+
+# [ 8 1 9 7 7 8 8 2 8 ]
+>> Objective values: [ 1.0 -2.4 -1.2 -1.5 -2.0 ] | Rank: 1 | Crowding Distance: 0.0
+
+# [ 8 1 9 7 7 8 8 5 8 ]
+>> Objective values: [ 1.0 -2.4 -1.2 -1.5 -2.0 ] | Rank: 1 | Crowding Distance: 2.5611
+
+# [ 8 1 9 7 7 8 8 5 2 ]
+>> Objective values: [ 1.0 -2.1667 -1.3333 -2.0 -2.75 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 9 9 7 8 8 2 8 ]
+>> Objective values: [ 1.0 -2.4 -1.4 -1.75 -2.25 ] | Rank: 2 | Crowding Distance: 1.0335
+
+# [ 8 1 1 7 7 8 9 5 8 ]
+>> Objective values: [ 0.9 -2.6 -1.4 -1.75 -2.5 ] | Rank: 2 | Crowding Distance: 1.7976931348623157E308
+
+# [ 5 1 1 7 7 8 7 2 9 ]
+>> Objective values: [ 0.9167 -2.3333 -1.3333 -2.0 -4.5 ] | Rank: 2 | Crowding Distance: 1.7976931348623157E308
+
+
+[ END ]
+
+++++++++++++++++ GENERATION: 26 ++++++++++++++++
+
+[ START ]
+
+Parent Population: 10
+Child Population: 10
+
+======== PARENT ========
+
+# [ 8 1 1 7 7 8 8 2 8 ]
+>> Objective values: [ 0.875 -3.0 -1.25 -1.25 -2.0 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 9 7 7 8 8 5 8 ]
+>> Objective values: [ 1.0 -2.4 -1.2 -1.5 -2.0 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 9 7 7 8 8 5 8 ]
+>> Objective values: [ 1.0 -2.4 -1.2 -1.5 -2.0 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 9 7 7 8 8 5 8 ]
+>> Objective values: [ 1.0 -2.4 -1.2 -1.5 -2.0 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 9 7 7 8 8 2 8 ]
+>> Objective values: [ 1.0 -2.4 -1.2 -1.5 -2.0 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 9 7 7 8 8 5 8 ]
+>> Objective values: [ 1.0 -2.4 -1.2 -1.5 -2.0 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 9 7 7 8 8 5 8 ]
+>> Objective values: [ 1.0 -2.4 -1.2 -1.5 -2.0 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 9 7 7 8 8 5 8 ]
+>> Objective values: [ 1.0 -2.4 -1.2 -1.5 -2.0 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 9 7 7 8 8 5 8 ]
+>> Objective values: [ 1.0 -2.4 -1.2 -1.5 -2.0 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 9 7 7 8 8 5 8 ]
+>> Objective values: [ 1.0 -2.4 -1.2 -1.5 -2.0 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+
+======== CHILD ========
+
+# [ 8 1 9 7 7 8 8 8 8 ]
+>> Objective values: [ 1.1 -2.25 -1.5 -1.5 -1.75 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 9 7 7 8 8 2 8 ]
+>> Objective values: [ 1.0 -2.4 -1.2 -1.5 -2.0 ] | Rank: 1 | Crowding Distance: 0.9825
+
+# [ 8 1 9 7 7 8 8 5 8 ]
+>> Objective values: [ 1.0 -2.4 -1.2 -1.5 -2.0 ] | Rank: 1 | Crowding Distance: 0.0
+
+# [ 8 1 9 7 7 8 8 2 8 ]
+>> Objective values: [ 1.0 -2.4 -1.2 -1.5 -2.0 ] | Rank: 1 | Crowding Distance: 0.0
+
+# [ 8 1 9 7 7 8 8 2 8 ]
+>> Objective values: [ 1.0 -2.4 -1.2 -1.5 -2.0 ] | Rank: 1 | Crowding Distance: 0.8393
+
+# [ 8 1 9 7 4 8 8 2 8 ]
+>> Objective values: [ 1.0 -2.1667 -1.1667 -1.75 -2.75 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 2 1 1 7 7 9 8 5 8 ]
+>> Objective values: [ 0.8333 -2.5 -1.0 -1.5 -4.5 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 8 9 7 3 8 8 5 8 ]
+>> Objective values: [ 1.0 -2.4 -1.2 -1.5 -2.75 ] | Rank: 2 | Crowding Distance: 0.2727
+
+# [ 8 1 9 7 7 8 8 5 2 ]
+>> Objective values: [ 1.0 -2.1667 -1.3333 -2.0 -2.75 ] | Rank: 2 | Crowding Distance: 0.7666
+
+# [ 8 1 9 7 7 8 8 2 5 ]
+>> Objective values: [ 1.0 -2.1667 -1.3333 -2.0 -2.75 ] | Rank: 2 | Crowding Distance: 1.7976931348623157E308
+
+
+[ END ]
+
+++++++++++++++++ GENERATION: 27 ++++++++++++++++
+
+[ START ]
+
+Parent Population: 10
+Child Population: 10
+
+======== PARENT ========
+
+# [ 8 1 9 7 7 8 8 8 8 ]
+>> Objective values: [ 1.1 -2.25 -1.5 -1.5 -1.75 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 1 7 7 8 8 2 8 ]
+>> Objective values: [ 0.875 -3.0 -1.25 -1.25 -2.0 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 9 7 7 8 8 5 8 ]
+>> Objective values: [ 1.0 -2.4 -1.2 -1.5 -2.0 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 9 7 7 8 8 5 8 ]
+>> Objective values: [ 1.0 -2.4 -1.2 -1.5 -2.0 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 9 7 7 8 8 5 8 ]
+>> Objective values: [ 1.0 -2.4 -1.2 -1.5 -2.0 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 9 7 7 8 8 2 8 ]
+>> Objective values: [ 1.0 -2.4 -1.2 -1.5 -2.0 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 9 7 7 8 8 5 8 ]
+>> Objective values: [ 1.0 -2.4 -1.2 -1.5 -2.0 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 9 7 7 8 8 5 8 ]
+>> Objective values: [ 1.0 -2.4 -1.2 -1.5 -2.0 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 9 7 7 8 8 5 8 ]
+>> Objective values: [ 1.0 -2.4 -1.2 -1.5 -2.0 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 9 7 7 8 8 5 8 ]
+>> Objective values: [ 1.0 -2.4 -1.2 -1.5 -2.0 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+
+======== CHILD ========
+
+# [ 8 1 9 7 7 8 8 8 8 ]
+>> Objective values: [ 1.1 -2.25 -1.5 -1.5 -1.75 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 9 7 7 8 8 8 8 ]
+>> Objective values: [ 1.1 -2.25 -1.5 -1.5 -1.75 ] | Rank: 1 | Crowding Distance: 0.0
+
+# [ 8 1 9 7 7 8 8 8 8 ]
+>> Objective values: [ 1.1 -2.25 -1.5 -1.5 -1.75 ] | Rank: 1 | Crowding Distance: 0.0
+
+# [ 8 1 9 7 7 8 8 8 8 ]
+>> Objective values: [ 1.1 -2.25 -1.5 -1.5 -1.75 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 9 7 7 8 8 5 8 ]
+>> Objective values: [ 1.0 -2.4 -1.2 -1.5 -2.0 ] | Rank: 1 | Crowding Distance: 1.4129
+
+# [ 8 1 9 7 7 8 8 5 8 ]
+>> Objective values: [ 1.0 -2.4 -1.2 -1.5 -2.0 ] | Rank: 1 | Crowding Distance: 0.0
+
+# [ 8 1 9 7 7 8 8 5 8 ]
+>> Objective values: [ 1.0 -2.4 -1.2 -1.5 -2.0 ] | Rank: 1 | Crowding Distance: 1.2282
+
+# [ 8 1 9 7 7 8 8 2 5 ]
+>> Objective values: [ 1.0 -2.1667 -1.3333 -2.0 -2.75 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 9 7 7 4 8 5 8 ]
+>> Objective values: [ 1.0 -2.1667 -1.0 -1.5 -3.25 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 1 7 7 8 8 5 2 ]
+>> Objective values: [ 0.9 -2.6 -1.4 -1.75 -2.75 ] | Rank: 2 | Crowding Distance: 1.7976931348623157E308
+
+
+[ END ]
+
+++++++++++++++++ GENERATION: 28 ++++++++++++++++
+
+[ START ]
+
+Parent Population: 10
+Child Population: 10
+
+======== PARENT ========
+
+# [ 8 1 9 7 7 8 8 8 8 ]
+>> Objective values: [ 1.1 -2.25 -1.5 -1.5 -1.75 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 9 7 7 8 8 8 8 ]
+>> Objective values: [ 1.1 -2.25 -1.5 -1.5 -1.75 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 9 7 7 8 8 8 8 ]
+>> Objective values: [ 1.1 -2.25 -1.5 -1.5 -1.75 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 1 7 7 8 8 2 8 ]
+>> Objective values: [ 0.875 -3.0 -1.25 -1.25 -2.0 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 9 7 7 8 8 5 8 ]
+>> Objective values: [ 1.0 -2.4 -1.2 -1.5 -2.0 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 9 7 7 8 8 5 8 ]
+>> Objective values: [ 1.0 -2.4 -1.2 -1.5 -2.0 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 9 7 7 8 8 5 8 ]
+>> Objective values: [ 1.0 -2.4 -1.2 -1.5 -2.0 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 9 7 7 8 8 2 8 ]
+>> Objective values: [ 1.0 -2.4 -1.2 -1.5 -2.0 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 9 7 7 8 8 5 8 ]
+>> Objective values: [ 1.0 -2.4 -1.2 -1.5 -2.0 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 9 7 7 8 8 5 8 ]
+>> Objective values: [ 1.0 -2.4 -1.2 -1.5 -2.0 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+
+======== CHILD ========
+
+# [ 8 1 9 7 7 8 8 8 8 ]
+>> Objective values: [ 1.1 -2.25 -1.5 -1.5 -1.75 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 9 7 7 8 8 8 8 ]
+>> Objective values: [ 1.1 -2.25 -1.5 -1.5 -1.75 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 1 7 7 8 8 2 8 ]
+>> Objective values: [ 0.875 -3.0 -1.25 -1.25 -2.0 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 9 7 7 8 8 5 8 ]
+>> Objective values: [ 1.0 -2.4 -1.2 -1.5 -2.0 ] | Rank: 1 | Crowding Distance: 0.5832
+
+# [ 8 1 9 7 7 8 8 5 8 ]
+>> Objective values: [ 1.0 -2.4 -1.2 -1.5 -2.0 ] | Rank: 1 | Crowding Distance: 0.0
+
+# [ 8 1 4 7 7 8 8 5 8 ]
+>> Objective values: [ 1.0 -2.4 -1.2 -1.5 -2.0 ] | Rank: 1 | Crowding Distance: 0.0
+
+# [ 8 1 9 7 7 8 8 5 8 ]
+>> Objective values: [ 1.0 -2.4 -1.2 -1.5 -2.0 ] | Rank: 1 | Crowding Distance: 1.8056
+
+# [ 8 1 9 7 4 8 8 8 8 ]
+>> Objective values: [ 1.08 -2.0 -1.4 -1.75 -2.5 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 9 7 3 8 8 5 8 ]
+>> Objective values: [ 1.0 -2.1667 -1.1667 -1.75 -2.75 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 9 7 7 8 8 3 5 ]
+>> Objective values: [ 1.0 -2.1667 -1.3333 -2.0 -2.75 ] | Rank: 2 | Crowding Distance: 1.7976931348623157E308
+
+
+[ END ]
+
+++++++++++++++++ GENERATION: 29 ++++++++++++++++
+
+[ START ]
+
+Parent Population: 10
+Child Population: 10
+
+======== PARENT ========
+
+# [ 8 1 9 7 7 8 8 8 8 ]
+>> Objective values: [ 1.1 -2.25 -1.5 -1.5 -1.75 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 9 7 7 8 8 8 8 ]
+>> Objective values: [ 1.1 -2.25 -1.5 -1.5 -1.75 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 9 7 7 8 8 8 8 ]
+>> Objective values: [ 1.1 -2.25 -1.5 -1.5 -1.75 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 9 7 7 8 8 8 8 ]
+>> Objective values: [ 1.1 -2.25 -1.5 -1.5 -1.75 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 9 7 7 8 8 8 8 ]
+>> Objective values: [ 1.1 -2.25 -1.5 -1.5 -1.75 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 1 7 7 8 8 2 8 ]
+>> Objective values: [ 0.875 -3.0 -1.25 -1.25 -2.0 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 1 7 7 8 8 2 8 ]
+>> Objective values: [ 0.875 -3.0 -1.25 -1.25 -2.0 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 9 7 7 8 8 5 8 ]
+>> Objective values: [ 1.0 -2.4 -1.2 -1.5 -2.0 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 9 7 7 8 8 5 8 ]
+>> Objective values: [ 1.0 -2.4 -1.2 -1.5 -2.0 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 9 7 7 8 8 5 8 ]
+>> Objective values: [ 1.0 -2.4 -1.2 -1.5 -2.0 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+
+======== CHILD ========
+
+# [ 8 1 9 7 7 8 8 8 8 ]
+>> Objective values: [ 1.1 -2.25 -1.5 -1.5 -1.75 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 9 7 7 8 8 8 8 ]
+>> Objective values: [ 1.1 -2.25 -1.5 -1.5 -1.75 ] | Rank: 1 | Crowding Distance: 1.7989
+
+# [ 8 1 1 7 7 8 8 9 8 ]
+>> Objective values: [ 0.875 -3.0 -1.25 -1.25 -2.0 ] | Rank: 1 | Crowding Distance: 0.8111
+
+# [ 8 1 1 7 7 8 8 2 8 ]
+>> Objective values: [ 0.875 -3.0 -1.25 -1.25 -2.0 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 9 7 7 8 8 2 8 ]
+>> Objective values: [ 1.0 -2.4 -1.2 -1.5 -2.0 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 9 7 7 8 8 2 8 ]
+>> Objective values: [ 1.0 -2.4 -1.2 -1.5 -2.0 ] | Rank: 1 | Crowding Distance: 0.0
+
+# [ 8 1 9 7 7 8 8 2 8 ]
+>> Objective values: [ 1.0 -2.4 -1.2 -1.5 -2.0 ] | Rank: 1 | Crowding Distance: 0.0
+
+# [ 8 1 9 7 7 8 8 5 8 ]
+>> Objective values: [ 1.0 -2.4 -1.2 -1.5 -2.0 ] | Rank: 1 | Crowding Distance: 1.102
+
+# [ 8 1 1 7 7 9 8 8 8 ]
+>> Objective values: [ 1.0 -2.5 -1.25 -1.25 -3.0 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 1 7 7 8 8 8 2 ]
+>> Objective values: [ 0.9375 -2.75 -1.75 -1.75 -2.75 ] | Rank: 2 | Crowding Distance: 1.7976931348623157E308
+
+
+[ END ]
+
+++++++++++++++++ GENERATION: 30 ++++++++++++++++
+
+[ START ]
+
+Parent Population: 10
+Child Population: 10
+
+======== PARENT ========
+
+# [ 8 1 9 7 7 8 8 8 8 ]
+>> Objective values: [ 1.1 -2.25 -1.5 -1.5 -1.75 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 9 7 7 8 8 8 8 ]
+>> Objective values: [ 1.1 -2.25 -1.5 -1.5 -1.75 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 9 7 7 8 8 8 8 ]
+>> Objective values: [ 1.1 -2.25 -1.5 -1.5 -1.75 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 9 7 7 8 8 8 8 ]
+>> Objective values: [ 1.1 -2.25 -1.5 -1.5 -1.75 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 9 7 7 8 8 8 8 ]
+>> Objective values: [ 1.1 -2.25 -1.5 -1.5 -1.75 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 9 7 7 8 8 8 8 ]
+>> Objective values: [ 1.1 -2.25 -1.5 -1.5 -1.75 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 1 7 7 8 8 2 8 ]
+>> Objective values: [ 0.875 -3.0 -1.25 -1.25 -2.0 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 1 7 7 8 8 2 8 ]
+>> Objective values: [ 0.875 -3.0 -1.25 -1.25 -2.0 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 1 7 7 8 8 2 8 ]
+>> Objective values: [ 0.875 -3.0 -1.25 -1.25 -2.0 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 9 7 7 8 8 5 8 ]
+>> Objective values: [ 1.0 -2.4 -1.2 -1.5 -2.0 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+
+======== CHILD ========
+
+# [ 8 1 9 7 7 8 8 8 8 ]
+>> Objective values: [ 1.1 -2.25 -1.5 -1.5 -1.75 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 1 7 7 8 8 6 8 ]
+>> Objective values: [ 0.875 -3.0 -1.25 -1.25 -2.0 ] | Rank: 1 | Crowding Distance: 0.6068
+
+# [ 8 1 1 7 7 8 8 9 8 ]
+>> Objective values: [ 0.875 -3.0 -1.25 -1.25 -2.0 ] | Rank: 1 | Crowding Distance: 1.5055
+
+# [ 8 1 9 7 7 8 8 2 8 ]
+>> Objective values: [ 1.0 -2.4 -1.2 -1.5 -2.0 ] | Rank: 1 | Crowding Distance: 0.696
+
+# [ 8 1 9 7 7 8 8 2 8 ]
+>> Objective values: [ 1.0 -2.4 -1.2 -1.5 -2.0 ] | Rank: 1 | Crowding Distance: 0.0
+
+# [ 8 1 9 7 7 8 8 2 8 ]
+>> Objective values: [ 1.0 -2.4 -1.2 -1.5 -2.0 ] | Rank: 1 | Crowding Distance: 0.8007
+
+# [ 8 1 9 7 7 8 8 8 5 ]
+>> Objective values: [ 1.05 -2.2 -1.6 -2.0 -2.75 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 1 7 7 9 8 8 8 ]
+>> Objective values: [ 1.0 -2.5 -1.25 -1.25 -3.0 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 4 1 9 7 7 8 8 5 8 ]
+>> Objective values: [ 0.8889 -2.5 -1.1667 -1.75 -4.5 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 1 2 7 8 8 2 8 ]
+>> Objective values: [ 0.75 -3.25 -1.5 -1.5 -2.75 ] | Rank: 2 | Crowding Distance: 1.7976931348623157E308
+
+
+[ END ]
+
+++++++++++++++++ GENERATION: 31 ++++++++++++++++
+
+[ START ]
+
+Parent Population: 10
+Child Population: 10
+
+======== PARENT ========
+
+# [ 8 1 9 7 7 8 8 8 8 ]
+>> Objective values: [ 1.1 -2.25 -1.5 -1.5 -1.75 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 9 7 7 8 8 8 8 ]
+>> Objective values: [ 1.1 -2.25 -1.5 -1.5 -1.75 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 9 7 7 8 8 8 8 ]
+>> Objective values: [ 1.1 -2.25 -1.5 -1.5 -1.75 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 9 7 7 8 8 8 8 ]
+>> Objective values: [ 1.1 -2.25 -1.5 -1.5 -1.75 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 9 7 7 8 8 8 8 ]
+>> Objective values: [ 1.1 -2.25 -1.5 -1.5 -1.75 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 9 7 7 8 8 8 8 ]
+>> Objective values: [ 1.1 -2.25 -1.5 -1.5 -1.75 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 9 7 7 8 8 8 8 ]
+>> Objective values: [ 1.1 -2.25 -1.5 -1.5 -1.75 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 1 7 7 8 8 2 8 ]
+>> Objective values: [ 0.875 -3.0 -1.25 -1.25 -2.0 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 1 7 7 8 8 2 8 ]
+>> Objective values: [ 0.875 -3.0 -1.25 -1.25 -2.0 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 1 7 7 8 8 2 8 ]
+>> Objective values: [ 0.875 -3.0 -1.25 -1.25 -2.0 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+
+======== CHILD ========
+
+# [ 8 1 9 7 7 8 8 2 8 ]
+>> Objective values: [ 1.0 -2.4 -1.2 -1.5 -2.0 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 9 7 7 8 8 2 8 ]
+>> Objective values: [ 1.0 -2.4 -1.2 -1.5 -2.0 ] | Rank: 1 | Crowding Distance: 1.1762
+
+# [ 8 1 9 5 7 8 8 2 8 ]
+>> Objective values: [ 1.0 -2.1667 -1.1667 -1.75 -2.75 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 4 1 7 7 8 8 8 2 ]
+>> Objective values: [ 1.05 -2.2 -1.6 -2.0 -2.75 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 1 7 7 8 9 8 8 ]
+>> Objective values: [ 0.9375 -2.75 -1.75 -1.75 -2.25 ] | Rank: 2 | Crowding Distance: 1.2644
+
+# [ 8 1 1 7 7 8 9 8 8 ]
+>> Objective values: [ 0.9375 -2.75 -1.75 -1.75 -2.25 ] | Rank: 2 | Crowding Distance: 0.0
+
+# [ 8 1 1 7 7 8 9 8 8 ]
+>> Objective values: [ 0.9375 -2.75 -1.75 -1.75 -2.25 ] | Rank: 2 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 9 7 7 8 2 2 8 ]
+>> Objective values: [ 1.0 -2.4 -1.6 -2.0 -2.5 ] | Rank: 2 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 9 7 1 8 8 2 8 ]
+>> Objective values: [ 0.9 -2.6 -1.4 -1.75 -2.75 ] | Rank: 2 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 1 7 7 8 8 8 2 ]
+>> Objective values: [ 0.9375 -2.75 -1.75 -1.75 -2.75 ] | Rank: 3 | Crowding Distance: 0.0
+
+
+[ END ]
+
+++++++++++++++++ GENERATION: 32 ++++++++++++++++
+
+[ START ]
+
+Parent Population: 10
+Child Population: 10
+
+======== PARENT ========
+
+# [ 8 1 9 7 7 8 8 8 8 ]
+>> Objective values: [ 1.1 -2.25 -1.5 -1.5 -1.75 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 9 7 7 8 8 8 8 ]
+>> Objective values: [ 1.1 -2.25 -1.5 -1.5 -1.75 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 9 7 7 8 8 8 8 ]
+>> Objective values: [ 1.1 -2.25 -1.5 -1.5 -1.75 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 9 7 7 8 8 8 8 ]
+>> Objective values: [ 1.1 -2.25 -1.5 -1.5 -1.75 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 9 7 7 8 8 8 8 ]
+>> Objective values: [ 1.1 -2.25 -1.5 -1.5 -1.75 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 9 7 7 8 8 8 8 ]
+>> Objective values: [ 1.1 -2.25 -1.5 -1.5 -1.75 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 9 7 7 8 8 8 8 ]
+>> Objective values: [ 1.1 -2.25 -1.5 -1.5 -1.75 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 1 7 7 8 8 2 8 ]
+>> Objective values: [ 0.875 -3.0 -1.25 -1.25 -2.0 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 1 7 7 8 8 2 8 ]
+>> Objective values: [ 0.875 -3.0 -1.25 -1.25 -2.0 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 1 7 7 8 8 2 8 ]
+>> Objective values: [ 0.875 -3.0 -1.25 -1.25 -2.0 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+
+======== CHILD ========
+
+# [ 8 1 9 7 7 8 8 8 8 ]
+>> Objective values: [ 1.1 -2.25 -1.5 -1.5 -1.75 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 9 7 7 8 8 8 8 ]
+>> Objective values: [ 1.1 -2.25 -1.5 -1.5 -1.75 ] | Rank: 1 | Crowding Distance: 0.0
+
+# [ 8 1 9 7 7 8 8 8 8 ]
+>> Objective values: [ 1.1 -2.25 -1.5 -1.5 -1.75 ] | Rank: 1 | Crowding Distance: 1.6444
+
+# [ 8 1 1 7 7 8 8 2 8 ]
+>> Objective values: [ 0.875 -3.0 -1.25 -1.25 -2.0 ] | Rank: 1 | Crowding Distance: 0.6778
+
+# [ 8 1 1 7 7 8 8 9 8 ]
+>> Objective values: [ 0.875 -3.0 -1.25 -1.25 -2.0 ] | Rank: 1 | Crowding Distance: 0.0
+
+# [ 8 1 1 7 7 8 8 2 8 ]
+>> Objective values: [ 0.875 -3.0 -1.25 -1.25 -2.0 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 9 7 7 8 8 2 8 ]
+>> Objective values: [ 1.0 -2.4 -1.2 -1.5 -2.0 ] | Rank: 1 | Crowding Distance: 1.4111
+
+# [ 8 1 9 7 7 8 8 2 8 ]
+>> Objective values: [ 1.0 -2.4 -1.2 -1.5 -2.0 ] | Rank: 1 | Crowding Distance: 1.1112
+
+# [ 8 1 1 7 7 9 8 2 8 ]
+>> Objective values: [ 0.9 -2.6 -1.0 -1.25 -3.25 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 1 7 7 8 8 8 2 ]
+>> Objective values: [ 0.9375 -2.75 -1.75 -1.75 -2.75 ] | Rank: 2 | Crowding Distance: 1.7976931348623157E308
+
+
+[ END ]
+
+++++++++++++++++ GENERATION: 33 ++++++++++++++++
+
+[ START ]
+
+Parent Population: 10
+Child Population: 10
+
+======== PARENT ========
+
+# [ 8 1 9 7 7 8 8 8 8 ]
+>> Objective values: [ 1.1 -2.25 -1.5 -1.5 -1.75 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 9 7 7 8 8 8 8 ]
+>> Objective values: [ 1.1 -2.25 -1.5 -1.5 -1.75 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 9 7 7 8 8 8 8 ]
+>> Objective values: [ 1.1 -2.25 -1.5 -1.5 -1.75 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 9 7 7 8 8 8 8 ]
+>> Objective values: [ 1.1 -2.25 -1.5 -1.5 -1.75 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 9 7 7 8 8 8 8 ]
+>> Objective values: [ 1.1 -2.25 -1.5 -1.5 -1.75 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 9 7 7 8 8 8 8 ]
+>> Objective values: [ 1.1 -2.25 -1.5 -1.5 -1.75 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 9 7 7 8 8 8 8 ]
+>> Objective values: [ 1.1 -2.25 -1.5 -1.5 -1.75 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 9 7 7 8 8 8 8 ]
+>> Objective values: [ 1.1 -2.25 -1.5 -1.5 -1.75 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 1 7 7 8 8 2 8 ]
+>> Objective values: [ 0.875 -3.0 -1.25 -1.25 -2.0 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 1 7 7 8 8 2 8 ]
+>> Objective values: [ 0.875 -3.0 -1.25 -1.25 -2.0 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+
+======== CHILD ========
+
+# [ 8 4 9 7 7 8 8 8 8 ]
+>> Objective values: [ 1.1 -2.25 -1.5 -1.5 -1.75 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 1 7 7 8 8 2 8 ]
+>> Objective values: [ 0.875 -3.0 -1.25 -1.25 -2.0 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 9 7 7 8 8 2 8 ]
+>> Objective values: [ 1.0 -2.4 -1.2 -1.5 -2.0 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 9 7 7 8 8 8 2 ]
+>> Objective values: [ 1.05 -2.2 -1.6 -2.0 -2.75 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 9 7 7 8 8 8 2 ]
+>> Objective values: [ 1.05 -2.2 -1.6 -2.0 -2.75 ] | Rank: 1 | Crowding Distance: 0.85
+
+# [ 8 1 1 7 7 8 9 8 8 ]
+>> Objective values: [ 0.9375 -2.75 -1.75 -1.75 -2.25 ] | Rank: 2 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 1 7 7 8 8 2 9 ]
+>> Objective values: [ 0.9 -2.6 -1.4 -1.75 -2.75 ] | Rank: 2 | Crowding Distance: 1.1966
+
+# [ 8 1 1 7 7 8 8 2 9 ]
+>> Objective values: [ 0.9 -2.6 -1.4 -1.75 -2.75 ] | Rank: 2 | Crowding Distance: 0.0
+
+# [ 8 1 9 1 7 8 8 2 8 ]
+>> Objective values: [ 0.9 -2.6 -1.4 -1.75 -2.75 ] | Rank: 2 | Crowding Distance: 0.463
+
+# [ 2 1 1 7 7 8 9 8 8 ]
+>> Objective values: [ 0.8333 -2.8 -1.6 -2.0 -4.25 ] | Rank: 2 | Crowding Distance: 1.7976931348623157E308
+
+
+[ END ]
+
+++++++++++++++++ GENERATION: 34 ++++++++++++++++
+
+[ START ]
+
+Parent Population: 10
+Child Population: 10
+
+======== PARENT ========
+
+# [ 8 1 9 7 7 8 8 8 8 ]
+>> Objective values: [ 1.1 -2.25 -1.5 -1.5 -1.75 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 9 7 7 8 8 8 8 ]
+>> Objective values: [ 1.1 -2.25 -1.5 -1.5 -1.75 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 9 7 7 8 8 8 8 ]
+>> Objective values: [ 1.1 -2.25 -1.5 -1.5 -1.75 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 9 7 7 8 8 8 8 ]
+>> Objective values: [ 1.1 -2.25 -1.5 -1.5 -1.75 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 9 7 7 8 8 8 8 ]
+>> Objective values: [ 1.1 -2.25 -1.5 -1.5 -1.75 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 9 7 7 8 8 8 8 ]
+>> Objective values: [ 1.1 -2.25 -1.5 -1.5 -1.75 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 9 7 7 8 8 8 8 ]
+>> Objective values: [ 1.1 -2.25 -1.5 -1.5 -1.75 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 9 7 7 8 8 8 8 ]
+>> Objective values: [ 1.1 -2.25 -1.5 -1.5 -1.75 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 4 9 7 7 8 8 8 8 ]
+>> Objective values: [ 1.1 -2.25 -1.5 -1.5 -1.75 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 1 7 7 8 8 2 8 ]
+>> Objective values: [ 0.875 -3.0 -1.25 -1.25 -2.0 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+
+======== CHILD ========
+
+# [ 8 4 9 7 7 8 8 8 8 ]
+>> Objective values: [ 1.1 -2.25 -1.5 -1.5 -1.75 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 9 7 7 8 8 8 8 ]
+>> Objective values: [ 1.1 -2.25 -1.5 -1.5 -1.75 ] | Rank: 1 | Crowding Distance: 0.0
+
+# [ 8 4 9 7 7 8 8 8 8 ]
+>> Objective values: [ 1.1 -2.25 -1.5 -1.5 -1.75 ] | Rank: 1 | Crowding Distance: 0.0
+
+# [ 8 1 9 7 7 8 8 8 8 ]
+>> Objective values: [ 1.1 -2.25 -1.5 -1.5 -1.75 ] | Rank: 1 | Crowding Distance: 0.0
+
+# [ 8 4 9 7 7 8 8 8 8 ]
+>> Objective values: [ 1.1 -2.25 -1.5 -1.5 -1.75 ] | Rank: 1 | Crowding Distance: 0.0
+
+# [ 8 1 9 7 7 8 8 8 8 ]
+>> Objective values: [ 1.1 -2.25 -1.5 -1.5 -1.75 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 1 7 7 8 8 9 8 ]
+>> Objective values: [ 0.875 -3.0 -1.25 -1.25 -2.0 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 9 7 7 8 8 2 8 ]
+>> Objective values: [ 1.0 -2.4 -1.2 -1.5 -2.0 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 9 7 7 8 8 2 8 ]
+>> Objective values: [ 1.0 -2.4 -1.2 -1.5 -2.0 ] | Rank: 1 | Crowding Distance: 1.6556
+
+# [ 8 1 1 7 7 9 8 8 8 ]
+>> Objective values: [ 1.0 -2.5 -1.25 -1.25 -3.0 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+
+[ END ]
+
+++++++++++++++++ GENERATION: 35 ++++++++++++++++
+
+[ START ]
+
+Parent Population: 10
+Child Population: 10
+
+======== PARENT ========
+
+# [ 8 1 9 7 7 8 8 8 8 ]
+>> Objective values: [ 1.1 -2.25 -1.5 -1.5 -1.75 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 9 7 7 8 8 8 8 ]
+>> Objective values: [ 1.1 -2.25 -1.5 -1.5 -1.75 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 9 7 7 8 8 8 8 ]
+>> Objective values: [ 1.1 -2.25 -1.5 -1.5 -1.75 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 9 7 7 8 8 8 8 ]
+>> Objective values: [ 1.1 -2.25 -1.5 -1.5 -1.75 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 9 7 7 8 8 8 8 ]
+>> Objective values: [ 1.1 -2.25 -1.5 -1.5 -1.75 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 9 7 7 8 8 8 8 ]
+>> Objective values: [ 1.1 -2.25 -1.5 -1.5 -1.75 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 9 7 7 8 8 8 8 ]
+>> Objective values: [ 1.1 -2.25 -1.5 -1.5 -1.75 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 9 7 7 8 8 8 8 ]
+>> Objective values: [ 1.1 -2.25 -1.5 -1.5 -1.75 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 4 9 7 7 8 8 8 8 ]
+>> Objective values: [ 1.1 -2.25 -1.5 -1.5 -1.75 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 4 9 7 7 8 8 8 8 ]
+>> Objective values: [ 1.1 -2.25 -1.5 -1.5 -1.75 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+
+======== CHILD ========
+
+# [ 8 1 9 7 7 8 8 8 8 ]
+>> Objective values: [ 1.1 -2.25 -1.5 -1.5 -1.75 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 4 9 7 7 8 8 8 8 ]
+>> Objective values: [ 1.1 -2.25 -1.5 -1.5 -1.75 ] | Rank: 1 | Crowding Distance: 0.0
+
+# [ 8 1 9 7 7 8 8 8 8 ]
+>> Objective values: [ 1.1 -2.25 -1.5 -1.5 -1.75 ] | Rank: 1 | Crowding Distance: 0.0
+
+# [ 8 4 9 7 7 8 8 8 8 ]
+>> Objective values: [ 1.1 -2.25 -1.5 -1.5 -1.75 ] | Rank: 1 | Crowding Distance: 0.0
+
+# [ 8 1 9 7 7 8 8 8 8 ]
+>> Objective values: [ 1.1 -2.25 -1.5 -1.5 -1.75 ] | Rank: 1 | Crowding Distance: 0.0
+
+# [ 8 4 9 7 7 8 8 8 8 ]
+>> Objective values: [ 1.1 -2.25 -1.5 -1.5 -1.75 ] | Rank: 1 | Crowding Distance: 0.0
+
+# [ 8 4 9 7 7 8 8 8 8 ]
+>> Objective values: [ 1.1 -2.25 -1.5 -1.5 -1.75 ] | Rank: 1 | Crowding Distance: 0.0
+
+# [ 8 1 9 7 7 8 8 8 8 ]
+>> Objective values: [ 1.1 -2.25 -1.5 -1.5 -1.75 ] | Rank: 1 | Crowding Distance: 1.8197
+
+# [ 8 4 9 2 7 8 1 8 8 ]
+>> Objective values: [ 1.0417 -2.0 -1.5 -2.25 -3.0 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 9 7 8 8 8 8 8 ]
+>> Objective values: [ 1.0833 -2.25 -1.75 -1.75 -2.0 ] | Rank: 2 | Crowding Distance: 1.7976931348623157E308
+
+
+[ END ]
+
+++++++++++++++++ GENERATION: 36 ++++++++++++++++
+
+[ START ]
+
+Parent Population: 10
+Child Population: 10
+
+======== PARENT ========
+
+# [ 8 1 9 7 7 8 8 8 8 ]
+>> Objective values: [ 1.1 -2.25 -1.5 -1.5 -1.75 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 9 7 7 8 8 8 8 ]
+>> Objective values: [ 1.1 -2.25 -1.5 -1.5 -1.75 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 9 7 7 8 8 8 8 ]
+>> Objective values: [ 1.1 -2.25 -1.5 -1.5 -1.75 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 9 7 7 8 8 8 8 ]
+>> Objective values: [ 1.1 -2.25 -1.5 -1.5 -1.75 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 9 7 7 8 8 8 8 ]
+>> Objective values: [ 1.1 -2.25 -1.5 -1.5 -1.75 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 9 7 7 8 8 8 8 ]
+>> Objective values: [ 1.1 -2.25 -1.5 -1.5 -1.75 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 9 7 7 8 8 8 8 ]
+>> Objective values: [ 1.1 -2.25 -1.5 -1.5 -1.75 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 9 7 7 8 8 8 8 ]
+>> Objective values: [ 1.1 -2.25 -1.5 -1.5 -1.75 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 4 9 7 7 8 8 8 8 ]
+>> Objective values: [ 1.1 -2.25 -1.5 -1.5 -1.75 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 4 9 7 7 8 8 8 8 ]
+>> Objective values: [ 1.1 -2.25 -1.5 -1.5 -1.75 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+
+======== CHILD ========
+
+# [ 8 4 9 7 7 8 8 8 8 ]
+>> Objective values: [ 1.1 -2.25 -1.5 -1.5 -1.75 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 9 7 7 8 8 8 8 ]
+>> Objective values: [ 1.1 -2.25 -1.5 -1.5 -1.75 ] | Rank: 1 | Crowding Distance: 0.0
+
+# [ 8 4 9 7 7 8 8 8 8 ]
+>> Objective values: [ 1.1 -2.25 -1.5 -1.5 -1.75 ] | Rank: 1 | Crowding Distance: 0.0
+
+# [ 8 1 9 7 7 8 8 8 8 ]
+>> Objective values: [ 1.1 -2.25 -1.5 -1.5 -1.75 ] | Rank: 1 | Crowding Distance: 1.4804
+
+# [ 8 1 9 7 7 8 8 4 8 ]
+>> Objective values: [ 1.0 -2.4 -1.2 -1.5 -2.0 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 9 7 7 8 8 4 8 ]
+>> Objective values: [ 1.0 -2.4 -1.2 -1.5 -2.0 ] | Rank: 1 | Crowding Distance: 0.0
+
+# [ 8 4 9 7 7 8 8 1 8 ]
+>> Objective values: [ 1.0 -2.4 -1.2 -1.5 -2.0 ] | Rank: 1 | Crowding Distance: 1.5357
+
+# [ 2 4 9 7 7 8 8 1 8 ]
+>> Objective values: [ 0.8889 -2.5 -1.1667 -1.75 -4.5 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 5 4 9 7 7 8 8 8 8 ]
+>> Objective values: [ 0.95 -2.6 -1.4 -1.75 -4.25 ] | Rank: 2 | Crowding Distance: 2.9515
+
+# [ 3 1 9 7 9 8 8 8 8 ]
+>> Objective values: [ 0.85 -2.8 -1.6 -2.0 -5.0 ] | Rank: 2 | Crowding Distance: 1.7976931348623157E308
+
+
+[ END ]
+
+++++++++++++++++ GENERATION: 37 ++++++++++++++++
+
+[ START ]
+
+Parent Population: 10
+Child Population: 10
+
+======== PARENT ========
+
+# [ 8 1 9 7 7 8 8 8 8 ]
+>> Objective values: [ 1.1 -2.25 -1.5 -1.5 -1.75 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 9 7 7 8 8 8 8 ]
+>> Objective values: [ 1.1 -2.25 -1.5 -1.5 -1.75 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 9 7 7 8 8 8 8 ]
+>> Objective values: [ 1.1 -2.25 -1.5 -1.5 -1.75 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 9 7 7 8 8 8 8 ]
+>> Objective values: [ 1.1 -2.25 -1.5 -1.5 -1.75 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 9 7 7 8 8 8 8 ]
+>> Objective values: [ 1.1 -2.25 -1.5 -1.5 -1.75 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 9 7 7 8 8 8 8 ]
+>> Objective values: [ 1.1 -2.25 -1.5 -1.5 -1.75 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 9 7 7 8 8 8 8 ]
+>> Objective values: [ 1.1 -2.25 -1.5 -1.5 -1.75 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 9 7 7 8 8 8 8 ]
+>> Objective values: [ 1.1 -2.25 -1.5 -1.5 -1.75 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 4 9 7 7 8 8 8 8 ]
+>> Objective values: [ 1.1 -2.25 -1.5 -1.5 -1.75 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 4 9 7 7 8 8 8 8 ]
+>> Objective values: [ 1.1 -2.25 -1.5 -1.5 -1.75 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+
+======== CHILD ========
+
+# [ 8 4 9 7 7 8 8 8 8 ]
+>> Objective values: [ 1.1 -2.25 -1.5 -1.5 -1.75 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 9 7 7 8 8 8 8 ]
+>> Objective values: [ 1.1 -2.25 -1.5 -1.5 -1.75 ] | Rank: 1 | Crowding Distance: 0.0
+
+# [ 8 4 9 7 7 8 8 8 8 ]
+>> Objective values: [ 1.1 -2.25 -1.5 -1.5 -1.75 ] | Rank: 1 | Crowding Distance: 0.0
+
+# [ 8 1 9 7 7 8 8 8 8 ]
+>> Objective values: [ 1.1 -2.25 -1.5 -1.5 -1.75 ] | Rank: 1 | Crowding Distance: 0.0
+
+# [ 8 4 9 7 7 8 8 8 8 ]
+>> Objective values: [ 1.1 -2.25 -1.5 -1.5 -1.75 ] | Rank: 1 | Crowding Distance: 0.0
+
+# [ 8 1 9 7 7 8 8 8 8 ]
+>> Objective values: [ 1.1 -2.25 -1.5 -1.5 -1.75 ] | Rank: 1 | Crowding Distance: 0.0
+
+# [ 8 4 9 7 7 8 8 8 8 ]
+>> Objective values: [ 1.1 -2.25 -1.5 -1.5 -1.75 ] | Rank: 1 | Crowding Distance: 0.0
+
+# [ 8 1 9 7 7 8 8 8 8 ]
+>> Objective values: [ 1.1 -2.25 -1.5 -1.5 -1.75 ] | Rank: 1 | Crowding Distance: 0.0
+
+# [ 8 4 9 7 7 8 8 8 8 ]
+>> Objective values: [ 1.1 -2.25 -1.5 -1.5 -1.75 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 9 7 7 8 8 8 4 ]
+>> Objective values: [ 1.05 -2.2 -1.6 -2.0 -2.75 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+
+[ END ]
+
+++++++++++++++++ GENERATION: 38 ++++++++++++++++
+
+[ START ]
+
+Parent Population: 10
+Child Population: 10
+
+======== PARENT ========
+
+# [ 8 1 9 7 7 8 8 8 8 ]
+>> Objective values: [ 1.1 -2.25 -1.5 -1.5 -1.75 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 9 7 7 8 8 8 8 ]
+>> Objective values: [ 1.1 -2.25 -1.5 -1.5 -1.75 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 9 7 7 8 8 8 8 ]
+>> Objective values: [ 1.1 -2.25 -1.5 -1.5 -1.75 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 9 7 7 8 8 8 8 ]
+>> Objective values: [ 1.1 -2.25 -1.5 -1.5 -1.75 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 9 7 7 8 8 8 8 ]
+>> Objective values: [ 1.1 -2.25 -1.5 -1.5 -1.75 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 9 7 7 8 8 8 8 ]
+>> Objective values: [ 1.1 -2.25 -1.5 -1.5 -1.75 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 9 7 7 8 8 8 8 ]
+>> Objective values: [ 1.1 -2.25 -1.5 -1.5 -1.75 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 9 7 7 8 8 8 8 ]
+>> Objective values: [ 1.1 -2.25 -1.5 -1.5 -1.75 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 4 9 7 7 8 8 8 8 ]
+>> Objective values: [ 1.1 -2.25 -1.5 -1.5 -1.75 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 4 9 7 7 8 8 8 8 ]
+>> Objective values: [ 1.1 -2.25 -1.5 -1.5 -1.75 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+
+======== CHILD ========
+
+# [ 8 1 9 7 7 8 8 8 8 ]
+>> Objective values: [ 1.1 -2.25 -1.5 -1.5 -1.75 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 4 4 7 7 8 8 1 8 ]
+>> Objective values: [ 0.875 -3.0 -1.25 -1.25 -2.0 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 4 9 7 7 8 8 5 8 ]
+>> Objective values: [ 1.0 -2.4 -1.2 -1.5 -2.0 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 9 7 7 8 8 4 8 ]
+>> Objective values: [ 1.0 -2.4 -1.2 -1.5 -2.0 ] | Rank: 1 | Crowding Distance: 0.0
+
+# [ 8 4 9 7 7 8 8 1 8 ]
+>> Objective values: [ 1.0 -2.4 -1.2 -1.5 -2.0 ] | Rank: 1 | Crowding Distance: 0.0
+
+# [ 8 1 9 7 7 8 8 4 8 ]
+>> Objective values: [ 1.0 -2.4 -1.2 -1.5 -2.0 ] | Rank: 1 | Crowding Distance: 1.3247
+
+# [ 8 1 5 7 7 8 8 8 4 ]
+>> Objective values: [ 1.05 -2.2 -1.6 -2.0 -2.75 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 3 7 7 8 8 8 4 ]
+>> Objective values: [ 1.05 -2.2 -1.6 -2.0 -2.75 ] | Rank: 1 | Crowding Distance: 0.0
+
+# [ 8 4 9 7 7 8 8 8 1 ]
+>> Objective values: [ 1.05 -2.2 -1.6 -2.0 -2.75 ] | Rank: 1 | Crowding Distance: 1.4697
+
+# [ 5 4 9 7 7 8 8 8 9 ]
+>> Objective values: [ 0.8333 -2.8 -1.8 -2.25 -4.5 ] | Rank: 2 | Crowding Distance: 1.7976931348623157E308
+
+
+[ END ]
+
+++++++++++++++++ GENERATION: 39 ++++++++++++++++
+
+[ START ]
+
+Parent Population: 10
+Child Population: 10
+
+======== PARENT ========
+
+# [ 8 1 9 7 7 8 8 8 8 ]
+>> Objective values: [ 1.1 -2.25 -1.5 -1.5 -1.75 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 9 7 7 8 8 8 8 ]
+>> Objective values: [ 1.1 -2.25 -1.5 -1.5 -1.75 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 9 7 7 8 8 8 8 ]
+>> Objective values: [ 1.1 -2.25 -1.5 -1.5 -1.75 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 9 7 7 8 8 8 8 ]
+>> Objective values: [ 1.1 -2.25 -1.5 -1.5 -1.75 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 9 7 7 8 8 8 8 ]
+>> Objective values: [ 1.1 -2.25 -1.5 -1.5 -1.75 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 9 7 7 8 8 8 8 ]
+>> Objective values: [ 1.1 -2.25 -1.5 -1.5 -1.75 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 9 7 7 8 8 8 8 ]
+>> Objective values: [ 1.1 -2.25 -1.5 -1.5 -1.75 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 9 7 7 8 8 8 8 ]
+>> Objective values: [ 1.1 -2.25 -1.5 -1.5 -1.75 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 4 9 7 7 8 8 8 8 ]
+>> Objective values: [ 1.1 -2.25 -1.5 -1.5 -1.75 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 4 9 7 7 8 8 8 8 ]
+>> Objective values: [ 1.1 -2.25 -1.5 -1.5 -1.75 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+
+======== CHILD ========
+
+# [ 8 4 9 7 7 8 8 8 8 ]
+>> Objective values: [ 1.1 -2.25 -1.5 -1.5 -1.75 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 9 7 7 8 8 8 8 ]
+>> Objective values: [ 1.1 -2.25 -1.5 -1.5 -1.75 ] | Rank: 1 | Crowding Distance: 0.0
+
+# [ 8 1 9 7 7 8 8 8 8 ]
+>> Objective values: [ 1.1 -2.25 -1.5 -1.5 -1.75 ] | Rank: 1 | Crowding Distance: 0.0
+
+# [ 8 4 9 7 7 8 8 8 8 ]
+>> Objective values: [ 1.1 -2.25 -1.5 -1.5 -1.75 ] | Rank: 1 | Crowding Distance: 0.0
+
+# [ 8 4 9 7 7 8 8 8 8 ]
+>> Objective values: [ 1.1 -2.25 -1.5 -1.5 -1.75 ] | Rank: 1 | Crowding Distance: 0.0
+
+# [ 8 1 9 7 7 8 8 8 8 ]
+>> Objective values: [ 1.1 -2.25 -1.5 -1.5 -1.75 ] | Rank: 1 | Crowding Distance: 0.0
+
+# [ 8 4 9 7 7 8 8 8 8 ]
+>> Objective values: [ 1.1 -2.25 -1.5 -1.5 -1.75 ] | Rank: 1 | Crowding Distance: 0.0
+
+# [ 8 1 9 7 7 8 8 8 8 ]
+>> Objective values: [ 1.1 -2.25 -1.5 -1.5 -1.75 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 9 9 7 7 8 8 4 8 ]
+>> Objective values: [ 0.875 -3.0 -1.25 -1.25 -2.0 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 2 9 7 7 8 8 1 8 ]
+>> Objective values: [ 1.0 -2.4 -1.2 -1.5 -2.0 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+
+[ END ]
+
+++++++++++++++++ GENERATION: 40 ++++++++++++++++
+
+[ START ]
+
+Parent Population: 10
+Child Population: 10
+
+======== PARENT ========
+
+# [ 8 1 9 7 7 8 8 8 8 ]
+>> Objective values: [ 1.1 -2.25 -1.5 -1.5 -1.75 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 9 7 7 8 8 8 8 ]
+>> Objective values: [ 1.1 -2.25 -1.5 -1.5 -1.75 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 9 7 7 8 8 8 8 ]
+>> Objective values: [ 1.1 -2.25 -1.5 -1.5 -1.75 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 9 7 7 8 8 8 8 ]
+>> Objective values: [ 1.1 -2.25 -1.5 -1.5 -1.75 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 9 7 7 8 8 8 8 ]
+>> Objective values: [ 1.1 -2.25 -1.5 -1.5 -1.75 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 9 7 7 8 8 8 8 ]
+>> Objective values: [ 1.1 -2.25 -1.5 -1.5 -1.75 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 9 7 7 8 8 8 8 ]
+>> Objective values: [ 1.1 -2.25 -1.5 -1.5 -1.75 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 9 7 7 8 8 8 8 ]
+>> Objective values: [ 1.1 -2.25 -1.5 -1.5 -1.75 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 4 9 7 7 8 8 8 8 ]
+>> Objective values: [ 1.1 -2.25 -1.5 -1.5 -1.75 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 4 9 7 7 8 8 8 8 ]
+>> Objective values: [ 1.1 -2.25 -1.5 -1.5 -1.75 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+
+======== CHILD ========
+
+# [ 8 4 9 7 7 8 8 8 8 ]
+>> Objective values: [ 1.1 -2.25 -1.5 -1.5 -1.75 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 9 7 7 8 8 8 8 ]
+>> Objective values: [ 1.1 -2.25 -1.5 -1.5 -1.75 ] | Rank: 1 | Crowding Distance: 0.0
+
+# [ 8 1 9 7 7 8 8 8 8 ]
+>> Objective values: [ 1.1 -2.25 -1.5 -1.5 -1.75 ] | Rank: 1 | Crowding Distance: 1.525
+
+# [ 8 1 9 7 7 8 8 4 8 ]
+>> Objective values: [ 1.0 -2.4 -1.2 -1.5 -2.0 ] | Rank: 1 | Crowding Distance: 1.075
+
+# [ 8 4 9 7 7 8 8 1 8 ]
+>> Objective values: [ 1.0 -2.4 -1.2 -1.5 -2.0 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 4 9 5 7 8 8 8 8 ]
+>> Objective values: [ 1.08 -2.0 -1.4 -1.75 -2.5 ] | Rank: 1 | Crowding Distance: 3.35
+
+# [ 8 5 9 7 7 4 8 8 8 ]
+>> Objective values: [ 1.1 -2.0 -1.2 -1.5 -3.0 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 5 9 7 7 1 8 8 8 ]
+>> Objective values: [ 1.1 -2.0 -1.2 -1.5 -3.0 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 9 7 7 8 8 8 4 ]
+>> Objective values: [ 1.05 -2.2 -1.6 -2.0 -2.75 ] | Rank: 2 | Crowding Distance: 1.75
+
+# [ 8 4 9 7 7 8 8 8 1 ]
+>> Objective values: [ 1.05 -2.2 -1.6 -2.0 -2.75 ] | Rank: 2 | Crowding Distance: 1.7976931348623157E308
+
+
+[ END ]
+
+++++++++++++++++ GENERATION: 41 ++++++++++++++++
+
+[ START ]
+
+Parent Population: 10
+Child Population: 10
+
+======== PARENT ========
+
+# [ 8 1 9 7 7 8 8 8 8 ]
+>> Objective values: [ 1.1 -2.25 -1.5 -1.5 -1.75 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 9 7 7 8 8 8 8 ]
+>> Objective values: [ 1.1 -2.25 -1.5 -1.5 -1.75 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 9 7 7 8 8 8 8 ]
+>> Objective values: [ 1.1 -2.25 -1.5 -1.5 -1.75 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 9 7 7 8 8 8 8 ]
+>> Objective values: [ 1.1 -2.25 -1.5 -1.5 -1.75 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 9 7 7 8 8 8 8 ]
+>> Objective values: [ 1.1 -2.25 -1.5 -1.5 -1.75 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 9 7 7 8 8 8 8 ]
+>> Objective values: [ 1.1 -2.25 -1.5 -1.5 -1.75 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 9 7 7 8 8 8 8 ]
+>> Objective values: [ 1.1 -2.25 -1.5 -1.5 -1.75 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 9 7 7 8 8 8 8 ]
+>> Objective values: [ 1.1 -2.25 -1.5 -1.5 -1.75 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 4 9 7 7 8 8 8 8 ]
+>> Objective values: [ 1.1 -2.25 -1.5 -1.5 -1.75 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 4 9 7 7 8 8 8 8 ]
+>> Objective values: [ 1.1 -2.25 -1.5 -1.5 -1.75 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+
+======== CHILD ========
+
+# [ 8 1 9 7 7 8 8 8 8 ]
+>> Objective values: [ 1.1 -2.25 -1.5 -1.5 -1.75 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 4 9 7 7 8 8 8 8 ]
+>> Objective values: [ 1.1 -2.25 -1.5 -1.5 -1.75 ] | Rank: 1 | Crowding Distance: 0.0
+
+# [ 8 1 9 7 7 8 8 8 8 ]
+>> Objective values: [ 1.1 -2.25 -1.5 -1.5 -1.75 ] | Rank: 1 | Crowding Distance: 0.0
+
+# [ 8 4 9 7 7 8 8 8 8 ]
+>> Objective values: [ 1.1 -2.25 -1.5 -1.5 -1.75 ] | Rank: 1 | Crowding Distance: 0.0
+
+# [ 8 1 9 7 7 8 8 8 8 ]
+>> Objective values: [ 1.1 -2.25 -1.5 -1.5 -1.75 ] | Rank: 1 | Crowding Distance: 0.0
+
+# [ 8 4 9 7 7 8 8 8 8 ]
+>> Objective values: [ 1.1 -2.25 -1.5 -1.5 -1.75 ] | Rank: 1 | Crowding Distance: 0.0
+
+# [ 8 4 9 7 7 8 8 8 8 ]
+>> Objective values: [ 1.1 -2.25 -1.5 -1.5 -1.75 ] | Rank: 1 | Crowding Distance: 0.0
+
+# [ 8 1 9 7 7 8 8 8 8 ]
+>> Objective values: [ 1.1 -2.25 -1.5 -1.5 -1.75 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 9 7 7 4 8 8 8 ]
+>> Objective values: [ 1.1 -2.0 -1.2 -1.5 -3.0 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 4 9 7 7 1 6 8 8 ]
+>> Objective values: [ 1.0556 -2.0 -1.3333 -2.0 -3.5 ] | Rank: 2 | Crowding Distance: 1.7976931348623157E308
+
+
+[ END ]
+
+++++++++++++++++ GENERATION: 42 ++++++++++++++++
+
+[ START ]
+
+Parent Population: 10
+Child Population: 10
+
+======== PARENT ========
+
+# [ 8 1 9 7 7 8 8 8 8 ]
+>> Objective values: [ 1.1 -2.25 -1.5 -1.5 -1.75 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 9 7 7 8 8 8 8 ]
+>> Objective values: [ 1.1 -2.25 -1.5 -1.5 -1.75 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 9 7 7 8 8 8 8 ]
+>> Objective values: [ 1.1 -2.25 -1.5 -1.5 -1.75 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 9 7 7 8 8 8 8 ]
+>> Objective values: [ 1.1 -2.25 -1.5 -1.5 -1.75 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 9 7 7 8 8 8 8 ]
+>> Objective values: [ 1.1 -2.25 -1.5 -1.5 -1.75 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 9 7 7 8 8 8 8 ]
+>> Objective values: [ 1.1 -2.25 -1.5 -1.5 -1.75 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 9 7 7 8 8 8 8 ]
+>> Objective values: [ 1.1 -2.25 -1.5 -1.5 -1.75 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 9 7 7 8 8 8 8 ]
+>> Objective values: [ 1.1 -2.25 -1.5 -1.5 -1.75 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 4 9 7 7 8 8 8 8 ]
+>> Objective values: [ 1.1 -2.25 -1.5 -1.5 -1.75 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 4 9 7 7 8 8 8 8 ]
+>> Objective values: [ 1.1 -2.25 -1.5 -1.5 -1.75 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+
+======== CHILD ========
+
+# [ 8 9 9 7 7 8 8 8 8 ]
+>> Objective values: [ 0.9667 -3.0 -1.6667 -1.25 -1.75 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 4 9 7 7 8 8 8 8 ]
+>> Objective values: [ 1.1 -2.25 -1.5 -1.5 -1.75 ] | Rank: 1 | Crowding Distance: 0.4643
+
+# [ 8 1 9 7 7 8 8 8 8 ]
+>> Objective values: [ 1.1 -2.25 -1.5 -1.5 -1.75 ] | Rank: 1 | Crowding Distance: 0.0
+
+# [ 8 4 9 7 7 8 8 8 8 ]
+>> Objective values: [ 1.1 -2.25 -1.5 -1.5 -1.75 ] | Rank: 1 | Crowding Distance: 0.0
+
+# [ 8 4 9 7 7 8 8 8 8 ]
+>> Objective values: [ 1.1 -2.25 -1.5 -1.5 -1.75 ] | Rank: 1 | Crowding Distance: 0.0
+
+# [ 8 1 9 7 7 8 8 8 8 ]
+>> Objective values: [ 1.1 -2.25 -1.5 -1.5 -1.75 ] | Rank: 1 | Crowding Distance: 2.2072
+
+# [ 8 4 9 7 3 8 8 8 8 ]
+>> Objective values: [ 1.08 -2.0 -1.4 -1.75 -2.5 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 9 7 7 2 8 8 8 ]
+>> Objective values: [ 1.1 -2.0 -1.2 -1.5 -3.0 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 9 7 7 4 8 8 8 ]
+>> Objective values: [ 1.1 -2.0 -1.2 -1.5 -3.0 ] | Rank: 1 | Crowding Distance: 0.0
+
+# [ 8 4 9 7 7 1 8 8 8 ]
+>> Objective values: [ 1.1 -2.0 -1.2 -1.5 -3.0 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+
+[ END ]
+
+++++++++++++++++ GENERATION: 43 ++++++++++++++++
+
+[ START ]
+
+Parent Population: 10
+Child Population: 10
+
+======== PARENT ========
+
+# [ 8 9 9 7 7 8 8 8 8 ]
+>> Objective values: [ 0.9667 -3.0 -1.6667 -1.25 -1.75 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 9 7 7 8 8 8 8 ]
+>> Objective values: [ 1.1 -2.25 -1.5 -1.5 -1.75 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 9 7 7 8 8 8 8 ]
+>> Objective values: [ 1.1 -2.25 -1.5 -1.5 -1.75 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 9 7 7 8 8 8 8 ]
+>> Objective values: [ 1.1 -2.25 -1.5 -1.5 -1.75 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 9 7 7 8 8 8 8 ]
+>> Objective values: [ 1.1 -2.25 -1.5 -1.5 -1.75 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 9 7 7 8 8 8 8 ]
+>> Objective values: [ 1.1 -2.25 -1.5 -1.5 -1.75 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 9 7 7 8 8 8 8 ]
+>> Objective values: [ 1.1 -2.25 -1.5 -1.5 -1.75 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 9 7 7 8 8 8 8 ]
+>> Objective values: [ 1.1 -2.25 -1.5 -1.5 -1.75 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 9 7 7 8 8 8 8 ]
+>> Objective values: [ 1.1 -2.25 -1.5 -1.5 -1.75 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 4 9 7 7 8 8 8 8 ]
+>> Objective values: [ 1.1 -2.25 -1.5 -1.5 -1.75 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+
+======== CHILD ========
+
+# [ 8 1 9 7 7 8 8 8 8 ]
+>> Objective values: [ 1.1 -2.25 -1.5 -1.5 -1.75 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 4 9 7 7 8 8 8 8 ]
+>> Objective values: [ 1.1 -2.25 -1.5 -1.5 -1.75 ] | Rank: 1 | Crowding Distance: 0.0
+
+# [ 8 1 9 7 7 8 8 8 8 ]
+>> Objective values: [ 1.1 -2.25 -1.5 -1.5 -1.75 ] | Rank: 1 | Crowding Distance: 0.0
+
+# [ 8 1 3 7 7 8 8 8 8 ]
+>> Objective values: [ 1.1 -2.25 -1.5 -1.5 -1.75 ] | Rank: 1 | Crowding Distance: 1.7243
+
+# [ 8 1 8 7 3 8 8 8 4 ]
+>> Objective values: [ 1.12 -1.8 -1.6 -2.0 -2.75 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 9 9 7 7 4 8 8 8 ]
+>> Objective values: [ 1.0 -2.5 -1.25 -1.25 -3.0 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 4 9 7 7 8 8 8 1 ]
+>> Objective values: [ 1.05 -2.2 -1.6 -2.0 -2.75 ] | Rank: 2 | Crowding Distance: 0.5757
+
+# [ 8 4 9 7 7 8 8 8 9 ]
+>> Objective values: [ 0.9375 -2.75 -2.0 -2.0 -2.75 ] | Rank: 2 | Crowding Distance: 1.0574
+
+# [ 8 9 9 8 7 8 8 8 1 ]
+>> Objective values: [ 0.925 -2.75 -2.0 -2.0 -3.5 ] | Rank: 2 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 3 9 1 7 8 1 8 8 ]
+>> Objective values: [ 1.05 -2.2 -1.8 -2.25 -3.0 ] | Rank: 3 | Crowding Distance: 1.7976931348623157E308
+
+
+[ END ]
+
+++++++++++++++++ GENERATION: 44 ++++++++++++++++
+
+[ START ]
+
+Parent Population: 10
+Child Population: 10
+
+======== PARENT ========
+
+# [ 8 9 9 7 7 8 8 8 8 ]
+>> Objective values: [ 0.9667 -3.0 -1.6667 -1.25 -1.75 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 9 7 7 8 8 8 8 ]
+>> Objective values: [ 1.1 -2.25 -1.5 -1.5 -1.75 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 9 7 7 8 8 8 8 ]
+>> Objective values: [ 1.1 -2.25 -1.5 -1.5 -1.75 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 9 7 7 8 8 8 8 ]
+>> Objective values: [ 1.1 -2.25 -1.5 -1.5 -1.75 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 9 7 7 8 8 8 8 ]
+>> Objective values: [ 1.1 -2.25 -1.5 -1.5 -1.75 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 9 7 7 8 8 8 8 ]
+>> Objective values: [ 1.1 -2.25 -1.5 -1.5 -1.75 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 9 7 7 8 8 8 8 ]
+>> Objective values: [ 1.1 -2.25 -1.5 -1.5 -1.75 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 9 7 7 8 8 8 8 ]
+>> Objective values: [ 1.1 -2.25 -1.5 -1.5 -1.75 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 9 7 7 8 8 8 8 ]
+>> Objective values: [ 1.1 -2.25 -1.5 -1.5 -1.75 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 4 9 7 7 8 8 8 8 ]
+>> Objective values: [ 1.1 -2.25 -1.5 -1.5 -1.75 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+
+======== CHILD ========
+
+# [ 8 9 6 7 7 8 8 8 8 ]
+>> Objective values: [ 1.1 -2.25 -1.5 -1.5 -1.75 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 9 7 7 8 8 8 8 ]
+>> Objective values: [ 1.1 -2.25 -1.5 -1.5 -1.75 ] | Rank: 1 | Crowding Distance: 0.0
+
+# [ 8 4 9 7 7 8 8 8 8 ]
+>> Objective values: [ 1.1 -2.25 -1.5 -1.5 -1.75 ] | Rank: 1 | Crowding Distance: 0.0
+
+# [ 8 1 9 7 7 8 8 8 8 ]
+>> Objective values: [ 1.1 -2.25 -1.5 -1.5 -1.75 ] | Rank: 1 | Crowding Distance: 0.0
+
+# [ 8 1 9 7 7 8 8 8 8 ]
+>> Objective values: [ 1.1 -2.25 -1.5 -1.5 -1.75 ] | Rank: 1 | Crowding Distance: 1.5667
+
+# [ 8 4 9 7 7 8 1 8 8 ]
+>> Objective values: [ 1.05 -2.2 -1.6 -2.0 -2.25 ] | Rank: 1 | Crowding Distance: 1.2292
+
+# [ 8 1 9 7 7 8 3 8 8 ]
+>> Objective values: [ 1.05 -2.2 -1.6 -2.0 -2.25 ] | Rank: 1 | Crowding Distance: 0.328
+
+# [ 8 4 9 7 6 8 8 8 8 ]
+>> Objective values: [ 1.08 -2.0 -1.4 -1.75 -2.5 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 7 9 7 7 8 4 8 8 ]
+>> Objective values: [ 0.9792 -2.75 -2.0 -2.0 -2.25 ] | Rank: 2 | Crowding Distance: 1.7976931348623157E308
+
+# [ 6 9 9 7 7 8 1 8 8 ]
+>> Objective values: [ 0.8333 -2.8 -1.6 -2.0 -4.25 ] | Rank: 2 | Crowding Distance: 1.7976931348623157E308
+
+
+[ END ]
+
+++++++++++++++++ GENERATION: 45 ++++++++++++++++
+
+[ START ]
+
+Parent Population: 10
+Child Population: 10
+
+======== PARENT ========
+
+# [ 8 9 9 7 7 8 8 8 8 ]
+>> Objective values: [ 0.9667 -3.0 -1.6667 -1.25 -1.75 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 9 7 7 8 8 8 8 ]
+>> Objective values: [ 1.1 -2.25 -1.5 -1.5 -1.75 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 9 7 7 8 8 8 8 ]
+>> Objective values: [ 1.1 -2.25 -1.5 -1.5 -1.75 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 9 7 7 8 8 8 8 ]
+>> Objective values: [ 1.1 -2.25 -1.5 -1.5 -1.75 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 9 7 7 8 8 8 8 ]
+>> Objective values: [ 1.1 -2.25 -1.5 -1.5 -1.75 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 9 7 7 8 8 8 8 ]
+>> Objective values: [ 1.1 -2.25 -1.5 -1.5 -1.75 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 9 7 7 8 8 8 8 ]
+>> Objective values: [ 1.1 -2.25 -1.5 -1.5 -1.75 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 9 7 7 8 8 8 8 ]
+>> Objective values: [ 1.1 -2.25 -1.5 -1.5 -1.75 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 9 7 7 8 8 8 8 ]
+>> Objective values: [ 1.1 -2.25 -1.5 -1.5 -1.75 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 4 9 7 7 8 8 8 8 ]
+>> Objective values: [ 1.1 -2.25 -1.5 -1.5 -1.75 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+
+======== CHILD ========
+
+# [ 8 4 9 7 7 8 8 8 8 ]
+>> Objective values: [ 1.1 -2.25 -1.5 -1.5 -1.75 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 9 7 7 8 8 8 8 ]
+>> Objective values: [ 1.1 -2.25 -1.5 -1.5 -1.75 ] | Rank: 1 | Crowding Distance: 0.0
+
+# [ 8 1 9 7 7 8 8 8 8 ]
+>> Objective values: [ 1.1 -2.25 -1.5 -1.5 -1.75 ] | Rank: 1 | Crowding Distance: 1.4349
+
+# [ 8 1 9 7 7 8 8 4 8 ]
+>> Objective values: [ 1.0 -2.4 -1.2 -1.5 -2.0 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 9 4 7 7 8 8 1 8 ]
+>> Objective values: [ 1.0 -2.4 -1.2 -1.5 -2.0 ] | Rank: 1 | Crowding Distance: 1.5946
+
+# [ 8 1 9 7 7 8 4 8 8 ]
+>> Objective values: [ 1.05 -2.2 -1.6 -2.0 -2.25 ] | Rank: 1 | Crowding Distance: 0.9848
+
+# [ 8 4 9 7 7 8 1 8 8 ]
+>> Objective values: [ 1.05 -2.2 -1.6 -2.0 -2.25 ] | Rank: 1 | Crowding Distance: 0.5734
+
+# [ 8 4 9 6 7 8 8 1 8 ]
+>> Objective values: [ 1.0 -2.1667 -1.1667 -1.75 -2.75 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 9 9 7 7 8 1 8 8 ]
+>> Objective values: [ 0.9375 -2.75 -1.75 -1.75 -2.25 ] | Rank: 2 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 9 7 7 8 1 8 8 ]
+>> Objective values: [ 0.9375 -2.75 -2.0 -2.0 -2.25 ] | Rank: 2 | Crowding Distance: 1.7976931348623157E308
+
+
+[ END ]
+
+++++++++++++++++ GENERATION: 46 ++++++++++++++++
+
+[ START ]
+
+Parent Population: 10
+Child Population: 10
+
+======== PARENT ========
+
+# [ 8 9 9 7 7 8 8 8 8 ]
+>> Objective values: [ 0.9667 -3.0 -1.6667 -1.25 -1.75 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 9 7 7 8 8 8 8 ]
+>> Objective values: [ 1.1 -2.25 -1.5 -1.5 -1.75 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 9 7 7 8 8 8 8 ]
+>> Objective values: [ 1.1 -2.25 -1.5 -1.5 -1.75 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 9 7 7 8 8 8 8 ]
+>> Objective values: [ 1.1 -2.25 -1.5 -1.5 -1.75 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 9 7 7 8 8 8 8 ]
+>> Objective values: [ 1.1 -2.25 -1.5 -1.5 -1.75 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 9 7 7 8 8 8 8 ]
+>> Objective values: [ 1.1 -2.25 -1.5 -1.5 -1.75 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 9 7 7 8 8 8 8 ]
+>> Objective values: [ 1.1 -2.25 -1.5 -1.5 -1.75 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 9 7 7 8 8 8 8 ]
+>> Objective values: [ 1.1 -2.25 -1.5 -1.5 -1.75 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 9 7 7 8 8 8 8 ]
+>> Objective values: [ 1.1 -2.25 -1.5 -1.5 -1.75 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 4 9 7 7 8 8 8 8 ]
+>> Objective values: [ 1.1 -2.25 -1.5 -1.5 -1.75 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+
+======== CHILD ========
+
+# [ 8 9 9 7 7 8 8 8 8 ]
+>> Objective values: [ 0.9667 -3.0 -1.6667 -1.25 -1.75 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 9 9 7 7 8 8 8 8 ]
+>> Objective values: [ 0.9667 -3.0 -1.6667 -1.25 -1.75 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 9 7 7 8 8 8 8 ]
+>> Objective values: [ 1.1 -2.25 -1.5 -1.5 -1.75 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 4 9 7 7 8 8 8 8 ]
+>> Objective values: [ 1.1 -2.25 -1.5 -1.5 -1.75 ] | Rank: 1 | Crowding Distance: 0.0
+
+# [ 8 1 9 7 7 8 8 8 8 ]
+>> Objective values: [ 1.1 -2.25 -1.5 -1.5 -1.75 ] | Rank: 1 | Crowding Distance: 0.0
+
+# [ 8 1 9 7 7 8 8 8 8 ]
+>> Objective values: [ 1.1 -2.25 -1.5 -1.5 -1.75 ] | Rank: 1 | Crowding Distance: 0.0
+
+# [ 8 4 9 7 7 8 8 8 8 ]
+>> Objective values: [ 1.1 -2.25 -1.5 -1.5 -1.75 ] | Rank: 1 | Crowding Distance: 0.8754
+
+# [ 8 1 9 7 7 8 5 8 8 ]
+>> Objective values: [ 1.05 -2.2 -1.6 -2.0 -2.25 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 8 9 7 7 8 8 8 1 ]
+>> Objective values: [ 1.1 -2.25 -1.75 -1.75 -2.75 ] | Rank: 2 | Crowding Distance: 1.7976931348623157E308
+
+# [ 6 4 9 7 7 8 1 8 8 ]
+>> Objective values: [ 0.9444 -2.3333 -1.5 -2.25 -4.25 ] | Rank: 2 | Crowding Distance: 1.7976931348623157E308
+
+
+[ END ]
+
+++++++++++++++++ GENERATION: 47 ++++++++++++++++
+
+[ START ]
+
+Parent Population: 10
+Child Population: 10
+
+======== PARENT ========
+
+# [ 8 9 9 7 7 8 8 8 8 ]
+>> Objective values: [ 0.9667 -3.0 -1.6667 -1.25 -1.75 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 9 9 7 7 8 8 8 8 ]
+>> Objective values: [ 0.9667 -3.0 -1.6667 -1.25 -1.75 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 9 9 7 7 8 8 8 8 ]
+>> Objective values: [ 0.9667 -3.0 -1.6667 -1.25 -1.75 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 9 7 7 8 8 8 8 ]
+>> Objective values: [ 1.1 -2.25 -1.5 -1.5 -1.75 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 9 7 7 8 8 8 8 ]
+>> Objective values: [ 1.1 -2.25 -1.5 -1.5 -1.75 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 9 7 7 8 8 8 8 ]
+>> Objective values: [ 1.1 -2.25 -1.5 -1.5 -1.75 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 9 7 7 8 8 8 8 ]
+>> Objective values: [ 1.1 -2.25 -1.5 -1.5 -1.75 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 9 7 7 8 8 8 8 ]
+>> Objective values: [ 1.1 -2.25 -1.5 -1.5 -1.75 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 9 7 7 8 8 8 8 ]
+>> Objective values: [ 1.1 -2.25 -1.5 -1.5 -1.75 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 9 7 7 8 8 8 8 ]
+>> Objective values: [ 1.1 -2.25 -1.5 -1.5 -1.75 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+
+======== CHILD ========
+
+# [ 8 9 9 7 7 8 8 8 8 ]
+>> Objective values: [ 0.9667 -3.0 -1.6667 -1.25 -1.75 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 9 9 7 7 8 8 8 8 ]
+>> Objective values: [ 0.9667 -3.0 -1.6667 -1.25 -1.75 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 9 7 7 8 8 8 8 ]
+>> Objective values: [ 1.1 -2.25 -1.5 -1.5 -1.75 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 9 7 7 8 8 8 8 ]
+>> Objective values: [ 1.1 -2.25 -1.5 -1.5 -1.75 ] | Rank: 1 | Crowding Distance: 0.0
+
+# [ 8 1 9 7 7 8 8 8 8 ]
+>> Objective values: [ 1.1 -2.25 -1.5 -1.5 -1.75 ] | Rank: 1 | Crowding Distance: 0.0
+
+# [ 8 1 9 7 7 8 8 8 8 ]
+>> Objective values: [ 1.1 -2.25 -1.5 -1.5 -1.75 ] | Rank: 1 | Crowding Distance: 0.0
+
+# [ 8 1 9 7 7 8 8 8 8 ]
+>> Objective values: [ 1.1 -2.25 -1.5 -1.5 -1.75 ] | Rank: 1 | Crowding Distance: 1.3247
+
+# [ 8 9 9 7 7 8 1 8 8 ]
+>> Objective values: [ 0.9375 -2.75 -1.75 -1.75 -2.25 ] | Rank: 2 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 9 9 1 7 8 8 8 8 ]
+>> Objective values: [ 0.975 -2.5 -1.5 -1.5 -2.5 ] | Rank: 2 | Crowding Distance: 3.4316
+
+# [ 8 9 9 7 7 1 8 8 7 ]
+>> Objective values: [ 0.9583 -2.75 -1.75 -1.75 -4.0 ] | Rank: 3 | Crowding Distance: 1.7976931348623157E308
+
+
+[ END ]
+
+++++++++++++++++ GENERATION: 48 ++++++++++++++++
+
+[ START ]
+
+Parent Population: 10
+Child Population: 10
+
+======== PARENT ========
+
+# [ 8 9 9 7 7 8 8 8 8 ]
+>> Objective values: [ 0.9667 -3.0 -1.6667 -1.25 -1.75 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 9 9 7 7 8 8 8 8 ]
+>> Objective values: [ 0.9667 -3.0 -1.6667 -1.25 -1.75 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 9 9 7 7 8 8 8 8 ]
+>> Objective values: [ 0.9667 -3.0 -1.6667 -1.25 -1.75 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 9 9 7 7 8 8 8 8 ]
+>> Objective values: [ 0.9667 -3.0 -1.6667 -1.25 -1.75 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 9 9 7 7 8 8 8 8 ]
+>> Objective values: [ 0.9667 -3.0 -1.6667 -1.25 -1.75 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 9 7 7 8 8 8 8 ]
+>> Objective values: [ 1.1 -2.25 -1.5 -1.5 -1.75 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 9 7 7 8 8 8 8 ]
+>> Objective values: [ 1.1 -2.25 -1.5 -1.5 -1.75 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 9 7 7 8 8 8 8 ]
+>> Objective values: [ 1.1 -2.25 -1.5 -1.5 -1.75 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 9 7 7 8 8 8 8 ]
+>> Objective values: [ 1.1 -2.25 -1.5 -1.5 -1.75 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 9 7 7 8 8 8 8 ]
+>> Objective values: [ 1.1 -2.25 -1.5 -1.5 -1.75 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+
+======== CHILD ========
+
+# [ 8 9 9 7 7 8 8 8 8 ]
+>> Objective values: [ 0.9667 -3.0 -1.6667 -1.25 -1.75 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 9 9 7 7 8 8 8 8 ]
+>> Objective values: [ 0.9667 -3.0 -1.6667 -1.25 -1.75 ] | Rank: 1 | Crowding Distance: 0.0
+
+# [ 8 9 9 7 7 8 8 8 8 ]
+>> Objective values: [ 0.9667 -3.0 -1.6667 -1.25 -1.75 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 9 7 7 8 8 8 8 ]
+>> Objective values: [ 1.1 -2.25 -1.5 -1.5 -1.75 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 9 7 7 8 8 8 8 ]
+>> Objective values: [ 1.1 -2.25 -1.5 -1.5 -1.75 ] | Rank: 1 | Crowding Distance: 0.0
+
+# [ 8 1 9 7 7 8 8 8 8 ]
+>> Objective values: [ 1.1 -2.25 -1.5 -1.5 -1.75 ] | Rank: 1 | Crowding Distance: 0.0
+
+# [ 8 1 9 7 7 8 8 8 8 ]
+>> Objective values: [ 1.1 -2.25 -1.5 -1.5 -1.75 ] | Rank: 1 | Crowding Distance: 1.2835
+
+# [ 8 9 9 7 7 1 8 8 8 ]
+>> Objective values: [ 1.0 -2.5 -1.25 -1.25 -3.0 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 9 7 7 8 8 1 8 ]
+>> Objective values: [ 1.0 -2.75 -1.5 -1.5 -2.0 ] | Rank: 2 | Crowding Distance: 1.9499
+
+# [ 8 1 9 9 7 8 8 8 8 ]
+>> Objective values: [ 1.1 -2.25 -1.75 -1.75 -2.0 ] | Rank: 2 | Crowding Distance: 1.7976931348623157E308
+
+
+[ END ]
+
+++++++++++++++++ GENERATION: 49 ++++++++++++++++
+
+[ START ]
+
+Parent Population: 10
+Child Population: 10
+
+======== PARENT ========
+
+# [ 8 9 9 7 7 8 8 8 8 ]
+>> Objective values: [ 0.9667 -3.0 -1.6667 -1.25 -1.75 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 9 9 7 7 8 8 8 8 ]
+>> Objective values: [ 0.9667 -3.0 -1.6667 -1.25 -1.75 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 9 9 7 7 8 8 8 8 ]
+>> Objective values: [ 0.9667 -3.0 -1.6667 -1.25 -1.75 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 9 9 7 7 8 8 8 8 ]
+>> Objective values: [ 0.9667 -3.0 -1.6667 -1.25 -1.75 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 9 9 7 7 8 8 8 8 ]
+>> Objective values: [ 0.9667 -3.0 -1.6667 -1.25 -1.75 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 9 9 7 7 8 8 8 8 ]
+>> Objective values: [ 0.9667 -3.0 -1.6667 -1.25 -1.75 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 9 9 7 7 8 8 8 8 ]
+>> Objective values: [ 0.9667 -3.0 -1.6667 -1.25 -1.75 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 9 7 7 8 8 8 8 ]
+>> Objective values: [ 1.1 -2.25 -1.5 -1.5 -1.75 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 9 7 7 8 8 8 8 ]
+>> Objective values: [ 1.1 -2.25 -1.5 -1.5 -1.75 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 9 7 7 8 8 8 8 ]
+>> Objective values: [ 1.1 -2.25 -1.5 -1.5 -1.75 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+
+======== CHILD ========
+
+# [ 8 9 9 7 7 8 8 8 8 ]
+>> Objective values: [ 0.9667 -3.0 -1.6667 -1.25 -1.75 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 9 9 7 7 8 8 8 8 ]
+>> Objective values: [ 0.9667 -3.0 -1.6667 -1.25 -1.75 ] | Rank: 1 | Crowding Distance: 0.0
+
+# [ 8 9 9 7 7 8 8 8 8 ]
+>> Objective values: [ 0.9667 -3.0 -1.6667 -1.25 -1.75 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 9 7 7 8 8 8 8 ]
+>> Objective values: [ 1.1 -2.25 -1.5 -1.5 -1.75 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 4 9 7 7 8 8 8 8 ]
+>> Objective values: [ 1.1 -2.25 -1.5 -1.5 -1.75 ] | Rank: 1 | Crowding Distance: 0.0
+
+# [ 8 1 9 7 7 8 8 8 8 ]
+>> Objective values: [ 1.1 -2.25 -1.5 -1.5 -1.75 ] | Rank: 1 | Crowding Distance: 0.6876
+
+# [ 8 1 9 7 7 8 8 6 8 ]
+>> Objective values: [ 1.0 -2.4 -1.2 -1.5 -2.0 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 9 7 7 8 8 8 2 ]
+>> Objective values: [ 1.05 -2.2 -1.6 -2.0 -2.75 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 9 9 7 7 1 8 8 8 ]
+>> Objective values: [ 1.0 -2.5 -1.25 -1.25 -3.0 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 7 9 7 7 8 8 8 8 ]
+>> Objective values: [ 1.0222 -3.0 -2.0 -1.5 -1.75 ] | Rank: 2 | Crowding Distance: 1.7976931348623157E308
+
+
+[ END ]
+
+++++++++++++++++ GENERATION: 50 ++++++++++++++++
+
+[ START ]
+
+Parent Population: 10
+Child Population: 10
+
+======== PARENT ========
+
+# [ 8 9 9 7 7 8 8 8 8 ]
+>> Objective values: [ 0.9667 -3.0 -1.6667 -1.25 -1.75 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 9 9 7 7 8 8 8 8 ]
+>> Objective values: [ 0.9667 -3.0 -1.6667 -1.25 -1.75 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 9 9 7 7 8 8 8 8 ]
+>> Objective values: [ 0.9667 -3.0 -1.6667 -1.25 -1.75 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 9 9 7 7 8 8 8 8 ]
+>> Objective values: [ 0.9667 -3.0 -1.6667 -1.25 -1.75 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 9 9 7 7 8 8 8 8 ]
+>> Objective values: [ 0.9667 -3.0 -1.6667 -1.25 -1.75 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 9 9 7 7 8 8 8 8 ]
+>> Objective values: [ 0.9667 -3.0 -1.6667 -1.25 -1.75 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 9 9 7 7 8 8 8 8 ]
+>> Objective values: [ 0.9667 -3.0 -1.6667 -1.25 -1.75 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 9 9 7 7 8 8 8 8 ]
+>> Objective values: [ 0.9667 -3.0 -1.6667 -1.25 -1.75 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 9 9 7 7 8 8 8 8 ]
+>> Objective values: [ 0.9667 -3.0 -1.6667 -1.25 -1.75 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 9 7 7 8 8 8 8 ]
+>> Objective values: [ 1.1 -2.25 -1.5 -1.5 -1.75 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+
+======== CHILD ========
+
+# [ 8 9 9 7 7 8 8 8 8 ]
+>> Objective values: [ 0.9667 -3.0 -1.6667 -1.25 -1.75 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 9 9 7 7 8 8 8 8 ]
+>> Objective values: [ 0.9667 -3.0 -1.6667 -1.25 -1.75 ] | Rank: 1 | Crowding Distance: 0.0
+
+# [ 8 9 9 7 7 8 8 8 8 ]
+>> Objective values: [ 0.9667 -3.0 -1.6667 -1.25 -1.75 ] | Rank: 1 | Crowding Distance: 0.0
+
+# [ 8 9 9 7 7 8 8 8 8 ]
+>> Objective values: [ 0.9667 -3.0 -1.6667 -1.25 -1.75 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 9 7 7 8 8 8 8 ]
+>> Objective values: [ 1.1 -2.25 -1.5 -1.5 -1.75 ] | Rank: 1 | Crowding Distance: 1.7976931348623157E308
+
+# [ 8 1 9 7 7 8 8 8 8 ]
+>> Objective values: [ 1.1 -2.25 -1.5 -1.5 -1.75 ] | Rank: 1 | Crowding Distance: 0.0
+
+# [ 8 1 9 7 7 8 8 8 8 ]
+>> Objective values: [ 1.1 -2.25 -1.5 -1.5 -1.75 ] | Rank: 1 | Crowding Distance: 0.0
+
+# [ 8 1 6 7 7 8 8 8 8 ]
+>> Objective values: [ 1.1 -2.25 -1.5 -1.5 -1.75 ] | Rank: 1 | Crowding Distance: 0.0
+
+# [ 8 1 9 7 7 8 8 8 8 ]
+>> Objective values: [ 1.1 -2.25 -1.5 -1.5 -1.75 ] | Rank: 1 | Crowding Distance: 3.6538
+
+# [ 8 9 9 7 7 8 1 8 8 ]
+>> Objective values: [ 0.9375 -2.75 -1.75 -1.75 -2.25 ] | Rank: 2 | Crowding Distance: 1.7976931348623157E308
+
+
+[ END ]
+------------------------------------------------
+NSGA-II ENDED SUCCESSFULLY
+

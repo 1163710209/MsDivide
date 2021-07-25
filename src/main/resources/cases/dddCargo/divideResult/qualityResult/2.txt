@@ -13,7 +13,7 @@
 微服务serviceB
 	 classList = [Location]
 	 classRelationList = []
-	 interfaceList = []
+	 interfaceList = [MsInterface(className=Location, methodName=getLocation, msNameList=[serviceA]), MsInterface(className=Location, methodName=getLocation, msNameList=[serviceA]), MsInterface(className=Location, methodName=getLocation, msNameList=[serviceA])]
 	 qualitySupportDegree = {}
 	 deployLocationSet[Edge]
  ---------------------------------------------------------
@@ -21,7 +21,7 @@
 聚合度为：1.1875
 耦合度为：3.0
 是否符合部署位置约束：true
-通讯代价为：0.0
+通讯代价为：1.0
 平均每个微服务支持的质量指标数：2.0
 平均每个质量指标关联的微服务数：1.0
 -------------------------------------------

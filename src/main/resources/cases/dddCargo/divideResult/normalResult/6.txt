@@ -5,7 +5,7 @@
 微服务serviceA
 	 classList = [Cargo, Leg, Itinerary]
 	 classRelationList = [ClassRelation(origin=Cargo, destination=Leg, type=ClassAggregate), ClassRelation(origin=Cargo, destination=Itinerary, type=ClassComposition), ClassRelation(origin=Itinerary, destination=Leg, type=ClassComposition)]
-	 interfaceList = []
+	 interfaceList = [MsInterface(className=Leg, methodName=routeCargo, msNameList=[serviceC])]
 	 qualitySupportDegree = {Profit=0.75, Cost=0.35}
 	 deployLocationSet[Cloud, Edge]
  ---------------------------------------------------------
@@ -21,7 +21,7 @@
 微服务serviceC
 	 classList = [Voyage, Delivery]
 	 classRelationList = [ClassRelation(origin=Delivery, destination=Voyage, type=ClassAggregate)]
-	 interfaceList = [MsInterface(className=Delivery, methodName=handleCargoEvent, msNameList=[serviceA])]
+	 interfaceList = [MsInterface(className=Delivery, methodName=handleCargoEvent, msNameList=[serviceA]), MsInterface(className=Delivery, methodName=handleCargoEvent, msNameList=[serviceA])]
 	 qualitySupportDegree = {UserSatisfaction=0.35, ResponseTime=0.45, Cost=0.4}
 	 deployLocationSet[Cloud, Edge]
  ---------------------------------------------------------
@@ -37,7 +37,7 @@
 微服务serviceE
 	 classList = [Location]
 	 classRelationList = []
-	 interfaceList = []
+	 interfaceList = [MsInterface(className=Location, methodName=getLocation, msNameList=[serviceF]), MsInterface(className=Location, methodName=getLocation, msNameList=[serviceA]), MsInterface(className=Location, methodName=getLocation, msNameList=[serviceD])]
 	 qualitySupportDegree = {}
 	 deployLocationSet[Edge]
  ---------------------------------------------------------
@@ -45,7 +45,7 @@
 微服务serviceF
 	 classList = [HandlingEvent]
 	 classRelationList = []
-	 interfaceList = []
+	 interfaceList = [MsInterface(className=HandlingEvent, methodName=handleCargoEvent, msNameList=[serviceA])]
 	 qualitySupportDegree = {ResponseTime=0.55, Cost=0.25}
 	 deployLocationSet[Cloud, Edge]
  ---------------------------------------------------------
@@ -53,7 +53,7 @@
 聚合度为：1.0555555555555556
 耦合度为：2.0
 是否符合部署位置约束：true
-通讯代价为：1.0
+通讯代价为：3.5
 平均每个微服务支持的质量指标数：1.5
 平均每个质量指标关联的微服务数：2.25
 -------------------------------------------

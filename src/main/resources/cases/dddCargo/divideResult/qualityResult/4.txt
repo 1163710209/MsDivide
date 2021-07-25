@@ -5,7 +5,7 @@
 微服务serviceA
 	 classList = [Cargo, RouteSpecification, Leg, Itinerary]
 	 classRelationList = [ClassRelation(origin=Cargo, destination=RouteSpecification, type=ClassComposition), ClassRelation(origin=Cargo, destination=Leg, type=ClassAggregate), ClassRelation(origin=Cargo, destination=Itinerary, type=ClassComposition), ClassRelation(origin=Itinerary, destination=Leg, type=ClassComposition)]
-	 interfaceList = []
+	 interfaceList = [MsInterface(className=Leg, methodName=routeCargo, msNameList=[serviceB])]
 	 qualitySupportDegree = {Profit=1.0, Cost=0.35}
 	 deployLocationSet[Cloud, Edge]
  ---------------------------------------------------------
@@ -13,7 +13,7 @@
 微服务serviceB
 	 classList = [Voyage, Delivery, HandlingEvent]
 	 classRelationList = [ClassRelation(origin=Delivery, destination=Voyage, type=ClassAggregate), ClassRelation(origin=HandlingEvent, destination=Voyage, type=ClassAggregate)]
-	 interfaceList = [MsInterface(className=Delivery, methodName=handleCargoEvent, msNameList=[serviceA])]
+	 interfaceList = [MsInterface(className=Delivery, methodName=handleCargoEvent, msNameList=[serviceA]), MsInterface(className=Delivery, methodName=handleCargoEvent, msNameList=[serviceA]), MsInterface(className=HandlingEvent, methodName=handleCargoEvent, msNameList=[serviceA])]
 	 qualitySupportDegree = {UserSatisfaction=0.35, ResponseTime=1.0, Cost=0.65}
 	 deployLocationSet[Cloud, Edge]
  ---------------------------------------------------------
@@ -29,7 +29,7 @@
 微服务serviceD
 	 classList = [Location]
 	 classRelationList = []
-	 interfaceList = []
+	 interfaceList = [MsInterface(className=Location, methodName=getLocation, msNameList=[serviceA]), MsInterface(className=Location, methodName=getLocation, msNameList=[serviceC]), MsInterface(className=Location, methodName=getLocation, msNameList=[serviceB])]
 	 qualitySupportDegree = {}
 	 deployLocationSet[Edge]
  ---------------------------------------------------------
@@ -37,7 +37,7 @@
 聚合度为：1.0625
 耦合度为：2.5
 是否符合部署位置约束：true
-通讯代价为：1.0
+通讯代价为：3.5
 平均每个微服务支持的质量指标数：1.5
 平均每个质量指标关联的微服务数：1.5
 -------------------------------------------

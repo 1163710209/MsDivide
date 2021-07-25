@@ -5,7 +5,7 @@
 微服务serviceB
 	 classList = [HandlingEvent, Location]
 	 classRelationList = [ClassRelation(origin=HandlingEvent, destination=Location, type=ClassAggregate)]
-	 interfaceList = []
+	 interfaceList = [MsInterface(className=HandlingEvent, methodName=handleCargoEvent, msNameList=[serviceA]), MsInterface(className=Location, methodName=getLocation, msNameList=[serviceA]), MsInterface(className=Location, methodName=getLocation, msNameList=[serviceC])]
 	 qualitySupportDegree = {ResponseTime=0.55, Cost=0.25}
 	 deployLocationSet[Edge]
  ---------------------------------------------------------
@@ -13,7 +13,7 @@
 微服务serviceA
 	 classList = [Delivery, Cargo, Itinerary, Leg, RouteSpecification]
 	 classRelationList = [ClassRelation(origin=Cargo, destination=Delivery, type=ClassComposition), ClassRelation(origin=Cargo, destination=Itinerary, type=ClassComposition), ClassRelation(origin=Cargo, destination=Leg, type=ClassAggregate), ClassRelation(origin=Cargo, destination=RouteSpecification, type=ClassComposition), ClassRelation(origin=Itinerary, destination=Leg, type=ClassComposition)]
-	 interfaceList = []
+	 interfaceList = [MsInterface(className=Leg, methodName=routeCargo, msNameList=[serviceC])]
 	 qualitySupportDegree = {Profit=1.0, ResponseTime=0.45, Cost=0.75}
 	 deployLocationSet[Cloud, Edge]
  ---------------------------------------------------------
@@ -29,7 +29,7 @@
 聚合度为：1.0666666666666667
 耦合度为：3.0
 是否符合部署位置约束：true
-通讯代价为：0.0
+通讯代价为：2.0
 平均每个微服务支持的质量指标数：2.0
 平均每个质量指标关联的微服务数：1.5
 -------------------------------------------
